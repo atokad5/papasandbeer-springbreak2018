@@ -79,7 +79,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 window.$ = _jquery2.default;
 window.jQuery = _jquery2.default;
 
-console.log('working');
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene, {
+  // relativeInput: true
+});
+
+(0, _jquery2.default)(window).on('load', function () {
+  (0, _jquery2.default)('body').addClass('is-ready');
+});
 
 /***/ }),
 /* 1 */
