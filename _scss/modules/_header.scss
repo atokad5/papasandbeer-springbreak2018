@@ -1,0 +1,24 @@
+header {
+	position: relative;
+	height: 100vh;
+}
+
+.hdr-inner {
+	position: relative;
+	height: 100vh;
+}
+
+.hdr-container {
+	color: white;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	max-width: 900px;
+}
+
+.dates {
+	padding-bottom: 0.5em;
+}

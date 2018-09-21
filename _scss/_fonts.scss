@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500');
+
+@font-face {
+  font-family: 'california';
+  src: url('../../../_assets/fonts/California-Medium.eot'); /* IE9 Compat Modes */
+  src: url('../../../_assets/fonts/California-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../../_assets/fonts/California-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../../../_assets/fonts/California-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../../../_assets/fonts/California-Medium.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'bebas';
+  src: url('../../../_assets/fonts/BebasNeueRegular.eot'); /* IE9 Compat Modes */
+  src: url('../../../_assets/fonts/BebasNeueRegular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../../_assets/fonts/BebasNeueRegular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../../../_assets/fonts/BebasNeueRegular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../../../_assets/fonts/BebasNeueRegular.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+body {
+  font-size: 15px;
+  line-height: 2;
+  font-family: 'Raleway', sans-serif;
+}
+
+
+.section-header {
+  h1 {
+    font-size: 3.7em;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: 'california';
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.1;
+  margin: 0;
+  font-family: 'bebas';
+}
+
+.dates {
+  font-size: 2em;
+  letter-spacing: 4px;
+}
+
+
+@media(min-width: $bp-md) {
+  body {
+    font-size: 16px;
+  }
+}
+
+
+@media(min-width: $bp-lg) {
+  body {
+    font-size: 17px;
+  }
+}
+
+@media(min-width: $bp-xl) {
+  body {
+    font-size: 18px;
+  }
+}
+
+
+
+

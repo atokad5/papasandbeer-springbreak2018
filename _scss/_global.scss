@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+}
+.inner {
+  max-width: 1440px;
+  width: 95%;
+  margin: auto;
+}
+
+
+.is-mobile-centered {
+  text-align: center;
+}
+.site-container {
+  z-index: 2;
+  max-width: 1800px;
+  margin: auto;
+  position: relative;
+}
+
+.is-el-bg {
+  @include fill-parent();
+  background-size: cover;
+  background-position: center;
+  transition: opacity 800ms ease;
+}
+
+
+.over-bg {
+  position: relative;
+  z-index: 5;
+}
+
+.is-center {
+  text-align: center;
+  margin: auto;
+}
