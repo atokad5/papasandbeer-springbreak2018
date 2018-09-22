@@ -4,10 +4,11 @@ export default function() {
 	let $currentWelcome = $('.current-name').text();
 	let $spliter = $currentWelcome.split('');
 
+	setTimeout(function() {
+		$body.addClass('is-ready')
+	})
+	
 	$(window).on('load', function() {
-		setTimeout(function() {
-			$body.addClass('is-ready')
-		})
 		setTimeout(function() {
 			$body.addClass('is-building')
 		}, 500)

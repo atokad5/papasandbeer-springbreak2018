@@ -22,6 +22,16 @@ header {
 	max-width: 900px;
 }
 
+.sb-logo {
+	position: relative;
+	z-index: 9;
+	max-width: 450px;
+	margin: auto;
+
+	img {
+		width: 100%;
+	}
+}
 .dates {
 	padding-bottom: 0.5em;
 }
@@ -73,11 +83,13 @@ header {
 	opacity: 0;
 }
 .is-ready {
+
 	.hdr-sleeve {
 		opacity: 1;
-
 	}
+
 	&.is-building {
+
 		@for $i from 1 through 50 {
 			.letter {
 				&:nth-child(#{$i}) {
@@ -88,10 +100,13 @@ header {
 				}
 			}
 		}
+
 	}
 
 	&.is-built {
+
 		@for $i from 1 through 50 {
+
 			.letter {
 				&:nth-child(#{$i}) {
 					transform: translateX(200%);
@@ -100,24 +115,29 @@ header {
 					transition-delay: 40ms * $i - 1;
 				}
 			}
+
 		}
 	}
 	
 	&.is-destroy {
+
 		.hdr-sleeve {
 			opacity: 0;
 			z-index: -1;
 		}
+
 		.header-bg {
 			transition-delay: 600ms;
 			opacity: 1;
 			transform: scale(1);
 			transition: all 1500ms ease;
 		}
+
 		.hdr-container {
 			opacity: 1;
 			transition-delay: 700ms;
 		}
+
 	}
 
 }

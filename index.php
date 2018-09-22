@@ -6,6 +6,9 @@
 <header>
 	<div class="inner hdr-inner over-bg">
 		<div class="hdr-container">
+			<figure class="sb-logo">
+				<img src="<?php echo "$root/_assets/images/sb-logo.png"; ?>" alt="">
+			</figure>
 			<h2 class="dates" style="position: relative; transition: all 400ms ease;">October 19th & 20th, 2018</h2>
 			<div class="section-header">
 				<h1>Main headline goes here</h1>
