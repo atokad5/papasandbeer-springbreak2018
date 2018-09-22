@@ -5,7 +5,7 @@
 
 
 
-<script src="<?php echo "$root/dist/assets/js/app.bundle.js?=" ?>"></script>
+<script src="<?php echo "$root/dist/assets/js/app.bundle.js?fwa=fwa" ?>"></script>
 <?php  wp_footer();  ?>
 </body>
 </html>
