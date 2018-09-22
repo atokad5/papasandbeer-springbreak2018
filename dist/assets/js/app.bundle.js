@@ -104,7 +104,6 @@ var $currentWelcomeParent = (0, _jquery2.default)('.sp-welcome-parent');
 var $currentWelcome = (0, _jquery2.default)('.current-name').text();
 var $spliter = $currentWelcome.split('');
 var generateWrapper = function generateWrapper() {
-	console.log('suh');
 	$currentWelcomeParent.html('');
 	for (var i = 0; i < $spliter.length; i++) {
 		$currentWelcomeParent.append('\n\t\t\t<span class="letter">' + $spliter[i] + '</span>\n\t\t');

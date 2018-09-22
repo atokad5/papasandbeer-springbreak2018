@@ -26,7 +26,6 @@ let $currentWelcomeParent = $('.sp-welcome-parent');
 let $currentWelcome = $('.current-name').text();
 let $spliter = $currentWelcome.split('');
 let generateWrapper = () => {
-	console.log('suh')
 	$currentWelcomeParent.html('');
 	for(let i = 0; i < $spliter.length; i++) {
 		$currentWelcomeParent.append(`
