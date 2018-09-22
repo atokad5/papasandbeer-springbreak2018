@@ -74,19 +74,44 @@ var _jquery = __webpack_require__(1);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
+var _hover = __webpack_require__(3);
+
+var _hover2 = _interopRequireDefault(_hover);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 window.$ = _jquery2.default;
 window.jQuery = _jquery2.default;
 
-var scene = document.getElementById('scene');
-var parallaxInstance = new Parallax(scene, {
-  // relativeInput: true
-});
+(0, _hover2.default)();
 
 (0, _jquery2.default)(window).on('load', function () {
-  (0, _jquery2.default)('body').addClass('is-ready');
+	setTimeout(function () {
+		(0, _jquery2.default)('body').addClass('is-ready');
+	});
+	setTimeout(function () {
+		(0, _jquery2.default)('body').addClass('is-ready-er');
+	}, 500);
+	setTimeout(function () {
+		(0, _jquery2.default)('body').addClass('is-gone');
+	}, 2000);
+	setTimeout(function () {
+		(0, _jquery2.default)('body').addClass('is-goneer');
+	}, 3000);
 });
+
+var $currentWelcomeParent = (0, _jquery2.default)('.sp-welcome-parent');
+var $currentWelcome = (0, _jquery2.default)('.current-name').text();
+var $spliter = $currentWelcome.split('');
+var generateWrapper = function generateWrapper() {
+	console.log('suh');
+	$currentWelcomeParent.html('');
+	for (var i = 0; i < $spliter.length; i++) {
+		$currentWelcomeParent.append('\n\t\t\t<span class="letter">' + $spliter[i] + '</span>\n\t\t');
+	}
+};
+
+(0, _jquery2.default)(window).on('load', generateWrapper);
 
 /***/ }),
 /* 1 */
@@ -10458,6 +10483,39 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
+
+/***/ }),
+/* 2 */,
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+exports.default = function () {
+	var $s = {
+		header: $('header'),
+		mouseY: 0,
+		mouseX: 0,
+		movingElements: $('[data-move]')
+	};
+
+	var trackMouse = function trackMouse(e) {
+		$s.mouseY = e.clientY;
+		$s.mouseX = e.clientX;
+
+		$s.movingElements.animate({
+			'transform': 'translate(' + $s.mouseX / 900 + '%,' + $s.mouseY / 1000 + '%)',
+			'transition': 'all 500ms ease'
+		});
+	};
+
+	$s.header.on('mousemove', trackMouse);
+};
 
 /***/ })
 /******/ ]);

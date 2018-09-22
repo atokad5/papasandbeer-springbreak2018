@@ -11,6 +11,7 @@ header {
 
 .hdr-container {
 	color: white;
+	display: none;
 	text-align: center;
 	position: absolute;
 	top: 50%;
@@ -24,15 +25,81 @@ header {
 	padding-bottom: 0.5em;
 }
 
-.header-bg {
-	position: relative;
-	transform: scale(0.5) !important;
+.hdr-sleeve {
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%; height: 100%;
+	background: red;
+	z-index: 9;
+	transition: all 800ms ease;
+	transform: translateY(100%);
+}
+
+.sp-position {
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+	display: inline-block;
+	// background: blue;
+	overflow: hidden;
 }
 
 
+.sp-welcome-parent {
+	position: relative;
+	display: inline-block;
+	transform: translateY(100%);
+}
+
+.letter {
+	display: inline-block;
+	position: relative;
+}
+
+.parent-current {
+	position: relative;
+	transform: translateY(-100%);
+	display: inline-block;
+}
+
+.header-bg {
+	display: none;
+}
+
 .is-ready {
-	.header-bg {
-		transform: scale(1) !important;
-		transition: transform 2s ease;
+	.hdr-sleeve {
+
+		transform: translateY(0%);
+
 	}
+	&.is-ready-er {
+		@for $i from 1 through 20 {
+			.letter {
+				&:nth-child(#{$i}) {
+					transform: translateY(-100%);
+					transition: all 700ms ease;
+					transition-delay: 40ms * $i - 1;
+				}
+			}
+		}
+	}
+
+	&.is-gone {
+		@for $i from 1 through 20 {
+			.letter {
+				&:nth-child(#{$i}) {
+					transform: translateY(-200%);
+					transition: all 700ms ease;
+					transition-delay: 40ms * $i - 1;
+				}
+			}
+		}
+	}
+	
+	&.is-goneer {
+		.hdr-sleeve {
+			transform: translateY(-100%);
+		}
+	}
+
 }
