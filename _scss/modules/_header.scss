@@ -40,15 +40,17 @@ header {
 	position: absolute;
 	top: 50%; left: 50%;
 	transform: translate(-50%, -50%);
-	display: inline-block;
+	display: block;
+	width: 100%;
 	// overflow: hidden;
 	color: white;
+	text-align: center;
 }
 
 
 .sp-welcome-parent {
 	position: relative;
-	display: inline-block;
+	display: block;
 	transform: translateY(100%);
 }
 
@@ -60,7 +62,7 @@ header {
 .parent-current {
 	position: relative;
 	transform: translateY(-100%);
-	display: inline-block;
+	display: block;
 }
 
 .header-bg {
