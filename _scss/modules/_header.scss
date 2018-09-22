@@ -26,13 +26,14 @@ header {
 }
 
 .hdr-sleeve {
-	position: fixed;
+	position: absolute;
 	top: 0; left: 0;
 	width: 100%; height: 100%;
 	background-image: linear-gradient(to top right, #E02C5D, #F5A623);
 	z-index: 9;
 	transition: all 800ms cubic-bezier(1,.02,.93,.75);
-	transform: translateY(100%);
+	// transform: translateY(100%);
+	opacity: 0;
 }
 
 .sp-position {
@@ -69,7 +70,7 @@ header {
 
 .is-ready {
 	.hdr-sleeve {
-		transform: translateY(0%);
+		opacity: 1;
 
 	}
 	&.is-ready-er {
