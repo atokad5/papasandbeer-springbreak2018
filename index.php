@@ -8,7 +8,7 @@
 
 <header>
 	<div class="inner hdr-inner over-bg">
-		<div class="hdr-container">
+		<div class="hdr-container pre-built">
 		<!-- 	<figure class="sb-logo">
 				<img src="<?php echo "$root/_assets/images/sb-logo.png"; ?>" alt="">
 			</figure> -->
