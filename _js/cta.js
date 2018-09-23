@@ -9,8 +9,6 @@ export default function() {
 			let $btnText = $t.text();
 			let $splitText = $btnText.split('');
 
-			console.log($splitText);
-
 			$t.html('').append(`
 				<span class="btn-text-parent">
 					<span class="wrap_text current-btn-text"></span>
