@@ -10495,7 +10495,7 @@ exports.default = function () {
 		}, 500);
 		setTimeout(function () {
 			$body.addClass('is-built');
-		}, 2000);
+		}, 2100);
 		setTimeout(function () {
 			$body.addClass('is-destroy');
 		}, 3000);

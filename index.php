@@ -3,17 +3,21 @@
 	$root = get_template_directory_uri();
 ?>
 
+<?php get_template_part('includes/nav'); ?>
+
+
 <header>
 	<div class="inner hdr-inner over-bg">
 		<div class="hdr-container">
-			<figure class="sb-logo">
+	<!-- 		<figure class="sb-logo">
 				<img src="<?php echo "$root/_assets/images/sb-logo.png"; ?>" alt="">
-			</figure>
+			</figure> -->
 			<h2 class="dates" style="position: relative; transition: all 400ms ease;">October 19th & 20th, 2018</h2>
 			<div class="section-header">
 				<h1>Main headline goes here</h1>
 			</div>
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus atque cum fugit fugiat accusantium, corrupti officiis quisquam illo ullam qui enim. Veniam accusantium consectetur modi laboriosam, quidem quaerat maxime molestiae!</p>
+			<p>Have a cold drink in hand while sitting under the sun, poolside listening to amazing music in good company. When the sun sets, our beachfront club lights up and comes to life.</p>
+			<div class="cta">GET TICKETS</div>
 		</div>		
 	</div>
 

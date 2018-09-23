@@ -20,7 +20,7 @@
 
 body {
   font-size: 15px;
-  line-height: 2;
+  line-height: 1.8;
   font-family: 'Raleway', sans-serif;
   // @include font-smoothing()
 }
@@ -51,14 +51,17 @@ h5 {
 }
 
 .dates {
-  font-size: 2em;
-  letter-spacing: 4px;
+  font-size: 1.8em;
+  letter-spacing: 3px;
 }
 
 
 @media(min-width: $bp-md) {
   body {
     font-size: 16px;
+  }
+  .dates {
+    letter-spacing: 4px;
   }
 }
 

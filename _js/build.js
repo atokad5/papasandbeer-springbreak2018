@@ -7,14 +7,14 @@ export default function() {
 	setTimeout(function() {
 		$body.addClass('is-ready')
 	})
-	
+
 	$(window).on('load', function() {
 		setTimeout(function() {
 			$body.addClass('is-building')
 		}, 500)
 		setTimeout(function() {
 			$body.addClass('is-built')
-		}, 2000)
+		}, 2100)
 		setTimeout(function() {
 			$body.addClass('is-destroy')
 		}, 3000)
