@@ -74,6 +74,13 @@ header {
 	display: block;
 }
 
+.hdr-el {
+	position: relative;
+	transform: translateY(25px);
+	opacity: 0;
+	transition: transform 700ms, opacity 900ms ease;
+}
+
 .header-bg {
 	opacity: 0;
 	transform: scale(1.2);
@@ -136,6 +143,25 @@ header {
 		.hdr-container {
 			opacity: 1;
 			transition-delay: 700ms;
+		}
+
+	}
+	&.is-complete {
+
+		@for $i from 1 through 15 {
+
+			.hdr-el {
+				
+				&:nth-child(#{$i}) {
+					
+					opacity: 1;
+					transform: translateY(0px);
+					transition-delay: 150ms * $i - 1;
+
+				}
+
+			}
+
 		}
 
 	}
