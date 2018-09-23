@@ -1,7 +1,7 @@
 .cta {
 	background-color: $themePink;
 	display: inline-block;
-	padding: 0.8em 3em 0.7em 3em;
+	padding: 0.8em 3em 0.1em 3em;
 	border-radius: 100px;
 	font-family: 'california';
 	letter-spacing: 3px;
@@ -9,5 +9,56 @@
 	color: white;
 	text-decoration: none;
 	font-size: 1.2em;
+}
 
+
+.btn-text-parent {
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+}
+
+.wrap_text {
+	display: inline-block;
+}
+
+.buildin-btn-text {
+	position: absolute;
+	left: 0; top: 0;
+	z-index: 9;
+	width: 100%;
+	transform: translateY(100%);
+
+}
+
+.btn-letter {
+	display: inline-block;
+	margin: 0em 0.05em;
+	position: relative;
+	transition: transform 500ms ease;
+}
+
+
+.cta:hover {
+	@for $i from 1 through 30 {
+		.current-btn-text {			
+			.btn-letter {
+				&:nth-child(#{$i}) {
+					transform: translateY(-100%);
+					transition-delay: 40ms * $i - 1;
+				}
+			}
+		}
+	}
+
+	@for $i from 1 through 30 {
+		.buildin-btn-text {			
+			.btn-letter {
+				&:nth-child(#{$i}) {
+					transform: translateY(-100%);
+					transition-delay: 50ms * $i - 1;
+				}
+			}
+		}
+	}
 }

@@ -4,6 +4,19 @@
 ?>
 
 <?php get_template_part('includes/nav') ?>
+<div class="hdr-sleeve">
+	<div class="spring-break-welcome">
+		<div class="sp-position">
+			<span class="sp-welcome-parent">
+				<span class="parent-current">
+					<span class="current-name" style="opacity: 0;"> Vamos Spring Break 2019
+					</span>
+				</span>
+			</span>
+		</div>
+	</div>
+</div>
+
 
 
 <header>
@@ -22,21 +35,7 @@
 	</div>
 
 	<div class="is-bg is-el-bg header-bg" data-bg-src="<?php echo "$root/_assets/images/hero-image.jpg" ;?>"></div>
-	<div class="hdr-sleeve">
-			
-			<div class="spring-break-welcome">
-
-				<div class="sp-position">
-					<span class="sp-welcome-parent">
-						<span class="parent-current">
-							<span class="current-name" style="opacity: 0;"> Vamos Spring Break 2019</span>
-						</span>
-					</span>
-				</div>
-
-			</div>
-
-	</div>
+	
 </header>
 
 <?php get_footer(); ?>
