@@ -5,7 +5,7 @@
 
 
 
-<script src="<?php echo "$root/dist/assets/js/app.bundle.js?mnse=opd" ?>"></script>
+<script src="<?php echo "$root/dist/assets/js/app.bundle.js?se=pd" ?>"></script>
 <?php  wp_footer();  ?>
 </body>
 </html>
