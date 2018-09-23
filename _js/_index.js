@@ -11,3 +11,5 @@ hover();
 import lazyLoad from './lazyload.js';
 lazyLoad();
 
+import cta from './cta.js';
+cta();

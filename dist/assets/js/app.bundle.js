@@ -86,6 +86,10 @@ var _lazyload = __webpack_require__(4);
 
 var _lazyload2 = _interopRequireDefault(_lazyload);
 
+var _cta = __webpack_require__(5);
+
+var _cta2 = _interopRequireDefault(_cta);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 window.$ = _jquery2.default;
@@ -96,6 +100,8 @@ window.jQuery = _jquery2.default;
 (0, _hover2.default)();
 
 (0, _lazyload2.default)();
+
+(0, _cta2.default)();
 
 /***/ }),
 /* 1 */
@@ -10593,6 +10599,40 @@ exports.default = function () {
     snagBgImages();
     injectSrc();
   });
+};
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+exports.default = function () {
+	var $cta = $('.cta');
+
+	var createBtnsMarkup = function createBtnsMarkup() {
+
+		$cta.each(function (i, btn) {
+			var $t = $(btn);
+			var $btnText = $t.text();
+			var $splitText = $btnText.split('');
+
+			console.log($splitText);
+
+			$t.html('').append('\n\t\t\t\t<span class="btn-text-parent">\n\t\t\t\t\t<span class="wrap_text current-btn-text"></span>\n\t\t\t\t\t<span class="wrap_text buildin-btn-text"></span>\n\t\t\t\t</span>\n\t\t\t');
+
+			for (var _i = 0; _i < $splitText.length; _i++) {
+				$('.wrap_text').append('<span class="btn-letter">' + $splitText[_i] + '</span>');
+			}
+		});
+	};
+
+	window.onLoad = createBtnsMarkup();
 };
 
 /***/ })
