@@ -1,6 +1,6 @@
 <?php $root = get_template_directory_uri(); ?>
 <nav>
-	<div class="inner">
+	<div class="inner pre-built">
 
 		<div class="is-nav-el logo-el">
 			<figure class="sb-logo-mini">
