@@ -3,9 +3,16 @@
 ?>
 
 
+<div class="mobile-nav">
+	<?php get_template_part('includes/nav-li'); ?>
+	
+	<div class="sleeve trigger-sleeve"></div>
+	<div class="sleeve"></div>
+</div>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="<?php echo "$root/dist/assets/js/app.bundle.js?e=d" ?>"></script>
+<script src="<?php echo "$root/dist/assets/js/app.bundle.js?d=e" ?>"></script>
 <?php  wp_footer();  ?>
 </body>
 </html>

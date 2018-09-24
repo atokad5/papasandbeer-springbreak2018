@@ -10,6 +10,7 @@ export default function() {
 			$s.body.removeClass('nav-is-open');
 			$s.navOpen = false;
 		}
+
 	}
 
 	$s.menuTrigger.on('click', toggleMenu);
