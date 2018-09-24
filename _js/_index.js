@@ -6,3 +6,6 @@ lazyLoad();
 
 import cta from './cta.js';
 cta();
+
+import nav from './nav.js';
+nav();

@@ -27,7 +27,6 @@ nav {
 	@include btn-reset();
 	height: 30px;
 	width: 28px;
-	// background: red;
 	position: absolute;
 	top: 50%; right: 0;
 	transform: translateY(-50%);
@@ -38,6 +37,7 @@ nav {
 #mt-bot {
 	position: absolute;
 	height: 3px;
+	transition: transform 200ms ease;
 	border-radius: 100px;
 	width: 100%;
 	background: white;
@@ -49,4 +49,15 @@ nav {
 }
 #mt-bot {
 	top: 20px;
+}
+
+.nav-is-open {
+	#mt-top {
+		transform: rotate(135deg);
+		top: 12px;
+	}
+	#mt-bot {
+		transform: rotate(45deg);
+		top: 12px;
+	}
 }
