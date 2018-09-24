@@ -1,12 +1,12 @@
-import $ from 'jQuery';
-
-export default function() {
-	let $s = {
-		$body : $('body'),
-		$header : $('header'),
-		$footer : $('footer')
-	}
+let $s = {
+	win: $('window'),
+	body : $('body'),
+	header : $('header'),
+	footer : $('footer')
 }
 
 
+export {
+	$s
+}
 

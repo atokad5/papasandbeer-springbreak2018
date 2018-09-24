@@ -4,7 +4,7 @@
 
 
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="<?php echo "$root/dist/assets/js/app.bundle.js?e=d" ?>"></script>
 <?php  wp_footer();  ?>
 </body>

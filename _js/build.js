@@ -1,31 +1,17 @@
+import { $s } from './selectors';
+
 export default function() {
-	let $body = $('body');
 	let $currentWelcomeParent = $('.sp-welcome-parent');
 	let $currentWelcome = $('.current-name').text();
 	let $spliter = $currentWelcome.split('');
 
 	setTimeout(function() {
-		$body.addClass('is-ready')
+		$s.body.addClass('is-ready')
 	})
 	setTimeout(function() {
-		$body.addClass('is-building')
+		$s.body.addClass('is-building')
 	}, 500)
 
-	$(window).on('load', function() {
-
-		setTimeout(function() {
-			$body.addClass('is-built')
-		}, 2100)
-
-		setTimeout(function() {
-			$body.addClass('is-destroy')
-		}, 3000)
-
-		setTimeout(function() {
-			$body.addClass('is-complete')
-		}, 3500)
-
-	})
 
 	let generateWrapper = () => {
 		$currentWelcomeParent.html('');
@@ -34,7 +20,19 @@ export default function() {
 				<span class="letter">${$spliter[i]}</span>
 			`);
 		}
+
+		setTimeout(function() {
+			$s.body.addClass('is-built')
+		}, 2100)
+
+		setTimeout(function() {
+			$s.body.addClass('is-destroy')
+		}, 3000)
+
+		setTimeout(function() {
+			$s.body.addClass('is-complete')
+		}, 3500)
 	}
 
-	$(window).on('load', generateWrapper);
+	$s.win.onLoad = generateWrapper();
 }
