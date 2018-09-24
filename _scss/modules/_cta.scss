@@ -45,31 +45,40 @@
 	transition: transform 400ms, opacity 400ms ease;
 }
 
-
-
+@for $i from 1 through 30 {
+	.current-btn-text {			
+		.btn-letter {
+			&:nth-child(#{$i}) {
+				transition-delay: 30ms * $i - 1;
+			}
+		}
+	}
+}
+@for $i from 1 through 30 {
+	.buildin-btn-text {			
+		.btn-letter {
+			&:nth-child(#{$i}) {
+				opacity: 0;
+				transition-delay: 30ms * $i - 1;
+			}
+		}
+	}
+}
 
 .cta:hover {
-	@for $i from 1 through 30 {
-		.current-btn-text {			
-			.btn-letter {
-				&:nth-child(#{$i}) {
-					opacity: 0;
-					transform: translateY(-100%);
-					transition-delay: 30ms * $i - 1;
-				}
-			}
+	.current-btn-text {			
+		.btn-letter {
+			opacity: 0;
+			transform: translateY(-100%);
 		}
 	}
+	.buildin-btn-text {			
+		.btn-letter {
+			opacity: 1;
+			transform: translateY(-100%);
+		}
+	}
+	
 
-	@for $i from 1 through 30 {
-		.buildin-btn-text {			
-			.btn-letter {
-				&:nth-child(#{$i}) {
-					opacity: 1;
-					transform: translateY(-100%);
-					transition-delay: 30ms * $i - 1;
-				}
-			}
-		}
-	}
+
 }
