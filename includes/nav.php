@@ -1,6 +1,6 @@
 <?php $root = get_template_directory_uri(); ?>
 <nav>
-	<div class="inner pre-built">
+	<div class="inner pre-built nav-flex">
 
 		<div class="is-nav-el logo-el">
 			<figure class="sb-logo-mini">
@@ -15,8 +15,10 @@
 			
 		</div>
 
-		<div class="is-nav-el">
-
+		<div class="is-nav-el is-menu-dk">
+			<div class="dk-nav">
+				<?php get_template_part('includes/nav-li'); ?>
+			</div>
 		</div>
 
 

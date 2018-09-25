@@ -61,3 +61,54 @@ nav {
 		top: 12px;
 	}
 }
+.dk-nav  {
+	display: none;
+}
+
+
+@media(min-width: $bp-md) {
+
+	.dk-nav {
+		display: block;
+	}
+	.nav-flex {
+		display: flex;
+		align-items: center;
+	}
+
+	.is-nav-el {
+		width: (50% / 2);
+	}
+
+	.is-menu-dk {
+		text-align: center;
+		width: 50%;
+
+		ul {
+			margin: 0; 
+			padding: 0;
+			list-style-type: none;
+		}
+
+		li {
+
+			display: inline-block;
+			margin: 0em 1em;
+		}
+
+		a {
+			color: white;
+			text-decoration: none;
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+
+	}
+
+	.mt-trigger {
+		display: none;
+	}
+
+}

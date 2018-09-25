@@ -5,9 +5,6 @@
 
 <div class="mobile-nav">
 	<?php get_template_part('includes/nav-li'); ?>
-	
-	<div class="sleeve trigger-sleeve"></div>
-	<div class="sleeve"></div>
 </div>
 
 
