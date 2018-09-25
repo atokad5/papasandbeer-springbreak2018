@@ -1,6 +1,7 @@
 .mobile-nav {
 	position: fixed;
 	height: 100vh;
+	max-width: 300px;
 	width: 50%;
 	// background: $themePink;
 	z-index: 99;
@@ -78,7 +79,7 @@
 
 }
 
-@media(min-width: $bp-md) {
+@media(min-width: $bp-lg) {
 	
 	.mobile-nav {
 		display: none;

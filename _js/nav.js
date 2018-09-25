@@ -5,35 +5,38 @@ export default function() {
 	let $menuImg = $('.dk-nav .menu-li a');
 	let $hdrBg = $('.is-transition-bg');
 	let $nav = $('nav');
-	// const pullImages = () => {
-	// 	$menuImg.each((i,img) => {
-	// 		let $t = $(img);
-	// 		let myI = new Image();
-	// 		$(myI).attr('src', $t.attr('data-image'));
-	// 	})
-	// }
+	
 
-	// window.onLoad = pullImages();
+	let pullImages = () => {
+		$menuImg.each((i, img) => {
+			let $t = $(img);
+			let $grabSrc = $t.attr('data-image');
+			let $newImg = new Image();
+			$($newImg).attr('src', $grabSrc).on('load', e => {
+				let $el = $(e.currentTarget);
+				$hdrBg.append($el);	
+			})
+		})
+	}
 
-	// let changeBg = e => {
-	// 	console.log('suh')
-	// 	let $t = $(e.currentTarget);
-	// 	let $imgSrc = $t.attr('data-image');
-		
-	// 	$hdrBg.css({
-	// 		'opacity': '0'
-	// 	})
+	let changeImage = e => {
+		$hdrBg.addClass('is-active')
+		let $el = $(e.currentTarget);
+		let $elImg = $el.attr('data-image');
+		$hdrBg.css({'background-image': 'url('+ $elImg +')'})
+	}
 
-	// 	setTimeout(function() {
-	// 		$hdrBg.css({
-	// 			'opacity': 1,
-	// 			'background-image': 'url('+ $imgSrc +')'
-	// 		})
-	// 	}, 0)
+	let resetImage = e => {
+		$hdrBg.removeClass('is-active')
+		let $el = $(e.currentTarget);
+		let $elImg = $el.attr('data-image');
+		$hdrBg.css({'background-image': 'url('+ $elImg +')'})
+	}
 
-	// }
+	$menuImg.on('mouseleave', resetImage)
+	$menuImg.on('mouseenter', changeImage)
 
-	// $menuImg.on('mouseover', e => changeBg(e));
+	$(window).on('load', pullImages);
 
 	let checkifMobile = () => {
 		let $mobileCheck = $s.menuTrigger.is(':visible') ? true : false;

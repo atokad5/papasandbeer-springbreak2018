@@ -33,6 +33,7 @@ header {
 .sb-logo {
 	position: relative;
 	z-index: 9;
+	display: none;
 	max-width: 450px;
 	margin: auto;
 
@@ -185,6 +186,21 @@ header {
 	top: 0; left: 0;
 	width: 100%; height: 100%;
 	opacity: 0;
-	transition: opacity 900ms ease;
-	z-index: 1;
+	z-index: 2;
+	transition: opacity 1200ms ease;
+
+	&.is-active {
+		opacity: 1;
+		transition: opacity 1200ms ease-out;
+	}
+	img {
+		opacity: 0;
+		width: 1px;
+	}
+}
+
+@media(min-width: $bp-lg) {
+	.sb-logo {
+		display: block;
+	}
 }

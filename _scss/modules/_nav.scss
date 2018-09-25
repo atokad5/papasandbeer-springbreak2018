@@ -37,7 +37,7 @@ nav {
 #mt-bot {
 	position: absolute;
 	height: 3px;
-	transition: transform 200ms ease;
+	transition: transform 400ms ease;
 	border-radius: 100px;
 	width: 100%;
 	background: white;
@@ -68,7 +68,7 @@ nav {
 	display: none;
 }
 
-@media(min-width: $bp-md) {
+@media(min-width: $bp-lg) {
 	nav {
 		padding: 1em 0em;
 	}
