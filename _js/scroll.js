@@ -1,6 +1,8 @@
+import {$s} from './selectors.js';
+
 export default function() {
   ;(function($){ 
-    let $window = $(window);
+
     let didScroll = false;
 
 
@@ -26,6 +28,6 @@ export default function() {
 
     
     requestAnimationFrame(scrollTicker)
-    $window.on('scroll', updateScrollState);
+    $s.win.on('scroll', updateScrollState);
   })(jQuery);
 }

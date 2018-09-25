@@ -1,12 +1,15 @@
-import $ from 'jQuery';
-
-export default function() {
-	let $s = {
-		$body : $('body'),
-		$header : $('header'),
-		$footer : $('footer')
-	}
+let $s = {
+	win: $('window'),
+	body : $('body'),
+	header : $('header'),
+	nav: $('nav'),
+	footer : $('footer'),
+	navOpen: false,
+	menuTrigger : $('.mt-trigger')
 }
 
 
+export {
+	$s
+}
 
