@@ -64,9 +64,17 @@ nav {
 .dk-nav  {
 	display: none;
 }
-
+.social-links-ul {
+	display: none;
+}
 
 @media(min-width: $bp-md) {
+	nav {
+		padding: 1em 0em;
+	}
+	.sb-logo-mini {
+		display: none;
+	}
 
 	.dk-nav {
 		display: block;
@@ -99,9 +107,10 @@ nav {
 		a {
 			color: white;
 			text-decoration: none;
+			transition: color 400ms ease;
 
 			&:hover {
-				opacity: 0.7;
+				color: $themeBlue;
 			}
 		}
 
@@ -109,6 +118,22 @@ nav {
 
 	.mt-trigger {
 		display: none;
+	}
+
+	.social-links-ul {
+		list-style-type: none;
+		margin: 0;
+		display: flex;
+
+		li {
+			margin-right: 1em;
+			&:last-of-type {
+				margin: 0;
+			}
+			svg {
+				width: 100%;
+			}
+		}
 	}
 
 }

@@ -3,6 +3,9 @@
 	<div class="inner pre-built nav-flex">
 
 		<div class="is-nav-el logo-el">
+			<div class="social-nav">
+				<?php get_template_part('includes/social-links'); ?>
+			</div>
 			<figure class="sb-logo-mini">
 				<img src="<?php echo "$root/_assets/images/sb-logo.png"; ?>" alt="">
 			</figure>

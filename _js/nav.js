@@ -3,36 +3,37 @@ import {$s} from './selectors.js';
 export default function() {	
 	let $navUl = $('.mobile-nav .menu-li');
 	let $menuImg = $('.dk-nav .menu-li a');
-	let $hdrBg = $('.header-bg');
+	let $hdrBg = $('.is-transition-bg');
 	let $nav = $('nav');
-	const pullImages = () => {
-		$menuImg.each((i,img) => {
-			let $t = $(img);
-			let myI = new Image();
-			myI.src = $t.attr('data-image');
-		})
-	}
+	// const pullImages = () => {
+	// 	$menuImg.each((i,img) => {
+	// 		let $t = $(img);
+	// 		let myI = new Image();
+	// 		$(myI).attr('src', $t.attr('data-image'));
+	// 	})
+	// }
 
-	window.onLoad = pullImages();
+	// window.onLoad = pullImages();
 
-	let changeBg = e => {
-		console.log('suh')
-		let $t = $(e.currentTarget);
-		let $imgSrc = $t.attr('data-image');
-		console.log($t.attr('data-image'));
-		$hdrBg.css({
-			'background-image': 'url('+ $imgSrc +')'
-		})
-	}
+	// let changeBg = e => {
+	// 	console.log('suh')
+	// 	let $t = $(e.currentTarget);
+	// 	let $imgSrc = $t.attr('data-image');
+		
+	// 	$hdrBg.css({
+	// 		'opacity': '0'
+	// 	})
 
-	let resetBg = e => {
-		let $imgOldSrc = $(e.currentTarget).attr('data-bg-src');
-		$hdrBg.css({
-			'background-image': 'url('+ $imgOldSrc +')'
-		})
-	}
-	$nav.on('mouseleave', resetBg)
-	$menuImg.on('mouseover', e => changeBg(e));
+	// 	setTimeout(function() {
+	// 		$hdrBg.css({
+	// 			'opacity': 1,
+	// 			'background-image': 'url('+ $imgSrc +')'
+	// 		})
+	// 	}, 0)
+
+	// }
+
+	// $menuImg.on('mouseover', e => changeBg(e));
 
 	let checkifMobile = () => {
 		let $mobileCheck = $s.menuTrigger.is(':visible') ? true : false;

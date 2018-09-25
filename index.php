@@ -30,10 +30,10 @@
 				<h1>Main headline goes here</h1>
 			</div>
 			<p class="hdr-el">Have a cold drink in hand while sitting under the sun, poolside listening to amazing music in good company. When the sun sets, our beachfront club lights up and comes to life.</p>
-			<a class="cta hdr-el" href="">View Packages</a>
+			<a class="cta hdr-el hdr-cta" href="">View Packages</a>
 		</div>		
 	</div>
-
+	<div class="is-transition-bg"></div>
 	<div class="is-bg is-el-bg header-bg" data-bg-src="<?php echo "$root/_assets/images/hero-image.jpg" ;?>"></div>
 	
 </header>

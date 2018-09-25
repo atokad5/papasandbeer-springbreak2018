@@ -1,6 +1,7 @@
 export default function() {
 	let $cta = $('.cta');
-
+	let $hdrCta = $('.hdr-cta');
+	let $hdrEl = $('.header-bg');
 
 	let createBtnsMarkup = () => {
 
@@ -23,6 +24,10 @@ export default function() {
 		})
 	}
 
+	const changeBgPosition = () => $hdrEl.css({'transform': 'scale(1.1)'})
+	const changeBgPositionBack = () => $hdrEl.css({'transform': 'scale(1)'})
 
+	$hdrCta.mouseenter(changeBgPosition)
+	$hdrCta.mouseleave(changeBgPositionBack)
 	window.onLoad = createBtnsMarkup();
 }
