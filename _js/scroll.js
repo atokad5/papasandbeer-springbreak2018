@@ -4,7 +4,7 @@ export default function() {
   ;(function($){ 
     let $windowOffset = $(window).scrollTop();
     let didScroll = false;  
-    let $svgRotate = $('.btn-text svg');
+    let $svgRotate = $('.btn-svg-wrapper');
 
 
 
