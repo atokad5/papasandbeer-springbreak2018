@@ -108,6 +108,10 @@ var _nav = __webpack_require__(5);
 
 var _nav2 = _interopRequireDefault(_nav);
 
+var _scroll = __webpack_require__(6);
+
+var _scroll2 = _interopRequireDefault(_scroll);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _build2.default)();
@@ -117,6 +121,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _cta2.default)();
 
 (0, _nav2.default)();
+
+(0, _scroll2.default)();
 
 /***/ }),
 /* 2 */
@@ -355,6 +361,46 @@ exports.default = function () {
 	};
 
 	_selectors.$s.menuTrigger.on('click', toggleMenu);
+};
+
+var _selectors = __webpack_require__(0);
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  ;(function ($) {
+    var $windowOffset = $(window).scrollTop();
+    var didScroll = false;
+    var $svgRotate = $('.btn-text svg');
+
+    var updateScrollState = function updateScrollState() {
+      didScroll = true;
+      $windowOffset = $(window).scrollTop();
+    };
+
+    var scrollTicker = function scrollTicker() {
+      if (didScroll) {
+        console.log($windowOffset);
+        $svgRotate.css({
+          'transform': 'rotate(' + $windowOffset / 20 + 'deg)'
+        });
+        didScroll = false;
+      }
+      requestAnimationFrame(scrollTicker);
+    };
+
+    requestAnimationFrame(scrollTicker);
+    $(window).on('scroll', updateScrollState);
+  })(jQuery);
 };
 
 var _selectors = __webpack_require__(0);
