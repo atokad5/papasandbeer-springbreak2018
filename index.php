@@ -5,7 +5,7 @@
 
 <?php get_template_part('includes/nav') ?>
 
-<?php get_template_part('include/loadin'); ?>
+<?php get_template_part('includes/loadin'); ?>
 
 
 <header>
