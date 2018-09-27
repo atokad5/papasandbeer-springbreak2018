@@ -108,6 +108,10 @@ var _nav = __webpack_require__(5);
 
 var _nav2 = _interopRequireDefault(_nav);
 
+var _scroll = __webpack_require__(6);
+
+var _scroll2 = _interopRequireDefault(_scroll);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _build2.default)();
@@ -117,6 +121,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _cta2.default)();
 
 (0, _nav2.default)();
+
+(0, _scroll2.default)();
 
 /***/ }),
 /* 2 */
@@ -137,14 +143,15 @@ exports.default = function () {
 
 	console.log(window.origin);
 
-	if (!$urlCheckDev) {
-		setTimeout(function () {
-			_selectors.$s.body.addClass('is-ready');
-		});
-		setTimeout(function () {
-			_selectors.$s.body.addClass('is-building');
-		}, 500);
-	}
+	// if(!$urlCheckDev) {
+	setTimeout(function () {
+		_selectors.$s.body.addClass('is-ready');
+	});
+	setTimeout(function () {
+		_selectors.$s.body.addClass('is-building');
+	}, 500);
+	// }
+
 
 	var generateWrapper = function generateWrapper() {
 		$currentWelcomeParent.html('');
@@ -152,28 +159,28 @@ exports.default = function () {
 			$currentWelcomeParent.append('\n\t\t\t\t<span class="letter">' + $spliter[i] + '</span>\n\t\t\t');
 		}
 
-		if (!$urlCheckDev) {
-			setTimeout(function () {
-				_selectors.$s.body.addClass('is-built');
-			}, 2100);
+		// if(!$urlCheckDev) {
+		setTimeout(function () {
+			_selectors.$s.body.addClass('is-built');
+		}, 2100);
 
-			setTimeout(function () {
-				_selectors.$s.body.addClass('is-destroy');
-			}, 3000);
+		setTimeout(function () {
+			_selectors.$s.body.addClass('is-destroy');
+		}, 3000);
 
-			setTimeout(function () {
-				_selectors.$s.body.addClass('is-complete');
-			}, 3500);
-		}
+		setTimeout(function () {
+			_selectors.$s.body.addClass('is-complete');
+		}, 3500);
+		// }
 	};
 
-	if ($urlCheckDev) {
-		_selectors.$s.body.addClass('is-ready');
-		_selectors.$s.body.addClass('is-building');
-		_selectors.$s.body.addClass('is-built');
-		_selectors.$s.body.addClass('is-destroy');
-		_selectors.$s.body.addClass('is-complete');
-	}
+	// if($urlCheckDev) {
+	// $s.body.addClass('is-ready')
+	// $s.body.addClass('is-building')
+	// $s.body.addClass('is-built')
+	// $s.body.addClass('is-destroy')
+	// $s.body.addClass('is-complete')
+	// }
 
 	_selectors.$s.win.onLoad = generateWrapper();
 };
@@ -299,7 +306,6 @@ exports.default = function () {
 	};
 
 	var changeImage = function changeImage(e) {
-
 		$hdrBg.addClass('is-active');
 		var $el = $(e.currentTarget);
 		var $elImg = $el.attr('data-image');
@@ -356,6 +362,46 @@ exports.default = function () {
 	};
 
 	_selectors.$s.menuTrigger.on('click', toggleMenu);
+};
+
+var _selectors = __webpack_require__(0);
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  ;(function ($) {
+    var $windowOffset = $(window).scrollTop();
+    var didScroll = false;
+    var $svgRotate = $('.btn-svg-wrapper');
+
+    var updateScrollState = function updateScrollState() {
+      didScroll = true;
+      $windowOffset = $(window).scrollTop();
+    };
+
+    var scrollTicker = function scrollTicker() {
+      if (didScroll) {
+        console.log($windowOffset);
+        $svgRotate.css({
+          'transform': 'rotate(' + $windowOffset / 20 + 'deg)'
+        });
+        didScroll = false;
+      }
+      requestAnimationFrame(scrollTicker);
+    };
+
+    requestAnimationFrame(scrollTicker);
+    $(window).on('scroll', updateScrollState);
+  })(jQuery);
 };
 
 var _selectors = __webpack_require__(0);

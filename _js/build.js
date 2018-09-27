@@ -8,14 +8,14 @@ export default function() {
 
 	console.log(window.origin)
 
-	if(!$urlCheckDev) {
+	// if(!$urlCheckDev) {
 		setTimeout(function() {
 			$s.body.addClass('is-ready')
 		})
 		setTimeout(function() {
 			$s.body.addClass('is-building')
 		}, 500)
-	}
+	// }
 
 
 	let generateWrapper = () => {
@@ -26,7 +26,7 @@ export default function() {
 			`);
 		}
 
-		if(!$urlCheckDev) {
+		// if(!$urlCheckDev) {
 			setTimeout(function() {
 				$s.body.addClass('is-built')
 			}, 2100)
@@ -38,16 +38,16 @@ export default function() {
 			setTimeout(function() {
 				$s.body.addClass('is-complete')
 			}, 3500)
-		}
+		// }
 	}
 
-	if($urlCheckDev) {
-		$s.body.addClass('is-ready')
-		$s.body.addClass('is-building')
-		$s.body.addClass('is-built')
-		$s.body.addClass('is-destroy')
-		$s.body.addClass('is-complete')
-	}
+	// if($urlCheckDev) {
+		// $s.body.addClass('is-ready')
+		// $s.body.addClass('is-building')
+		// $s.body.addClass('is-built')
+		// $s.body.addClass('is-destroy')
+		// $s.body.addClass('is-complete')
+	// }
 
 	$s.win.onLoad = generateWrapper();
 }

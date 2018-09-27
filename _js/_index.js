@@ -10,3 +10,6 @@ cta();
 import nav from './nav.js';
 nav();
 
+
+import scroll from './scroll.js';
+scroll();

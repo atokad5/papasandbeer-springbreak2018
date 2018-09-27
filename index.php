@@ -4,19 +4,8 @@
 ?>
 
 <?php get_template_part('includes/nav') ?>
-<div class="hdr-sleeve">
-	<div class="spring-break-welcome">
-		<div class="sp-position">
-			<span class="sp-welcome-parent">
-				<span class="parent-current">
-					<span class="current-name" style="opacity: 0;"> Vamos Spring Break 2019
-					</span>
-				</span>
-			</span>
-		</div>
-	</div>
-</div>
 
+<?php get_template_part('includes/loadin'); ?>
 
 
 <header>
@@ -35,7 +24,10 @@
 	</div>
 	<div class="is-transition-bg"></div>
 	<div class="is-bg is-el-bg header-bg" data-bg-src="<?php echo "$root/_assets/images/hero-image.jpg" ;?>"></div>
-	
 </header>
+
+
+
+<?php get_template_part('includes/home/video_section'); ?>
 
 <?php get_footer(); ?>

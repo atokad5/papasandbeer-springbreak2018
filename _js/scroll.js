@@ -2,15 +2,16 @@ import {$s} from './selectors.js';
 
 export default function() {
   ;(function($){ 
-
-    let didScroll = false;
+    let $windowOffset = $(window).scrollTop();
+    let didScroll = false;  
+    let $svgRotate = $('.btn-svg-wrapper');
 
 
 
 
     let updateScrollState = () => {
       didScroll = true;
-      $windowOffset = $window.scrollTop();
+      $windowOffset = $(window).scrollTop();
     }
 
 
@@ -18,8 +19,10 @@ export default function() {
 
     let scrollTicker = () => {
       if(didScroll) {
-
-
+        console.log($windowOffset)
+        $svgRotate.css({
+          'transform': 'rotate('+ $windowOffset/20 +'deg)'
+        })
         didScroll = false;
       }
       requestAnimationFrame(scrollTicker);
@@ -28,6 +31,6 @@ export default function() {
 
     
     requestAnimationFrame(scrollTicker)
-    $s.win.on('scroll', updateScrollState);
+    $(window).on('scroll', updateScrollState);
   })(jQuery);
 }
