@@ -25,12 +25,6 @@ body {
   background-position: center;
   transition: opacity 800ms ease;
 
-  &.zoomed {
-    height: 115%;
-    width: 115%;
-    top: -7.5%;
-    left: -7.5%;
-  }
 }
 
 

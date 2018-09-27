@@ -58,7 +58,9 @@ gulp.task('webpack', () => {
 
 gulp.task('server', () => {
   browsersync.init({
-    proxy: 'http://papasandbeer-springbreak2018:8888/'
+    proxy: 'http://papasandbeer-springbreak2018:8888/',
+    notify: false,
+    open: false
   }, (err, bs) => {
     //qrcode.generate('http://'+bs.utils.devIp[0]+':3000');
   });
