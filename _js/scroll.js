@@ -21,7 +21,7 @@ export default function() {
       if(didScroll) {
         console.log($windowOffset)
         $svgRotate.css({
-          'transform': 'rotate('+ $windowOffset/20 +'deg)'
+          'transform': 'rotate('+ $windowOffset/15 +'deg)'
         })
         didScroll = false;
       }

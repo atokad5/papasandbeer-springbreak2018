@@ -16,6 +16,11 @@
 						</div>	
 					</div>
 				</div>
+
+
+				<div class="video-card-text-container">
+					<h2>2018 Recap Video</h2>
+				</div>
 				<div class="video-img-parent is-bg" data-bg-src="<?php echo "$root/_assets/images/video-placeholder-image.jpg"; ?>"></div>
 			</div>	
 		</div>
