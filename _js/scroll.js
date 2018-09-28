@@ -5,6 +5,7 @@ export default function() {
     let $windowOffset = $(window).scrollTop();
     let didScroll = false;  
     let $svgRotate = $('.btn-svg-wrapper');
+    let $recapCard = $('.video-card-text-transform');
 
 
 
@@ -15,14 +16,22 @@ export default function() {
     }
 
 
+    let recapElements = () => {
+      $svgRotate.css({
+        'transform': 'rotate('+ $windowOffset/15 +'deg)'
+      })
+      $recapCard.css({
+        'transform': 'translateY(-' + $windowOffset/15 +'%)'
+      })
+    }
 
 
     let scrollTicker = () => {
       if(didScroll) {
-        console.log($windowOffset)
-        $svgRotate.css({
-          'transform': 'rotate('+ $windowOffset/15 +'deg)'
-        })
+        
+        // home page
+        recapElements();
+
         didScroll = false;
       }
       requestAnimationFrame(scrollTicker);
