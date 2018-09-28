@@ -18,7 +18,7 @@ export default function() {
 			`)
 
 			for( let i = 0; i < $splitText.length; i++ ) {
-				$('.wrap_text').append(`<span class="btn-letter">${$splitText[i]}</span>`);
+				$t.find('.wrap_text').append(`<span class="btn-letter">${$splitText[i]}</span>`);
 			}
 
 		})

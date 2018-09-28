@@ -34,23 +34,35 @@
 <section class="is-orange">
 		
 		<div class="max clearfix flex-row-images">
-			<div class="half-el image-layout-parent">
-				<?php get_template_part('includes/home/image-layout'); ?>
-			</div>
-			
+
 			<div class="half-el inner clearfix is-half-inner-column">
 				<div class="is-image-grid-content">
-					<div class="section-header">
+					<h2 class="dates is-center">THIS IS ONLY THE BEGINNING</h2>
+					<div class="section-header is-center image-layout-hdr">
 						<h1>
 							The Ultimate Party
 						</h1>
 					</div>
 
+					<div class="hr-splitter">
+						
+					</div>
+
 					<div class="image-grid-copy">
 						<p>Have a cold drink in hand while sitting under the sun, poolside listening to amazing music in good company. When the sun sets, our beachfront club lights up and comes to life. Papas&Beer celebrates Spring Break the entire month of March, we are ready for you to dance all night and make memories to remember. During the weekdays, JusCollege will be hosting pool parties and bringing in fire performers. On the weekends, we got you covered with more wild pool parties and several A-List performers.</p>
 					</div>
+					<div class="section-cta">
+						<a class="cta" href="">View Packages</a>
+					</div>
 				</div>
 			</div>
+
+
+			<div class="half-el image-layout-parent">
+				<?php get_template_part('includes/home/image-layout'); ?>
+			</div>
+			
+			
 		
 		</div>
 		<div class="spacing spacing--md"></div>
