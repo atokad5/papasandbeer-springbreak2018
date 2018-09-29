@@ -4,10 +4,10 @@
 }
 
 .stroke-section  {
-	height: 70px;
+	height: 80px;
 	width: 100%;
 	position: absolute;
-	top: 0;
+	top: -0px;
 	background-repeat: repeat-x;
 	transform: translateY(-100%);
 }
@@ -17,6 +17,15 @@
 	padding-bottom: (1080 / 1920 ) * 100%;
 	border: 0.5em solid white;
 	box-shadow: 0px 0px 35px rgba(black, 0.3);
+	opacity: 0;
+	transform: translateX(20px);
+	transition: opacity 1200ms, transform 1200ms ease;
+
+	&.in-view {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+
 }
 
 .video-img-parent {

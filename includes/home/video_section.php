@@ -29,6 +29,8 @@
 				</div>
 				
 				<div class="video-img-parent is-bg" data-bg-src="<?php echo "$root/_assets/images/video-placeholder-image.jpg"; ?>"></div>
+
+				<div class="is-reveal-sleeve-img-group"></div>
 			</div>	
 		</div>
 	<div class="spacing spacing--md"></div>
