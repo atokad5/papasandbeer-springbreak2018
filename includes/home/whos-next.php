@@ -5,7 +5,19 @@
 		
 	</div>
 	<div class="spacing spacing--md"></div>
+	<div class="spacing spacing--md"></div>
+
 	<div class="inner">
+
+
+		<div class="is-center">
+			<div class="content-area">
+				<h2 class="dates">STAY TUNED FOR THE ARTIST LINEUP</h2>
+			</div>
+			<div class="section-header hdr-el content-area">
+				<h1>Who Will Be Next</h1>
+			</div>
+		</div>
 		
 	</div>
 	<div class="spacing spacing--md"></div>

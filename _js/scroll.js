@@ -40,7 +40,7 @@ export default function() {
 
     let checkElement = $element => {
       $element.each((i, element) => {
-        let $t = $($element)
+        let $t = $(element)
         if($t.inView()) {
           $t.addClass('in-view')
         }
