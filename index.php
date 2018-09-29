@@ -38,7 +38,7 @@
 			<div class="half-el inner clearfix is-half-inner-column">
 				<div class="is-image-grid-content">
 					<div class="content-area">
-						<h2 class="dates is-center">THIS IS ONLY THE BEGINNING</h2>
+						<h2 class="dates is-center sm-hdr">THIS IS ONLY THE BEGINNING</h2>
 					</div>
 					<div class="section-header is-center image-layout-hdr">
 						<div class="content-area">
@@ -46,9 +46,7 @@
 						</div>
 					</div>
 
-					<div class="hr-splitter">
-						
-					</div>
+					<div class="hr-splitter animated-spliter"></div>
 
 					<div class="image-grid-copy">
 						<div class="content-area">
@@ -74,7 +72,7 @@
 		</div>
 		<div class="spacing spacing--md"></div>
 		<div class="spacing spacing--md"></div>
-		<div class="spacing spacing--md"></div>
+		<div class="spacing spacing--sm"></div>
 </section>
 
 

@@ -33,6 +33,11 @@ body {
   margin: auto;
 }
 
+.has-max {
+  max-width: 800px;
+  margin: auto;
+}
+
 .over-bg {
   position: relative;
   z-index: 5;
@@ -41,6 +46,19 @@ body {
 .is-center {
   text-align: center;
   margin: auto;
+}
+
+.mini-spliter {
+  margin: 1.5em auto;
+  height: 8px;
+  background: linear-gradient(to right,$themePink, $themeOrange);
+  width: 0px;
+  transition: width 1200ms ease;
+
+  &.in-view {
+    width: 100px;
+  }
+
 }
 
 .max { max-width: 1800px; margin: auto  ; }

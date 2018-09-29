@@ -12,6 +12,7 @@ export default function() {
     let $checkMiniHeader = $('.content-area h2');
     let $sectionCta = $('.section-cta');
     let $hr = $('.hr-splitter');
+    let $miniSplitter = $('.mini-spliter');
 
 
     // content area 
@@ -77,6 +78,7 @@ export default function() {
         checkElement($checkHeader);
         checkElement($checkMiniHeader);
         checkElement($sectionCta);
+        checkElement($miniSplitter);
 
         didScroll = false;
       }

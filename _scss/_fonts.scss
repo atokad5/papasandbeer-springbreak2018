@@ -53,8 +53,13 @@ h5 {
 .dates {
   font-size: 1.8em;
   letter-spacing: 3px;
-}
 
+  &.sm-hdr {
+    font-size: 1.2em !important;
+    padding-bottom: 0.2em;
+  }
+
+}
 
 @media(min-width: $bp-md) {
   body {
