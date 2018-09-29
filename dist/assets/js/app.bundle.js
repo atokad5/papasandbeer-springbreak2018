@@ -383,6 +383,41 @@ exports.default = function () {
     var didScroll = false;
     var $svgRotate = $('.btn-svg-wrapper');
     var $recapCard = $('.video-card-text-transform');
+    var $imageView = $('.is-reveal-sleeve-img-group');
+    var $hr = $('.hr-splitter');
+
+    // content area 
+    var $contentElements = $('.content-area p');
+    var $checkHeader = $('.content-area h1');
+    var $checkMiniHeader = $('.content-area h2');
+    var $sectionHeader = $('.section-cta');
+
+    $.fn.inView = function () {
+      var win = $(window);
+      var obj = $(this);
+      var scrollPosition = win.scrollTop();
+      var visibleArea = win.scrollTop() + win.height();
+      var objEndPos = obj.offset().top + obj.outerHeight();
+      return visibleArea >= objEndPos && scrollPosition <= objEndPos ? true : false;
+    };
+
+    var checkImgView = function checkImgView($imageElement) {
+      $imageElement.each(function (i, img) {
+        var $t = $(img);
+        if ($t.inView()) {
+          $t.parent().addClass('in-view');
+        }
+      });
+    };
+
+    var checkElement = function checkElement($element) {
+      $element.each(function (i, element) {
+        var $t = $($element);
+        if ($t.inView()) {
+          $t.addClass('in-view');
+        }
+      });
+    };
 
     var updateScrollState = function updateScrollState() {
       didScroll = true;
@@ -403,6 +438,12 @@ exports.default = function () {
 
         // home page
         recapElements();
+        checkImgView($imageView);
+        checkElement($hr);
+        checkElement($contentElements);
+        checkElement($checkHeader);
+        checkElement($checkMiniHeader);
+        checkElement($sectionHeader);
 
         didScroll = false;
       }
