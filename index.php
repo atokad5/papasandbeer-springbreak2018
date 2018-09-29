@@ -50,9 +50,13 @@
 						
 					</div>
 
-					<div class="image-grid-copy content-area">
-						<p>Have a cold drink in hand while sitting under the sun, poolside listening to amazing music in good company. When the sun sets, our beachfront club lights up and comes to life.</p>
-						<p>Papas&Beer celebrates Spring Break the entire month of March, we are ready for you to dance all night and make memories to remember. During the weekdays, JusCollege will be hosting pool parties and bringing in fire performers. On the weekends, we got you covered with more wild pool parties and several A-List performers.</p>
+					<div class="image-grid-copy">
+						<div class="content-area">
+							<p>Have a cold drink in hand while sitting under the sun, poolside listening to amazing music in good company. When the sun sets, our beachfront club lights up and comes to life.</p>
+						</div>
+						<div class="content-area">
+							<p>Papas&Beer celebrates Spring Break the entire month of March, we are ready for you to dance all night and make memories to remember. During the weekdays, JusCollege will be hosting pool parties and bringing in fire performers. On the weekends, we got you covered with more wild pool parties and several A-List performers.</p>
+						</div>
 					</div>
 					<div class="section-cta">
 						<a class="cta" href="">View Packages</a>
@@ -72,5 +76,8 @@
 		<div class="spacing spacing--md"></div>
 		<div class="spacing spacing--md"></div>
 </section>
+
+
+<?php get_template_part('includes/home/whos-next'); ?>
 
 <?php get_footer(); ?>

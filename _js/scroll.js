@@ -7,14 +7,15 @@ export default function() {
     let $svgRotate = $('.btn-svg-wrapper');
     let $recapCard = $('.video-card-text-transform');
     let $imageView = $('.is-reveal-sleeve-img-group');
+    let $contentElements = $('.content-area p');
+    let $checkHeader = $('.content-area h1');
+    let $checkMiniHeader = $('.content-area h2');
+    let $sectionCta = $('.section-cta');
     let $hr = $('.hr-splitter');
 
 
     // content area 
-    let $contentElements = $('.content-area p');
-    let $checkHeader = $('.content-area h1');
-    let $checkMiniHeader = $('.content-area h2');
-    let $sectionHeader = $('.section-cta');
+
 
 
 
@@ -64,7 +65,7 @@ export default function() {
       })
     }
 
-
+    
     let scrollTicker = () => {
       if(didScroll) {
         
@@ -75,7 +76,7 @@ export default function() {
         checkElement($contentElements);
         checkElement($checkHeader);
         checkElement($checkMiniHeader);
-        checkElement($sectionHeader);
+        checkElement($sectionCta);
 
         didScroll = false;
       }
