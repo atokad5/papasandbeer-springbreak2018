@@ -64,9 +64,7 @@ nav {
 .dk-nav  {
 	display: none;
 }
-.social-links-ul {
-	display: none;
-}
+
 
 @media(min-width: $bp-lg) {
 	nav {
@@ -115,22 +113,6 @@ nav {
 
 	.mt-trigger {
 		display: none;
-	}
-
-	.social-links-ul {
-		list-style-type: none;
-		margin: 0;
-		display: flex;
-
-		li {
-			margin-right: 1em;
-			&:last-of-type {
-				margin: 0;
-			}
-			svg {
-				width: 100%;
-			}
-		}
 	}
 
 }
