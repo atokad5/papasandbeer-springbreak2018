@@ -175,6 +175,10 @@
 
 	.section-cta {
 		text-align: left;
+
+		&.is-center {
+			text-align: center;
+		}
 	}
 
 }

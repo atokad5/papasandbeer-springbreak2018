@@ -6,7 +6,6 @@ export default function() {
 	let $spliter = $currentWelcome.split('');
 	let $urlCheckDev = window.origin === "http://localhost:3000" ? true : false;
 
-	console.log(window.origin)
 
 	if(!$urlCheckDev) {
 		setTimeout(function() {

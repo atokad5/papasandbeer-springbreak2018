@@ -43,6 +43,10 @@ body {
   z-index: 5;
 }
 
+.is-white {
+  color: white;
+}
+
 .is-center {
   text-align: center;
   margin: auto;
@@ -61,7 +65,16 @@ body {
 
 }
 
+.mobile-center {
+  text-align: center;
+}
 .max { max-width: 1800px; margin: auto  ; }
 .clearfix {
   @include clearfix();
+}
+
+@media(min-width: $bp-lg) {
+  .mobile-center {
+    text-align: left;
+  }
 }
