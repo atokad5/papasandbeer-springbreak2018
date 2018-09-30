@@ -94,16 +94,24 @@
 	border: 1em solid white;
 	border-radius: 15px;
 	display: none;
+	overflow: hidden;
 	
-	img {
-		transform: translateY(110px);
-		transition: transform 500ms ease;
-	}
-
 	&.active-image {
 		display: block;
-		img {
-			transform: translateY(0px);
-		}
 	}
+}
+
+
+.element-lineup img {
+	transform: translateX(10%);
+	opacity: 0;
+	transition: transform 800ms, opacity 800ms ease;
+
+	&.is-active {
+		transform: translateX(0px);
+		opacity: 1;
+		transition: transform 1200ms, opacity 800ms ease;
+	}
+
+
 }

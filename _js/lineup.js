@@ -9,8 +9,13 @@ export default function() {
 
 		$lineupTrigger.removeClass('active');
 		$t.addClass('active');
+		let $index = $t.index();
 		$elementImage.removeClass('active-image');
-		$elementImage.eq($t.index()).addClass('active-image');
+		$elementImage.find('img').removeClass('is-active');
+		$elementImage.eq($index).addClass('active-image');
+		setTimeout(() => $elementImage.eq($index).find('img').addClass('is-active') , 20)
+
+
 
 	}
 

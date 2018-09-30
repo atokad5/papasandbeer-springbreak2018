@@ -35,12 +35,11 @@
 	<div class="image-lineup-nest">
 		<div class="figure-lineup-parent">
 			<figure class="element-lineup active-image">
-				<img src="<?php echo "$root/_assets/images/image-one-lineup.jpg" ;?>" alt="">
+				<img class="is-active" src="<?php echo "$root/_assets/images/image-one-lineup.jpg" ;?>" alt="">
 			</figure>
 
 			<figure class="element-lineup">
-				img two	
-				<img src="" alt="">
+				<img src="<?php echo "$root/_assets/images/image-one-lineup.jpg" ;?>" alt="">
 			</figure>
 		</div>
 	</div>
