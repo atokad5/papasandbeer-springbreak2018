@@ -13,3 +13,6 @@ nav();
 
 import scroll from './scroll.js';
 scroll();
+
+import lineup from './lineup.js';
+lineup();

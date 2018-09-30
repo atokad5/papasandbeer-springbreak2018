@@ -71,7 +71,7 @@ export default function() {
       if(didScroll) {
         
         // home page
-        recapElements();
+        // recapElements();
         checkImgView($imageView);
         checkElement($hr);
         checkElement($contentElements);
