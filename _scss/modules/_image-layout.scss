@@ -31,6 +31,11 @@
 	border-radius: 20px;
 	margin: 0;
 	overflow: hidden;
+
+	img {
+		border-radius: 20px;
+	}
+	
 }
 
 .figure-left-img {
@@ -111,7 +116,6 @@
 	img {
 		transform: translateX(10%);
 		opacity: 0;
-		will-change: transform;
 	}
 
 
