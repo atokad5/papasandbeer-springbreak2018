@@ -488,8 +488,13 @@ exports.default = function () {
 
 		$lineupTrigger.removeClass('active');
 		$t.addClass('active');
+		var $index = $t.index();
 		$elementImage.removeClass('active-image');
-		$elementImage.eq($t.index()).addClass('active-image');
+		$elementImage.find('img').removeClass('is-active');
+		$elementImage.eq($index).addClass('active-image');
+		setTimeout(function () {
+			return $elementImage.eq($index).find('img').addClass('is-active');
+		}, 20);
 	};
 
 	$lineupTrigger.on('click', toggleImage);
