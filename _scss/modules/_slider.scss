@@ -11,3 +11,23 @@
 	top: 70px;
 	transform: translateY(-100%) rotate(180deg);
 }
+
+.flex-slide {
+	display: flex;
+}
+
+.is-half-el-slider {
+	width: 50%;
+	position: relative;
+}
+
+.slider-el {
+	width: 33%;
+	min-width: 335px;
+	margin-right: 2em;
+}
+
+.slider--image {
+	background: #ddd;
+	@include padding-bottom(440, 335, 'img');
+}
