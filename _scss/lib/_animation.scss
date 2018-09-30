@@ -1,5 +1,6 @@
 $number: 20px;
 .content-area {
+	overflow: hidden; 
 	
 	p, h1, h2 {
 		transition: transform 1100ms, opacity 1100ms ease;
@@ -9,7 +10,6 @@ $number: 20px;
 		&.in-view {
 			transform: translateX(0px);
 			opacity: 1;
-			transition-delay: 500ms;
 		}
 
 	}

@@ -35,13 +35,13 @@
 	<div class="image-lineup-nest">
 		<div class="figure-lineup-parent">
 			<figure class="element-lineup active-image">
-				<img class="is-active" src="<?php echo "$root/_assets/images/image-one-lineup.jpg" ;?>" alt="">
+				<img class="lazy-image is-active" data-lazy="<?php echo "$root/_assets/images/image-one-lineup.jpg" ;?>" src="" alt="">
 			</figure>
 
 			<figure class="element-lineup">
-				<img src="<?php echo "$root/_assets/images/image-one-lineup.jpg" ;?>" alt="">
+				<img  class="lazy-image" data-lazy="<?php echo "$root/_assets/images/image-one-lineup.jpg" ;?>" src="" alt="">
 			</figure>
 		</div>
 	</div>
-	<div class="spacing spacing--md"></div>
+	<!-- <div class="spacing spacing--md"></div> -->
 </section>
