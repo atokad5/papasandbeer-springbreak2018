@@ -10,7 +10,7 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="<?php echo "$root/dist/assets/js/app.bundle.js?eg=fe" ?>"></script>
+<script src="<?php echo "$root/dist/assets/js/app.bundle.js?g=e" ?>"></script>
 <?php  wp_footer();  ?>
 </body>
 </html>
