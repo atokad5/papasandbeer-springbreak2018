@@ -78,4 +78,7 @@
 
 <?php get_template_part('includes/home/whos-next'); ?>
 
+
+<?php get_template_part('includes/home/slider'); ;?>
+
 <?php get_footer(); ?>

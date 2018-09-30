@@ -1,0 +1,13 @@
+#slider {
+	position: relative;
+	margin-top: -10em;
+}
+
+.is-blue {
+	background: $themeBlue;
+}
+
+.is-rotated {
+	top: 70px;
+	transform: translateY(-100%) rotate(180deg);
+}
