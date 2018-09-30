@@ -35,7 +35,7 @@ body {
   h3,
   h4,
   h5 {
-    font-family: 'california';
+    font-family: 'california' !important;
     letter-spacing: 2px;
   }
 }
@@ -53,8 +53,13 @@ h5 {
 .dates {
   font-size: 1.8em;
   letter-spacing: 3px;
-}
 
+  &.sm-hdr {
+    font-size: 1.2em !important;
+    padding-bottom: 0.2em;
+  }
+
+}
 
 @media(min-width: $bp-md) {
   body {

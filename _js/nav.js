@@ -20,6 +20,7 @@ export default function() {
 	}
 
 	let changeImage = e => {
+	
 		$hdrBg.addClass('is-active')
 		let $el = $(e.currentTarget);
 		let $elImg = $el.attr('data-image');
