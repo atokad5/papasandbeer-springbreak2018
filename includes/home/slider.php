@@ -42,16 +42,18 @@
 			
 			<?php for($i = 0; $i < 6; $i++) : ?>
 				<div class="slider-el">
-					<figure class="slider--image">
-						<img src="" alt="">
-						<figcaption class="slide-txt">
-							<div class="contents-inner-slider">
-								<h4>Im here</h4>
-								<p>with some text that will go for the image</p>
-							</div>
-							<div class="gradient-hr"></div>
-						</figcaption>
-					</figure>
+					<a href="">
+						<figure class="slider--image">
+							<img src="" alt="">
+							<figcaption class="slide-txt">
+								<div class="contents-inner-slider">
+									<h4>Im here</h4>
+									<p>with some text that will go for the image.</p>
+								</div>
+								<div class="gradient-hr"></div>
+							</figcaption>
+						</figure>
+					</a>
 				</div>
 			<?php endfor; ?>
 		</div>

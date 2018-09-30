@@ -20,3 +20,7 @@ lineup();
 
 import slider from './slider.js';
 slider();
+
+
+import header from './header.js';
+header();
