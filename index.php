@@ -81,4 +81,5 @@
 
 <?php get_template_part('includes/home/slider'); ;?>
 <?php get_template_part('includes/home/tickets-selling') ?>
+<?php get_template_part('includes/home/faq'); ?>
 <?php get_footer(); ?>

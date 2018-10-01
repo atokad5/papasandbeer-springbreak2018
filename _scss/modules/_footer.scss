@@ -3,31 +3,51 @@ footer {
 	color: white;
 
 	.mini-spliter {
-		margin: 1em 0em;
+		// margin: 1em 0em;
+		margin: 1em auto;
 	}
+
+	a {
+		color: white;
+		text-decoration: none;
+		transition: color 400ms ease;
+
+		&:hover {
+			color: $themePink;
+		}
+
+	}
+
+}
+
+.contact-us-footer {
+
+	a {
+		text-decoration: underline;
+	}
+
 }
 
 .footer-grid {
-	display: flex;
+	// display: flex;
 }
 
 .footer-column {
-	margin-right: 0.5em;
-
-	&:last-of-type {
-		margin-right: 0em;
-	}
-	&.is-large {
-		width: 35%;
-	}
-	&.is-small {
-		width: 20%;
-	}
-	&.is-md {
-		width: 25%;
-	}
+	width: 80%;
+	margin: 0em auto 3em auto;
+	text-align: center;
 }
 
+.footer-row {
+	margin-bottom: 4em;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+}
 .footer-section-title {
 	margin: 0;
 	font-family: 'california';
@@ -35,21 +55,92 @@ footer {
 }
 
 footer {
+
 	.social-links-ul {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
 		display: flex;
+		justify-content: center;
 
 		li {
 			margin-right: 1.5em;
+
 			&:last-of-type {
 				margin: 0;
 			}
+
 			svg {
 				width: 100%;
 			}
+
 		}
+
 	}
 
+}
+
+.come_to_life {
+	font-size: 1.3em;
+	letter-spacing: 2px;
+	h2 {
+		line-height: 1.5;
+		font-family: california !important;
+	}
+}
+#venue-parent {
+	max-width: 1800px;
+	margin: auto;
+	position: relative;
+}
+
+#venue-image {
+	margin: 0;
+	position: absolute;
+	@include padding-bottom(556, 1800, 'img');
+
+	img {
+		transform: translateY(-20%);
+	}
+}
+@media( min-width: $bp-md ) {
+
+	
+
+	footer {
+		position: relative;
+
+		.mini-spliter {
+			margin: 1em 0em;
+		}
+
+	}
+
+	.footer-grid {
+		display: flex;
+	}
+
+	.footer-column {
+		width: auto;
+		margin: 0em 2em 0em 0em;
+		text-align: left;
+
+		&:last-of-type {
+			margin-right: 0em;
+		}
+		&.is-large {
+			width: 35%;
+		}
+		&.is-small {
+			width: 20%;
+		}
+		&.is-md {
+			width: 25%;
+		}
+	}
+	footer {
+		.social-links-ul {
+			justify-content: start;
+		}
+	}
 }

@@ -3,7 +3,12 @@
 ?>
 
 <footer>
-	<div class="spacing spacing--md"></div>
+
+	<div id="venue-parent">
+		<figure id="venue-image">
+			<img src="<?php echo "$root/_assets/images/footer-image.png" ; ?>" alt="">
+		</figure>
+	</div>
 		<div class="inner footer-grid">
 
 
@@ -12,7 +17,7 @@
 					<div class="mini-spliter animated-spliter"></div>
 					<p>CORONADO 400, PLAYAS ROSARITO</p>
 					<p>ROSARITO, BC, MEXICO<BR>(619)799-9491</p>
-					<p><a href="">CONTACT US</a></p>
+					<p class="contact-us-footer"><a href="">CONTACT US</a></p>
 					<?php get_template_part('includes/social-links') ?>
 					<p>&copy; 2019 PAPAS AND BEER SPRING BREAK FEST ALL RIGHTS RESERVED</p>
 					<p><a href="">TERMS & CONDITIONS</a> <span> | </span> <a href="">PRIVACY POLICY</a></p>
@@ -76,6 +81,11 @@
 						<ul>
 							<li><a href="">ARTIST INFORMATION</a></li>
 						</ul>
+					</div>
+
+					<div class="footer-row come_to_life">
+						<div class="mini-spliter animated-spliter" id="ontopHd"></div>
+						<h2>WHEN THE SUN SETS, OUR BEACHFRONT CLUB LIGHTS UP AND COMES TO LIFE.</h2>
 					</div>
 					
 				</div>
