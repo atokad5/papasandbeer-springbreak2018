@@ -11,6 +11,16 @@
 
 <?php get_template_part('includes/footer-markup'); ?>
 
+
+
+<div id="video-modal">
+	<div id="video-container">
+	</div>
+	<button class="video-trigger is-modal-close">
+		Close Video
+	</button>
+</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script src="<?php echo "$root/dist/assets/js/app.bundle.js?t=srg"; ?>"></script>

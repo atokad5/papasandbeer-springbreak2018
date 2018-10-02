@@ -7,7 +7,7 @@
 	<div class="spacing spacing--md"></div>
 	<div class="spacing spacing--md"></div>
 		<div class="inner has-max-container">
-			<div class="video-container">
+			<div class="video-container video-trigger" data-video-src="https://www.youtube.com/embed/fPLUtI8ELAw">
 					
 				<div class="play-circ">
 					<div class="carrot"><?php get_template_part('includes/home/carrot'); ?></div>
