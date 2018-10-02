@@ -24,3 +24,6 @@ slider();
 
 import header from './header.js';
 header();
+
+import video from './video.js';
+video();

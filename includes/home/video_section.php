@@ -7,7 +7,7 @@
 	<div class="spacing spacing--md"></div>
 	<div class="spacing spacing--md"></div>
 		<div class="inner has-max-container">
-			<div class="video-container">
+			<div class="video-container video-trigger" data-video-src="<?php the_field('video_url');?>">
 					
 				<div class="play-circ">
 					<div class="carrot"><?php get_template_part('includes/home/carrot'); ?></div>
@@ -23,12 +23,12 @@
 
 				<div class="video-card-text-transform">
 					<div class="video-card-text-container">
-						<h2><span>2018 Recap Video</span></h2>
+						<h2><span><?php the_field('video_card_title'); ?></span></h2>
 						<div class="gradient-hr"></div>
 					</div>
 				</div>
 				
-				<div class="video-img-parent is-bg" data-bg-src="<?php echo "$root/_assets/images/video-placeholder-image.jpg"; ?>"></div>
+				<div class="video-img-parent is-bg" data-bg-src="<?php the_field('video_placeholder_image'); ?>"></div>
 
 				<div class="is-reveal-sleeve-img-group"></div>
 			</div>	

@@ -7,17 +7,17 @@
 
 		<div class="is-center">
 			<div class="content-area">
-				<h2 class="dates sm-hdr">don’t miss this event</h2>
+				<h2 class="dates sm-hdr"><?php the_field('tickets_subtitle'); ?></h2>
 			</div>
 			<div class="section-header hdr-el content-area">
-				<h1>tickets are selling fast!</h1>
+				<h1><?php the_field('tickets_headline'); ?></h1>
 			</div>
 			<div class="mini-spliter animated-spliter"></div>
 			<div class="content-area has-max">
-				<p>Have a cold drink in hand while sitting under the sun, poolside listening to amazing music in good company. When the sun sets, our beachfront club lights up and comes to life.</p>
+				<p><?php the_field('tickets_copy'); ?></p>
 			</div>
 			<div class="section-cta is-center">
-				<div class="cta">View Packages</div>
+				<a href="<?php the_field('view_packages_link', 'options'); ?>" class="cta"><?php the_field('view_packages_text', 'options'); ?></a>
 			</div>
 		</div>
 

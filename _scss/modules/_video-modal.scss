@@ -1,0 +1,48 @@
+#video-modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(black, 0.9);
+  z-index: 9999;
+  display: none;
+}
+
+#video-container {
+  max-width: 1800px;
+  margin: auto;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  iframe {
+    width: 100%;
+    height: 100vh;
+  }
+
+}
+
+.is-modal-close {
+  @include btn-reset();
+  position: fixed;
+  top: 0em; right: 0em;
+  z-index: 99;
+  background: $themePink;
+  color: white;
+  font-family: california;
+  font-size: 1.45em;
+  padding: 0.5em 2em;
+  cursor: pointer;
+
+  &:hover {
+    background: darken($themePink, 10%);
+  }
+
+}
+
+.video-showing {
+
+  #video-modal {
+    display: block;
+  }
+  
+}
