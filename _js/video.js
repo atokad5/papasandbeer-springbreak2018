@@ -6,13 +6,12 @@ export default function() {
 
 
   const toggleVideo = () => {
-    console.log('suh')
     $body.toggleClass('video-showing');
 
     if(!$body.hasClass('video-showing')) {
       $videoContainer.html('');
     } else {
-      $videoContainer.append(`
+      $videoContainer.html(`
         <iframe src="${$videoSrc}?autoplay=1&rel=0" frameborder="0"></iframe>
       `)
     }

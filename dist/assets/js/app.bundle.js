@@ -616,13 +616,12 @@ exports.default = function () {
   var $body = $('body');
 
   var toggleVideo = function toggleVideo() {
-    console.log('suh');
     $body.toggleClass('video-showing');
 
     if (!$body.hasClass('video-showing')) {
       $videoContainer.html('');
     } else {
-      $videoContainer.append('\n        <iframe src="' + $videoSrc + '?autoplay=1&rel=0" frameborder="0"></iframe>\n      ');
+      $videoContainer.html('\n        <iframe src="' + $videoSrc + '?autoplay=1&rel=0" frameborder="0"></iframe>\n      ');
     }
   };
 
