@@ -13,10 +13,10 @@ export default function() {
     } else {
       $videoContainer.html(`
         <iframe src="${$videoSrc}?autoplay=1&rel=0" frameborder="0"></iframe>
-      `)
+      `);
     }
 
   }
 
-  $videoParent.on('click', toggleVideo)
+  $videoParent.on('click', toggleVideo);
 }
