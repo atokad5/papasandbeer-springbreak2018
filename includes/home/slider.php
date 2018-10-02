@@ -11,11 +11,11 @@
 		<div class="is-half-el-slider">
 			<div class="is-image-grid-content">
 					<div class="content-area mobile-center">
-						<h2 class="dates sm-hdr">This is only the beginning</h2>
+						<h2 class="dates sm-hdr"><?php the_field('slider_subtitle'); ?></h2>
 					</div>
 					<div class="section-header image-layout-hdr">
 						<div class="content-area mobile-center">
-							<h1>the more inFo headline goes here</h1>
+							<h1><?php the_field('slider_headline'); ?></h1>
 						</div>
 					</div>
 
@@ -23,7 +23,7 @@
 
 					<div class="image-grid-copy">
 						<div class="content-area mobile-center">
-							<p>Have a cold drink in hand while sitting under the sun, poolside listening to amazing music in good company. When the sun sets, our beachfront club lights up and comes to life. </p>
+							<p><?php the_field('slider_copy'); ?></p>
 						</div>					
 					</div>
 
@@ -40,22 +40,24 @@
 		</div>
 		<div class="is-half-el-slider slider_parent">
 			
-			<?php for($i = 0; $i < 6; $i++) : ?>
+			<?php 
+			$slider_slides = get_field('slider_slides');
+			foreach($slider_slides as $theSlide) : ?>
 				<div class="slider-el">
 					<a href="">
 						<figure class="slider--image">
-							<img src="" alt="">
+							<img src="<?php echo $theSlide['link']; ?>" alt="">
 							<figcaption class="slide-txt">
 								<div class="contents-inner-slider">
-									<h4>Im here</h4>
-									<p>with some text that will go for the image.</p>
+									<h4><?php echo $theSlide['title']; ?></h4>
+									<p><?php echo $theSlide['summary']; ?></p>
 								</div>
 								<div class="gradient-hr"></div>
 							</figcaption>
 						</figure>
 					</a>
 				</div>
-			<?php endfor; ?>
+			<?php endforeach; ?>
 		</div>
 	</div>
 </section>

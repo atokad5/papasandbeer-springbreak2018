@@ -12,14 +12,14 @@
 
 		<div class="is-center">
 			<div class="content-area">
-				<h2 class="dates sm-hdr">STAY TUNED FOR THE ARTIST LINEUP</h2>
+				<h2 class="dates sm-hdr"><?php the_field('line_up_subtitle'); ?></h2>
 			</div>
 			<div class="section-header hdr-el content-area">
-				<h1>Who Will Be Next?</h1>
+				<h1><?php the_field('line_up_headline'); ?></h1>
 			</div>
 			<div class="mini-spliter animated-spliter"></div>
 			<div class="content-area has-max">
-				<p>Have a cold drink in hand while sitting under the sun, poolside listening to amazing music in good company. When the sun sets, our beachfront club lights up and comes to life.</p>
+				<p><?php the_field('line_up_copy'); ?></p>
 			</div>
 		</div>
 
@@ -35,11 +35,11 @@
 	<div class="image-lineup-nest">
 		<div class="figure-lineup-parent">
 			<figure class="element-lineup active-image">
-				<img class="lazy-image is-active" data-lazy="<?php echo "$root/_assets/images/image-one-lineup.jpg" ;?>" src="" alt="">
+				<img class="lazy-image is-active" data-lazy="<?php the_field('2018_lineup') ;?>" src="" alt="">
 			</figure>
 
 			<figure class="element-lineup">
-				<img  class="lazy-image" data-lazy="<?php echo "$root/_assets/images/image-one-lineup.jpg" ;?>" src="" alt="">
+				<img  class="lazy-image" data-lazy="<?php the_field('2019_lineup') ;?>" src="" alt="">
 			</figure>
 		</div>
 	</div>

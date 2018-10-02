@@ -20,6 +20,6 @@
 			<div class="is-reveal-sleeve-img-group"></div>
 		</div>
 	</div>
-
+	
 </div>
 
