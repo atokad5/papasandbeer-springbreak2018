@@ -3,10 +3,23 @@
 	<div class="spacing spacing--md"></div>
 		<div class="inner">
 			
+				<div class="content-area is-center is-white">
 
-				<div class="section-header">
-					<h1 style="text-align: center; color: white;">FAQ GOES HERE</h1>
+					<div class="section-header">
+						<h1>FAQ</h1>
+					</div>
+
+					<div class="mini-spliter animated-spliter"></div>
+					
+					<div class="content-area has-max">
+						<p>Got questions? We Got Answers</p>
+					</div>
+
 				</div>
+
+
+
+				
 
 		</div>
 	<div class="spacing spacing--md"></div>
