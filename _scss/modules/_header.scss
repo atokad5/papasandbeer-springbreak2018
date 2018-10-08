@@ -24,10 +24,7 @@ header {
 	width: 100%;
 	max-width: 700px;
 	backface-visibility: hidden;
-	h1 {
-		will-change: transform;
-		// backface-visibility: hidden;
-	}
+	padding: 4em 0em;
 }
 
 .sb-logo {
@@ -40,6 +37,7 @@ header {
 	img {
 		width: 100%;
 	}
+
 }
 .dates {
 	margin-bottom: 0.5em;
@@ -64,7 +62,6 @@ header {
 	color: white;
 	text-align: center;
 }
-
 
 .sp-welcome-parent {
 	position: relative;
@@ -98,6 +95,7 @@ header {
 .letter {
 	opacity: 0;
 }
+
 .is-ready {
 
 	.hdr-sleeve {
@@ -114,7 +112,9 @@ header {
 					opacity: 1;
 					transition-delay: 40ms * $i - 1;
 				}
+
 			}
+
 		}
 
 	}
@@ -133,6 +133,7 @@ header {
 			}
 
 		}
+
 	}
 	
 	&.is-destroy {
@@ -162,11 +163,9 @@ header {
 			.hdr-el {
 				
 				&:nth-child(#{$i}) {
-					
 					opacity: 1;
 					transform: translateY(0px);
 					transition-delay: 150ms * $i - 1;
-
 				}
 
 			}
@@ -196,11 +195,5 @@ header {
 	img {
 		opacity: 0;
 		width: 1px;
-	}
-}
-
-@media(min-width: $bp-lg) {
-	.sb-logo {
-		display: block;
 	}
 }

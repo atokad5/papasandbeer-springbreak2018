@@ -1,5 +1,6 @@
 @import 'lib/flickity';
 @import 'lib/mixins';
+@import 'lib/animation';
 @import 'vars';
 @import 'settings';
 @import 'fonts';
@@ -16,3 +17,10 @@
 @import 'modules/nav';
 @import 'modules/mobile-nav';
 @import 'modules/cta';
+@import 'modules/recap-video';
+@import 'modules/image-layout';
+@import 'modules/whosnext';
+@import 'modules/slider';
+@import 'modules/footer';
+@import 'modules/video-modal';
+@import 'modules/faq';

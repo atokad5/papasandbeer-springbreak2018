@@ -1,0 +1,192 @@
+.half-el {
+	width: 90%;
+	margin: auto;
+	
+	&:last-of-type {
+		margin-bottom: 0em;
+	}
+
+}
+
+.image-layout-parent {
+	display: flex;
+}
+
+.is-image-column {
+	width: 50%;
+	
+	&.left-image-column {
+		margin-right: 0%;
+		width: 50%;
+	}
+
+	&.right-image-column {
+		width: 50%;
+		margin-left: 1em;
+	}
+
+}
+
+.image-nest {
+	border-radius: 20px;
+	margin: 0;
+	overflow: hidden;
+
+	img {
+		border-radius: 20px;
+	}
+	
+}
+
+.figure-left-img {
+	position: relative;
+	padding-bottom: (800/425) * 100%;
+	height: 0;
+	background-size: cover;
+	background-position: center;
+	width: auto;
+	overflow: hidden;
+
+	img {
+		position: absolute;
+		top: 0; left: 0;
+		width: 100%; height: 100%;
+	}
+
+}
+
+.is-half-inner {
+	width: 80%;
+}
+
+.figure-right-top-img {
+	@include padding-bottom(550, 455, 'img');
+	top: -1em;
+	margin-top: -1em;
+}
+
+.figure-right-bottom-img {
+	@include padding-bottom(335, 335, 'img');
+}
+
+
+.is-half-inner-column {
+	margin: auto;
+	margin-bottom: 8em;
+}
+
+.image-layout-hdr {
+	padding: 1em 0em;
+}
+
+.is-image-grid-content {
+	max-width: 600px;
+	margin: auto;
+	width: 100%;
+	color: white;
+}
+
+.section-cta {
+	padding: 2em 0em 0em 0em;
+	text-align: center;
+}
+
+
+.hr-splitter {
+	height: 10px;
+	position: relative;
+	width: 0%;
+	z-index: 9;
+	margin: 2em auto;
+	background: linear-gradient(to left,$themePink, $themeOrange);
+
+	&.in-view {
+		transition: width 1200ms ease;
+		width: 80%;
+		transition-delay: 200ms;
+	}
+
+}
+
+
+// image transition css
+
+.image-nest {
+
+	img {
+		transform: translateX(10%);
+		opacity: 0;
+	}
+
+
+	&.in-view {
+		transition: box-shadow 800ms ease;
+		box-shadow: 0px 0px 20px rgba(black, 0.3);
+		transition-delay: 700ms;
+		
+		img {
+			transform: translateX(0%);
+			opacity: 1;
+			transition: transform 1000ms, opacity 1000ms ease;
+		}
+
+	}
+
+}
+
+.is-reveal-sleeve-img-group {
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	height: 50%;
+}
+@media(min-width: $bp-lg ) {
+
+	.flex-row-images {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+	}
+
+	.half-el {
+		margin: 0;
+		width: 50%;
+	}
+
+	.is-half-inner-column {
+		max-width: 50%;
+		width: 50%;
+		margin: 0;
+		margin-bottom: 0em;
+	}
+
+	.is-image-grid-content {
+		padding-top: 3em;
+		max-width: 600px;
+		margin: auto;
+		width: 80%;
+		color: white;
+	}
+
+	.hr-splitter {
+		transform: translateX(-50%);
+		margin: 1.5em 0em;
+	}
+
+	.section-cta {
+		text-align: left;
+
+		&.is-center {
+			text-align: center;
+		}
+	}
+
+}
+
+
+
+@media(min-width: $bp-xl) {
+	.flex-row-images {
+		align-items: start;
+	}
+}

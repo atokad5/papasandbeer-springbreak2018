@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  min-height: 3000px;
 }
 .inner {
   max-width: 1440px;
@@ -27,13 +28,54 @@ body {
 
 }
 
+.has-max-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.has-max {
+  max-width: 800px;
+  margin: auto;
+}
 
 .over-bg {
   position: relative;
   z-index: 5;
 }
 
+.is-white {
+  color: white;
+}
+
 .is-center {
   text-align: center;
   margin: auto;
+}
+
+.mini-spliter {
+  margin: 1.5em auto;
+  height: 8px;
+  background: linear-gradient(to right,$themePink, $themeOrange);
+  width: 0px;
+  transition: width 1200ms ease;
+
+  &.in-view {
+    width: 100px;
+  }
+
+}
+
+.mobile-center {
+  text-align: center;
+}
+.max { max-width: 1800px; margin: auto  ; }
+.clearfix {
+  @include clearfix();
+}
+
+
+@media(min-width: $bp-lg) {
+  .mobile-center {
+    text-align: left;
+  }
 }
