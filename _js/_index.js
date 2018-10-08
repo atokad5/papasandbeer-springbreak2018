@@ -27,3 +27,6 @@ header();
 
 import video from './video.js';
 video();
+
+import faq from './faq.js';
+faq();

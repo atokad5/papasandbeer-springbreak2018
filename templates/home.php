@@ -14,8 +14,12 @@
 			<div class="section-header hdr-el">
 				<h1><?php the_field('hero_headline') ?></h1>
 			</div>
-			<p class="hdr-el"><?php the_field('hero_copy'); ?></p>
-			<a href="<?php the_field('view_packages_link', 'options'); ?>" class="cta"><?php the_field('view_packages_text', 'options'); ?></a>
+			<div class="hdr-el">
+				<p class="hdr-el"><?php the_field('hero_copy'); ?></p>
+			</div>
+			<div class="hdr-el">
+				<a href="<?php the_field('view_packages_link', 'options'); ?>" class="cta hdr-cta"><?php the_field('view_packages_text', 'options'); ?></a>
+			</div>
 		</div>		
 	</div>
 	<div class="is-transition-bg"></div>

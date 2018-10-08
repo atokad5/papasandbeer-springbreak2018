@@ -128,6 +128,10 @@ var _video = __webpack_require__(10);
 
 var _video2 = _interopRequireDefault(_video);
 
+var _faq = __webpack_require__(11);
+
+var _faq2 = _interopRequireDefault(_faq);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _build2.default)();
@@ -147,6 +151,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _header2.default)();
 
 (0, _video2.default)();
+
+(0, _faq2.default)();
 
 /***/ }),
 /* 2 */
@@ -626,6 +632,48 @@ exports.default = function () {
   };
 
   $videoParent.on('click', toggleVideo);
+};
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  var $question = $('.question');
+  var $faqCard = $('.faq-card__subject');
+  var $number = 150;
+
+  var slideAnswer = function slideAnswer(e) {
+    var $t = $(e.currentTarget);
+    if ($t.hasClass('is-active')) return;
+
+    $question.removeClass('is-active');
+    $question.next('.answer').slideUp($number);
+    $t.addClass('is-active');
+    $t.next('.answer').slideDown($number);
+  };
+
+  var grabFaq = function grabFaq(e) {
+    console.log('suh');
+    var $card = $(e.currentTarget);
+    if ($card.hasClass('is-active')) return;
+
+    $faqCard.removeClass('is-active');
+    $faqCard.siblings('.faq-card__faq-panel').slideUp();
+
+    $card.addClass('is-active');
+    $card.siblings('.faq-card__faq-panel').slideDown();
+  };
+
+  $question.on('click', slideAnswer);
+  $faqCard.on('click', grabFaq);
 };
 
 /***/ })

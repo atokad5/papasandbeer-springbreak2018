@@ -73,6 +73,7 @@ body {
   @include clearfix();
 }
 
+
 @media(min-width: $bp-lg) {
   .mobile-center {
     text-align: left;

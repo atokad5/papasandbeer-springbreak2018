@@ -1,0 +1,22 @@
+.faq-card {
+  color: white;
+
+  &__element {
+    margin-bottom: 1.5em;
+    border: 1px solid white;
+  }
+
+  &__faq-panel {
+    display: none;
+  }
+
+}
+
+.question, .answer {
+  padding: 0em 1em;
+  cursor: pointer;
+}
+
+.answer {
+  display: none;
+}
