@@ -1,11 +1,10 @@
 export default function() {
   let $question = $('.question');
+  let $faqCard = $('.faq-card__subject');
   let $number = 150;
 
   let slideAnswer = e => {
     let $t = $(e.currentTarget);
-
-    // don't execute if already triggered
     if($t.hasClass('is-active')) return;
 
     $question.removeClass('is-active');
@@ -14,5 +13,21 @@ export default function() {
     $t.next('.answer').slideDown($number);
   }
 
-  $question.on('click', slideAnswer)
+  let grabFaq = e => {
+    console.log('suh')
+    let $card = $(e.currentTarget);
+    if($card.hasClass('is-active')) return;
+
+    $faqCard.removeClass('is-active');
+    $faqCard.siblings('.faq-card__faq-panel').slideUp();
+  
+    $card.addClass('is-active');
+    $card.siblings('.faq-card__faq-panel').slideDown();
+
+
+  }
+
+
+  $question.on('click', slideAnswer);
+  $faqCard.on('click', grabFaq)
 }

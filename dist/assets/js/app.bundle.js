@@ -647,12 +647,11 @@ Object.defineProperty(exports, "__esModule", {
 
 exports.default = function () {
   var $question = $('.question');
+  var $faqCard = $('.faq-card__subject');
   var $number = 150;
 
   var slideAnswer = function slideAnswer(e) {
     var $t = $(e.currentTarget);
-
-    // don't execute if already triggered
     if ($t.hasClass('is-active')) return;
 
     $question.removeClass('is-active');
@@ -661,7 +660,20 @@ exports.default = function () {
     $t.next('.answer').slideDown($number);
   };
 
+  var grabFaq = function grabFaq(e) {
+    console.log('suh');
+    var $card = $(e.currentTarget);
+    if ($card.hasClass('is-active')) return;
+
+    $faqCard.removeClass('is-active');
+    $faqCard.siblings('.faq-card__faq-panel').slideUp();
+
+    $card.addClass('is-active');
+    $card.siblings('.faq-card__faq-panel').slideDown();
+  };
+
   $question.on('click', slideAnswer);
+  $faqCard.on('click', grabFaq);
 };
 
 /***/ })
