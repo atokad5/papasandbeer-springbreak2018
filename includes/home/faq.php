@@ -31,7 +31,7 @@
 							<div class="faq-card__faq-panel">
 								<div class="faq-card__faq-panel--inner">
 									<div class="question">Question</div>
-									<div class="answer">Answer</div>
+									<div class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, maxime illo iusto quo odio corporis perferendis aspernatur debitis, error voluptas laborum obcaecati nulla fugit et incidunt soluta velit non fuga!</div>
 								</div>
 							</div>
 						<?php endfor; ?>

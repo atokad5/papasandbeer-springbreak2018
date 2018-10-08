@@ -19,10 +19,10 @@ export default function() {
     if($card.hasClass('is-active')) return;
 
     $faqCard.removeClass('is-active');
-    $faqCard.siblings('.faq-card__faq-panel').slideUp();
+    $faqCard.siblings('.faq-card__faq-panel').slideUp($number);
   
     $card.addClass('is-active');
-    $card.siblings('.faq-card__faq-panel').slideDown();
+    $card.siblings('.faq-card__faq-panel').slideDown($number);
 
 
   }

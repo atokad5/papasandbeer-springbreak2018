@@ -4,16 +4,25 @@
   &__element {
     margin-bottom: 1.5em;
     border: 1px solid white;
+    padding: 1em;
   }
 
   &__faq-panel {
     display: none;
   }
 
+  &__subject {
+    padding-bottom: 0.5em;
+
+    h1 {
+      margin-bottom: 0.4em;
+    }
+    
+  }
+
 }
 
-.question, .answer {
-  padding: 0em 1em;
+.question {
   cursor: pointer;
 }
 
