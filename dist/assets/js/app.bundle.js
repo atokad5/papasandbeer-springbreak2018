@@ -646,7 +646,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 exports.default = function () {
-  var $question = $('.question');
+  var $question = $('.faq-card__faq-panel');
   var $faqCard = $('.faq-card__subject');
   var $number = 150;
 
@@ -655,9 +655,9 @@ exports.default = function () {
     if ($t.hasClass('is-active')) return;
 
     $question.removeClass('is-active');
-    $question.next('.answer').slideUp($number);
+    $question.find('.answer').slideUp($number);
     $t.addClass('is-active');
-    $t.next('.answer').slideDown($number);
+    $t.find('.answer').slideDown($number);
   };
 
   var grabFaq = function grabFaq(e) {
