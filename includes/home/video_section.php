@@ -1,7 +1,7 @@
 <?php $root = get_template_directory_uri(); ?>
 
-<section class="is-orange">
-	<div class="stroke-section stroke-section-orange" style="background-image: url(<?php echo "$root/_assets/images/stroke-orange.png"; ?>);">
+<section class="is-blue" style="position: relative;">
+	<div class="stroke-section stroke-section-orange is-rotated" style="background-image: url(<?php echo "$root/_assets/images/stroke-orange.png"; ?>);">
 		
 	</div>
 	<div class="spacing spacing--md"></div>

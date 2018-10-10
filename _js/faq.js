@@ -1,5 +1,5 @@
 export default function() {
-  let $question = $('.question');
+  let $question = $('.faq-card__faq-panel');
   let $faqCard = $('.faq-card__subject');
   let $number = 150;
 
@@ -8,9 +8,9 @@ export default function() {
     if($t.hasClass('is-active')) return;
 
     $question.removeClass('is-active');
-    $question.next('.answer').slideUp($number);
+    $question.find('.answer').slideUp($number);
     $t.addClass('is-active');
-    $t.next('.answer').slideDown($number);
+    $t.find('.answer').slideDown($number);
   }
 
   let grabFaq = e => {
@@ -19,10 +19,10 @@ export default function() {
     if($card.hasClass('is-active')) return;
 
     $faqCard.removeClass('is-active');
-    $faqCard.siblings('.faq-card__faq-panel').slideUp();
+    $faqCard.siblings('.faq-card__faq-panel').slideUp($number);
   
     $card.addClass('is-active');
-    $card.siblings('.faq-card__faq-panel').slideDown();
+    $card.siblings('.faq-card__faq-panel').slideDown($number);
 
 
   }

@@ -23,15 +23,19 @@
 
 					<div class="faq-card__element">
 						<div class="faq-card__subject">
-							<h1>Category Name</h1>
-							<h4>Sub Title</h2>
+							<h1>Category for a FAQ</h1>
+							<h3>Sub Title</h3>
+							
+							<div class="indicator">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19"><g transform="translate(-8.5 -8)"><rect style="fill:#ea5859;" width="4" height="19" transform="translate(16 8)"/><rect style="fill:#ea5859;" width="4" height="19" transform="translate(27.5 15.5) rotate(90)"/></g></svg>
+							</div>
 						</div>
 
 						<?php for($fc = 0; $fc < 5; $fc++): ?>
 							<div class="faq-card__faq-panel">
 								<div class="faq-card__faq-panel--inner">
 									<div class="question">Question</div>
-									<div class="answer">Answer</div>
+									<div class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, maxime illo iusto quo odio corporis perferendis aspernatur debitis, error voluptas laborum obcaecati nulla fugit et incidunt soluta velit non fuga!</div>
 								</div>
 							</div>
 						<?php endfor; ?>

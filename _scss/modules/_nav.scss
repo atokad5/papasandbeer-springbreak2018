@@ -74,6 +74,22 @@ nav {
 	.dk-nav {
 		display: block;
 	}
+
+	.social-links__dk-menu {
+		// width: 40%;
+		text-align: center;
+		background: red;
+		justify-content: center;
+		ul {
+			display: flex;
+			list-style-type: none;
+			justify-content: center;
+		}
+
+		li {
+			margin: 0em 0.4em;
+		}
+	}
 	.nav-flex {
 		display: flex;
 		align-items: center;
@@ -84,7 +100,7 @@ nav {
 	}
 
 	.is-menu-dk {
-		text-align: center;
+		text-align: right;
 		width: 50%;
 
 		ul {
