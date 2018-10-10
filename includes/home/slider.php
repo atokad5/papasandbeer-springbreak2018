@@ -1,10 +1,7 @@
 <?php $root = get_template_directory_uri(); ?>
-<section id="slider" class="is-blue">
-	<div class="stroke-section stroke-section-orange is-rotated" style="background-image: url(<?php echo "$root/_assets/images/stroke-white.png"; ?>);"></div>
-	<div class="spacing spacing--md"></div>
-	<div class="spacing spacing--md"></div>
-	<div class="spacing spacing--md"></div>
-	<div class="spacing spacing--md"></div>
+<section id="slider" class="is-orange">
+<div class="spacing spacing--md"></div>
+	<div class="stroke-section stroke-section-orange" style="background-image: url(<?php echo "$root/_assets/images/stroke-orange.png"; ?>);"></div>
 	<div class="max clearfix flex-slide">
 
 
@@ -60,4 +57,7 @@
 			<?php endforeach; ?>
 		</div>
 	</div>
+
+	<div class="spacing spacing--md"></div>
+	<div class="spacing spacing--md"></div>
 </section>

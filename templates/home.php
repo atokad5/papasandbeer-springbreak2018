@@ -27,11 +27,12 @@
 </header>
 
 
+<?php get_template_part('includes/home/slider'); ?>
 
 <?php get_template_part('includes/home/video_section'); ?>
 
 
-<section class="is-orange">
+<section class="is-blue">
 		
 		<div class="max clearfix flex-row-images">
 			<div class="half-el inner clearfix is-half-inner-column">
@@ -80,10 +81,7 @@
 
 
 <?php get_template_part('includes/home/whos-next'); ?>
-
-
-<?php get_template_part('includes/home/slider'); ;?>
-<?php get_template_part('includes/home/tickets-selling') ?>
+<?php get_template_part('includes/home/tickets-selling'); ?>
 <?php get_template_part('includes/home/faq'); ?>
 
 

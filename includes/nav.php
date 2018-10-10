@@ -16,15 +16,15 @@
 			
 		</div>
 
+		<div class="is-nav-el">
+			
+		</div>
+
+
 		<div class="is-nav-el is-menu-dk">
 			<div class="dk-nav">
 				<?php get_template_part('includes/nav-li'); ?>
 			</div>
-		</div>
-
-
-		<div class="is-nav-el">
-
 		</div>
 
 
