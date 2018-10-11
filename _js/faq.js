@@ -5,7 +5,11 @@ export default function() {
 
   let slideAnswer = e => {
     let $t = $(e.currentTarget);
-    if($t.hasClass('is-active')) return;
+    if($t.hasClass('is-active')) {
+      $question.find('.answer').slideUp($number);
+      $question.removeClass('is-active');
+      return;
+    };
 
     $question.removeClass('is-active');
     $question.find('.answer').slideUp($number);
@@ -14,9 +18,12 @@ export default function() {
   }
 
   let grabFaq = e => {
-    console.log('suh')
     let $card = $(e.currentTarget);
-    if($card.hasClass('is-active')) return;
+    if($card.hasClass('is-active')) {
+      $card.siblings('.faq-card__faq-panel').slideUp($number);
+      $card.removeClass('is-active');
+      return;
+    };
 
     $faqCard.removeClass('is-active');
     $faqCard.siblings('.faq-card__faq-panel').slideUp($number);
