@@ -61,9 +61,6 @@ export default function() {
       $svgRotate.css({
         'transform': 'rotate('+ $windowOffset/15 +'deg)'
       })
-      $recapCard.css({
-        'transform': 'translateY(-' + $windowOffset/15 +'%)'
-      })
     }
 
     

@@ -25,8 +25,8 @@
 
 		<div class="toggle-element">
 			<ul>
-				<li class="lineup-year active"><span>2018 LINEUP</span></li>
-				<li class="lineup-year"><span>2019 LINEUP</span></li>
+				<li class="lineup-year active"><span>2019 LINEUP</span></li>
+				<li class="lineup-year"><span>2018 LINEUP</span></li>
 			</ul>
 		</div>
 		

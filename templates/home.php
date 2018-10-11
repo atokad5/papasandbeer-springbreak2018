@@ -32,8 +32,10 @@
 <?php get_template_part('includes/home/video_section'); ?>
 
 
-<section class="is-blue">
-		
+<section class="is-blue" style="position: relative;">
+<div class="stroke-section stroke-section-orange is-rotated is-low" style="background-image: url(<?php echo "$root/_assets/images/stroke-orange.png"; ?>);"></div>
+<div class="spacing spacing--md"></div>
+		<div class="spacing spacing--md"></div>
 		<div class="max clearfix flex-row-images">
 			<div class="half-el inner clearfix is-half-inner-column">
 				<div class="is-image-grid-content">
