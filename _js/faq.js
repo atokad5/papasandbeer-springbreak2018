@@ -22,15 +22,16 @@ export default function() {
     if($card.hasClass('is-active')) {
       $card.siblings('.faq-card__faq-panel').slideUp($number);
       $card.removeClass('is-active');
+      $card.parents('.faq-card__element').removeClass('is-active');
       return;
     };
 
     $faqCard.removeClass('is-active');
     $faqCard.siblings('.faq-card__faq-panel').slideUp($number);
-  
+    $faqCard.parents('.faq-card__element').removeClass('is-active');
     $card.addClass('is-active');
     $card.siblings('.faq-card__faq-panel').slideDown($number);
-
+    $card.parents('.faq-card__element').addClass('is-active');
 
   }
 

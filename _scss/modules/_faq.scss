@@ -5,8 +5,13 @@
     margin-bottom: 1.5em;
     border: 2px solid white;
     border-radius: 10px;
-    
+  
+    &.is-active {
+      border: 3px solid $themeOrange;
+    }
   }
+
+
 
   &__faq-panel {
     display: none;
@@ -89,4 +94,27 @@
   .indicator svg {
     transform: rotate(45deg);
   }
+}
+
+.faq-card__faq-panel.is-active {
+  background-color: darken($themeBlue, 10%);
+
+  .question {
+    color: white;
+    font-family: california;
+    font-size: 1.4em !important;
+  }
+  
+}
+
+.faq-card__subject {
+
+  .cat-type {
+    font-family: california;
+    margin: 0;
+    line-height: 1.4;
+    font-size: 2em;
+    padding-bottom: 0.4em;
+  }
+
 }

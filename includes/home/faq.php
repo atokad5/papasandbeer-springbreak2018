@@ -6,7 +6,7 @@
 				<div class="content-area is-white is-center">
 
 					<div class="section-header">
-						<h1>faq's</h1>
+						faq's
 					</div>
 
 					<div class="mini-spliter animated-spliter"></div>
@@ -23,7 +23,7 @@
 
 					<div class="faq-card__element">
 						<div class="faq-card__subject">
-							<h1>Category for a FAQ</h1>
+							<p class="cat-type">Category for a FAQ</p>
 							<h3>Sub Title</h3>
 							
 							<div class="indicator">

@@ -23,7 +23,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<script src="<?php echo "$root/dist/assets/js/app.bundle.js?g=frg"; ?>"></script>
+<script src="<?php echo "$root/dist/assets/js/app.bundle.js?ywrg=ewrytreg"; ?>"></script>
 <?php  wp_footer();  ?>
 </body>
 </html>
