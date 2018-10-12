@@ -12,7 +12,7 @@
 					</div>
 					<div class="section-header image-layout-hdr">
 						<div class="content-area mobile-center">
-							<h1><?php the_field('slider_headline'); ?></h1>
+							<?php the_field('slider_headline'); ?>
 						</div>
 					</div>
 

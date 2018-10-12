@@ -12,7 +12,7 @@
 		<div class="hdr-container pre-built">
 			<h2 class="dates hdr-el"><?php the_field('dates'); ?></h2>
 			<div class="section-header hdr-el">
-				<h1><?php the_field('hero_headline') ?></h1>
+				<?php the_field('hero_headline') ?>
 			</div>
 			<div class="hdr-el">
 				<p class="hdr-el"><?php the_field('hero_copy'); ?></p>
@@ -44,7 +44,7 @@
 					</div>
 					<div class="section-header is-center image-layout-hdr">
 						<div class="content-area">
-							<h1><?php the_field('image_grid_header'); ?></h1>
+							<?php the_field('image_grid_header'); ?>
 						</div>
 					</div>
 

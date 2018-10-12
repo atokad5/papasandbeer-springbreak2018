@@ -13,7 +13,7 @@
 				<h2 class="dates sm-hdr"><?php the_field('tickets_subtitle'); ?></h2>
 			</div>
 			<div class="section-header hdr-el content-area">
-				<h1><?php the_field('tickets_headline'); ?></h1>
+				<?php the_field('tickets_headline'); ?>
 			</div>
 			<div class="mini-spliter animated-spliter"></div>
 			<div class="content-area has-max">
