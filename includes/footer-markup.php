@@ -11,6 +11,15 @@
 	</div>
 		<div class="inner footer-grid">
 
+			<div class="footer-column mobileOnly">
+
+				<div class="footer-row come_to_life">
+					<div class="mini-spliter animated-spliter" id="ontopHd"></div>
+					<h2>WHEN THE SUN SETS, OUR BEACHFRONT CLUB LIGHTS UP AND COMES TO LIFE.</h2>
+				</div>
+					
+			</div>
+
 
 				<div class="footer-column is-large">
 					<h3 class="footer-section-title">Get In Touch</h3>
@@ -19,8 +28,10 @@
 					<p>ROSARITO, BC, MEXICO<BR>(619)799-9491</p>
 					<p class="contact-us-footer"><a href="">CONTACT US</a></p>
 					<?php get_template_part('includes/social-links') ?>
-					<p>&copy; 2019 PAPAS AND BEER SPRING BREAK FEST ALL RIGHTS RESERVED</p>
-					<p><a href="">TERMS & CONDITIONS</a> <span> | </span> <a href="">PRIVACY POLICY</a></p>
+					<div class="mobile__footer-content">
+						<p>&copy; 2019 PAPAS AND BEER SPRING BREAK FEST ALL RIGHTS RESERVED</p>
+						<p><a href="">TERMS & CONDITIONS</a> <span> | </span> <a href="">PRIVACY POLICY</a></p>
+					</div>
 				</div>
 
 
@@ -83,7 +94,13 @@
 						</ul>
 					</div>
 
-					<div class="footer-row come_to_life">
+					<div class="footer-row mobileOnly">
+						<p>&copy; 2019 PAPAS AND BEER SPRING BREAK FEST ALL RIGHTS RESERVED</p>
+						<p><a href="">TERMS & CONDITIONS</a> <span> | </span> <a href="">PRIVACY POLICY</a></p>
+
+					</div>
+
+					<div class="footer-row come_to_life mobile__footer-content">
 						<div class="mini-spliter animated-spliter" id="ontopHd"></div>
 						<h2>WHEN THE SUN SETS, OUR BEACHFRONT CLUB LIGHTS UP AND COMES TO LIFE.</h2>
 					</div>
