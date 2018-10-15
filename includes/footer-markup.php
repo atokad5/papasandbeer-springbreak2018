@@ -35,9 +35,9 @@
 				</div>
 
 
-				<div class="footer-column is-small">
+				<div class="footer-column is-small clearfix">
 
-					<div class="footer-row">
+					<div class="footer-row half_small">
 						<h3 class="footer-section-title">EXPERIENCE</h3>
 						<div class="mini-spliter animated-spliter"></div>
 						<ul>
@@ -46,7 +46,7 @@
 						</ul>
 					</div>
 
-					<div class="footer-row">
+					<div class="footer-row half_small">
 						<h3 class="footer-section-title">TRAVEL</h3>
 						<div class="mini-spliter animated-spliter"></div>
 						<ul>
@@ -61,9 +61,9 @@
 
 
 
-				<div class="footer-column is-small">
+				<div class="footer-column is-small clearfix">
 
-					<div class="footer-row">
+					<div class="footer-row half_small">
 						<h3 class="footer-section-title">PACKAGES</h3>
 						<div class="mini-spliter animated-spliter"></div>
 						<ul>
@@ -72,7 +72,7 @@
 						</ul>
 					</div>
 
-					<div class="footer-row">
+					<div class="footer-row half_small">
 						<h3 class="footer-section-title">INFO</h3>
 						<div class="mini-spliter animated-spliter"></div>
 						<ul>
