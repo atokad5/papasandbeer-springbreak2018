@@ -34,11 +34,22 @@
         </div>
 
         <div class="slider_area_mt">
-          <div class="slide-item_mt">1</div>
-          <div class="slide-item_mt">2</div>
-          <div class="slide-item_mt">3</div>
-          <div class="slide-item_mt">4</div>
-          <div class="slide-item_mt">5</div>
+          <?php for($d = 0; $d < 6; $d++) : ?>
+          <div class="slide-item_mt">
+            <div class="img-el_mt" style="background-image: url(http://www.papasandbeer.com/rosarito-spring-break/wp-content/uploads/2018/01/industrial-stage.jpg);">
+            </div>
+
+            <div class="content-area_slider_mt">
+              <div class="section-header">
+                Card Title
+              </div>
+              <div class="content-area">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ullam ad dolorem nesciunt quisquam deleniti accusantium enim quam vitae. Ipsa, ut eum libero asperiores magni fugit maiores sed nisi quae.</p>
+              </div>
+            </div>
+          </div>
+
+          <?php endfor; ?>
         
         </div>
       </div>
@@ -47,7 +58,7 @@
   </section>
 <?php } ?>
 
-<section class="spaceoff-footer">
+<section class="spaceoff-footer is-blue">
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>

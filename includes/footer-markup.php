@@ -6,7 +6,7 @@
 
 	<div id="venue-parent">
 		<figure id="venue-image">
-			<img src="<?php echo "$root/_assets/images/footer-image.png" ; ?>" alt="">
+			<img class="lazy-image" data-lazy="<?php echo "$root/_assets/images/footer-image.jpg" ; ?>" src="" alt="">
 		</figure>
 	</div>
 		<div class="inner footer-grid">

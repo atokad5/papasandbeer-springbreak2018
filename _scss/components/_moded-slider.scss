@@ -1,7 +1,37 @@
 .slide-item_mt {
-  height: 400px;
   width: 35%;
+  min-width: 450px;
   background: $themePink;
-  margin-right: 1.5em;
+  margin: 0em 1em;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0px 10px 50px rgba(black, 0.2);
 
+  &:nth-child(2n) {
+    top: -3em;
+  }
+
+}
+
+.slider_area_mt {
+  margin: auto;
+
+  .flickity-viewport {
+    padding: 4em 0em;
+  }
+  
+}
+
+.img-el_mt {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+.content-area_slider_mt {
+  padding: 2em 1em;
+
+  .section-header {
+    font-size: 2em;
+  }
 }

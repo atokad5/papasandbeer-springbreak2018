@@ -552,7 +552,11 @@ exports.default = function () {
 	};
 
 	if ($slideMt) {
-		$slideMt.flickity();
+		$slideMt.flickity({
+			pageDots: false,
+			cellAlign: 'left',
+			wrapAround: true
+		});
 	}
 
 	$sliderBtn.on('click', slideSlider);
