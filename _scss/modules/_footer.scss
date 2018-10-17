@@ -100,7 +100,7 @@ footer {
 	@include padding-bottom(556, 1800, 'img');
 
 	img {
-		transform: translateY(-20%);
+		transform: translateY(-50%);
 	}
 }
 
@@ -159,6 +159,7 @@ footer {
 
 	.footer-grid {
 		display: flex;
+		margin-top: -6em;
 	}
 
 	.footer-column {
@@ -183,5 +184,16 @@ footer {
 		.social-links-ul {
 			justify-content: start;
 		}
+	}
+}
+
+.dkSpacing {
+	display: none;
+}
+
+
+@media(min-width: $bp-md) {
+	.dkSpacing {
+		display: block;
 	}
 }

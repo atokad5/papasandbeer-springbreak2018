@@ -18,22 +18,25 @@
     </div>  
   </div>
   <div class="spacing spacing--md"></div>
-  <div class="spacing spacing--md"></div>
 </section>
 
 <?php for($i = 0; $i < 3; $i++) { ?>
   <section class="added_section is-blue">
-    <div class="inner inner-inner">
-      <div class="add_section__header is-white">
-        <div class="section-header">
-          Section Title Goes Here
-        </div>
-        <div class="content-area">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore iusto, vero asperiores ullam debitis quo exercitationem facilis perspiciatis incidunt enim fuga cupiditate? Eaque libero impedit mollitia eius vitae beatae veniam?</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore iusto, vero asperiores ullam debitis quo exercitationem facilis perspiciatis incidunt enim fuga cupiditate? Eaque libero impedit mollitia eius vitae beatae veniam?</p>
+    <div class="max">
+      <div class="add_section__header is-white flex">
+
+        <div class="mt_content_group flex_el">
+          <div class="section-header">
+            Section Title Goes Here
+          </div>
+          
+          <div class="content-area">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore iusto, vero asperiores ullam debitis quo exercitationem facilis perspiciatis incidunt enim fuga cupiditate? Eaque libero impedit mollitia eius vitae beatae veniam?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore iusto, vero asperiores ullam debitis quo exercitationem facilis perspiciatis incidunt enim fuga cupiditate? Eaque libero impedit mollitia eius vitae beatae veniam?</p>
+          </div>
         </div>
 
-        <div class="slider_area_mt">
+        <div class="slider_area_mt flex_el" >
           <?php for($d = 0; $d < 6; $d++) : ?>
           <div class="slide-item_mt">
             <div class="img-el_mt" style="background-image: url(http://www.papasandbeer.com/rosarito-spring-break/wp-content/uploads/2018/01/industrial-stage.jpg);">
