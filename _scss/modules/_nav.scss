@@ -132,3 +132,11 @@ nav {
 	}
 
 }
+
+.page-template-moded-template {
+	nav a {
+		&:hover {
+			color: $themePink;
+		}
+	}
+}

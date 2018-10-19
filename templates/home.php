@@ -78,6 +78,7 @@
 		</div>
 		<div class="spacing spacing--md"></div>
 		<div class="spacing spacing--md"></div>
+		<div class="spacing spacing--md"></div>
 		<div class="spacing spacing--sm"></div>
 </section>
 
@@ -87,6 +88,10 @@
 <?php get_template_part('includes/home/faq'); ?>
 
 
-
+		<section class="is-blue dkSpacing">
+			<div class="spacing spacing--md"></div>
+			<div class="spacing spacing--md"></div>
+			<div class="spacing spacing--md"></div>
+		</section>
 
 <?php get_footer(); ?>

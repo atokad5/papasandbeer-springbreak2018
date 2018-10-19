@@ -1,7 +1,7 @@
 export default function() {
 	let $sliderParent = $('.slider_parent');
 	let $sliderBtn = $('.slider_btn');
-
+	let $slideMt = $('.slider_area_mt');
 
 	$sliderParent.flickity({
 		cellAlign: 'left',
@@ -18,6 +18,14 @@ export default function() {
 		} else {
 			$sliderParent.flickity('previous')
 		}
+	}
+
+	if($slideMt) {
+		$slideMt.flickity({
+			pageDots: false,
+			cellAlign: 'left',
+			wrapAround: true
+		});
 	}
 
 	$sliderBtn.on('click', slideSlider);
