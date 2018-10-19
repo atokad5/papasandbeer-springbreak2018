@@ -5,7 +5,9 @@
 		<div class="is-nav-el logo-el">
 			
 			<figure class="sb-logo-mini">
-				<img src="<?php echo "$root/_assets/images/sb-logo.png"; ?>" alt="">
+				<a href="<?php echo site_url('/');?>">
+					<img src="<?php echo "$root/_assets/images/sb-logo.png"; ?>" alt="">
+				</a>
 			</figure>
 
 			<button class="mt-trigger">

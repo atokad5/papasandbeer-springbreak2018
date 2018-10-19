@@ -11,55 +11,66 @@
     <div class="inner-contents__mt">
       <div class="content-area">
         <div class="section-header">
-          This Is The Page Title
+          <?php the_field('page_title'); ?>
         </div>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero labore id at hic quidem temporibus rerum perferendis reprehenderit maiores ipsum!</p>
+        <?php the_field('page_message'); ?>
       </div>
     </div>  
   </div>
   <div class="spacing spacing--md"></div>
 </section>
 
-<?php for($i = 0; $i < 3; $i++) { ?>
+<div class="group-section">
+<?php 
+  $parentLoop = get_field('page_section');
+
+foreach($parentLoop as $theLoop) { ?>
   <section class="added_section is-blue">
-    <div class="max">
+    <div class="inner">
       <div class="add_section__header is-white flex">
 
         <div class="mt_content_group flex_el">
           <div class="section-header">
-            Section Title Goes Here
+            <?php echo $theLoop['section_title']; ?>
           </div>
           
           <div class="content-area">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore iusto, vero asperiores ullam debitis quo exercitationem facilis perspiciatis incidunt enim fuga cupiditate? Eaque libero impedit mollitia eius vitae beatae veniam?</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore iusto, vero asperiores ullam debitis quo exercitationem facilis perspiciatis incidunt enim fuga cupiditate? Eaque libero impedit mollitia eius vitae beatae veniam?</p>
+            <?php echo $theLoop['section_content']; ?>
           </div>
         </div>
 
         <div class="slider_area_mt flex_el" >
-          <?php for($d = 0; $d < 6; $d++) : ?>
-          <div class="slide-item_mt">
-            <div class="img-el_mt" style="background-image: url(http://www.papasandbeer.com/rosarito-spring-break/wp-content/uploads/2018/01/industrial-stage.jpg);">
-            </div>
+          
+          <?php foreach($theLoop['section_card_image'] as $theImage) { ?>
+          
+          <div class="slider-el has-max">
+					<!-- <a href=""> -->
+						<figure class="slider--image" style="background-image: url(<?php echo $theImage['url']; ?>);">
+							<!-- <img src="<?php echo $theSlide['link']; ?>" alt=""> -->
+							<figcaption class="slide-txt">
+								<div class="contents-inner-slider">
+									<h4><?php echo $theImage['title']; ?></h4>
+									<?php echo $theImage['caption']; ?>
+								</div>
+								<div class="gradient-hr"></div>
+							</figcaption>
+						</figure>
+					<!-- </a> -->
+				</div>
 
-            <div class="content-area_slider_mt">
-              <div class="section-header">
-                Card Title
-              </div>
-              <div class="content-area">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ullam ad dolorem nesciunt quisquam deleniti accusantium enim quam vitae. Ipsa, ut eum libero asperiores magni fugit maiores sed nisi quae.</p>
-              </div>
-            </div>
-          </div>
-
-          <?php endfor; ?>
+          <?php } ?>
         
         </div>
       </div>
     </div>
     <div class="spacing spacing--md"></div>
+
+    <div class="hr-parent-sp">
+      <div class="hr-splitter-ab"></div>
+    </div>
   </section>
 <?php } ?>
+</div>
 
 <section class="spaceoff-footer is-blue">
   <div class="spacing spacing--md"></div>
