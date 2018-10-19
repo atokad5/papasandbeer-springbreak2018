@@ -39,7 +39,7 @@ foreach($parentLoop as $theLoop) { ?>
           </div>
         </div>
 
-        <div class="slider_area_mt flex_el" >
+        <div class="slider_area_mt flex_el slidey">
           
           <?php foreach($theLoop['section_card_image'] as $theImage) { ?>
           

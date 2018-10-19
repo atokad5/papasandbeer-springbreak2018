@@ -2,6 +2,7 @@ export default function() {
 	let $sliderParent = $('.slider_parent');
 	let $sliderBtn = $('.slider_btn');
 	let $slideMt = $('.slider_area_mt');
+	let $sidery = $('.slidey');
 
 	$sliderParent.flickity({
 		cellAlign: 'left',
@@ -27,6 +28,17 @@ export default function() {
 			wrapAround: true
 		});
 	}
+
+	if($sidery) {
+		$sidery.each(function(event,index) {
+			$(this).on('change.flickity', function(){
+				console.log($(index).index())
+			})
+			
+		})
+	}
+
+
 
 	$sliderBtn.on('click', slideSlider);
 }
