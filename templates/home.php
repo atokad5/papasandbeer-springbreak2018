@@ -10,7 +10,7 @@
 <header>
 	<div class="inner hdr-inner over-bg">
 		<div class="hdr-container pre-built">
-			<h2 class="dates hdr-el"><?php the_field('dates'); ?></h2>
+			<h2 class="dates hdr-el" id="top-content"><?php the_field('dates'); ?></h2>
 			<div class="section-header hdr-el">
 				<?php the_field('hero_headline') ?>
 			</div>

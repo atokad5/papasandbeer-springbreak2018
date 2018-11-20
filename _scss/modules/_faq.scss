@@ -8,6 +8,22 @@
   
     &.is-active {
       border: 3px solid $themeOrange;
+      background: white;
+      color: $themeBlue;
+
+      .question {
+        color: $themeBlue;
+      }
+
+      .faq-card__subject {
+        background: white;
+        color: $themeBlue;
+      }
+
+      .faq-card__faq-panel {
+        background: white;
+        color: $themeBlue;
+      }
     }
   }
 
@@ -61,7 +77,6 @@
   &.is-active {
     color: $themePink;
     font-weight: bolder;
-    color: white;
   }
 
   &:hover {
@@ -101,7 +116,7 @@
   background-color: darken($themeBlue, 10%);
 
   .question {
-    color: white;
+    
     font-size: 1.4em !important;
   }
   

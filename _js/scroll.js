@@ -13,12 +13,14 @@ export default function() {
     let $sectionCta = $('.section-cta');
     let $hr = $('.hr-splitter');
     let $miniSplitter = $('.mini-spliter');
+    let $topContent = $("#top-content");
 
 
     // content area 
 
 
 
+    
 
     $.fn.inView = function(){
       var win = $(window);
@@ -66,6 +68,13 @@ export default function() {
     
     let scrollTicker = () => {
       if(didScroll) {
+        if($('body').hasClass('page-template-home')) {
+          if($windowOffset >= $topContent.offset().top - ($('nav').outerHeight() + 80)) {
+            $('nav').addClass('is-scrolled')
+          } else {
+            $('nav').removeClass('is-scrolled');
+          }
+        }
         
         // home page
         recapElements();

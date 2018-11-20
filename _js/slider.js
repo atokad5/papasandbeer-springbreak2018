@@ -1,8 +1,9 @@
 export default function() {
 	let $sliderParent = $('.slider_parent');
-	let $sliderBtn = $('.slider_btn');
+	let $sliderBtn = $('.slideTr');
 	let $slideMt = $('.slider_area_mt');
 	let $sidery = $('.slidey');
+	let $newB = $('.is-btn');
 
 	$sliderParent.flickity({
 		cellAlign: 'left',
@@ -12,12 +13,44 @@ export default function() {
 	});
 
 
+	$(window).on('load', function() {
+		$slideMt.each(function() {
+			let $t = $(this);
+			let $newBox = $t.find('.arrow-box');
+			let $btns = $t.find('.flickity-button');
+			
+			console.log($newBox)
+			$btns.detach();
+			setTimeout(function() {
+				$newBox.append($btns)
+			})
+				// $btns.each(function() {
+				// let $b = $(this);
+				// console.log($b)
+				// $newBox.append($b)
+
+				// })
+
+		
+		})
+	})
+
 	let slideSlider = e => {
 		let $btn = $(e.currentTarget);
 		if($btn.hasClass('next')) {
 			$sliderParent.flickity('next');
 		} else {
 			$sliderParent.flickity('previous')
+		}
+	}
+
+	let changeSlide = e => {
+		let $btn = $(e.currentTarget);
+		let $sliderParentEl = $btn.parents('.inner').find('.slider_area_mt');
+		if($btn.hasClass('next')) {
+			$sliderParentEl.flickity('next')
+		} else {
+			$sliderParentEl.flickity('previous')
 		}
 	}
 
@@ -29,16 +62,7 @@ export default function() {
 		});
 	}
 
-	if($sidery) {
-		$sidery.each(function(event,index) {
-			$(this).on('change.flickity', function(){
-				console.log($(index).index())
-			})
-			
-		})
-	}
 
-
-
+	$newB.on('click', changeSlide)
 	$sliderBtn.on('click', slideSlider);
 }

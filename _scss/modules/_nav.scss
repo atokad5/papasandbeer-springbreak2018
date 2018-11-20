@@ -3,9 +3,17 @@ nav {
 	position: fixed;
 	top: 0;
 	z-index: 999;
+	transition: background 400ms ease;
 
 	.inner {
 		// padding: 0.5em 0em;
+	}
+
+	&.is-scrolled {
+		background: darken( $themeBlue, 5%);
+	}
+	&:hover {
+		background: darken( $themeBlue, 5%);
 	}
 }
 
@@ -71,7 +79,7 @@ nav {
 }
 
 
-@media(min-width: $bp-lg) {
+@media(min-width: $bp-xl) {
 	nav {
 		padding: 0.4em 0em;
 	}
@@ -144,7 +152,8 @@ nav {
 			transition: color 400ms ease;
 
 			&:hover {
-				color: white;
+				color: $themePink;
+				font-weight: bolder;
 			}
 		}
 
@@ -174,6 +183,13 @@ nav {
 		
 	}
 } 
+
+.h_over {
+	&:hover {
+		color: white !important;
+		font-weight: 300 !important;
+	}
+}
 
 .packages {
 	padding: 1.2em 3em 1em 3em;

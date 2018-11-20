@@ -50,8 +50,23 @@
 
 .slider--image {
 	background: #ddd;
+	background-size: cover;
 	border-radius: 20px;
-	@include padding-bottom(440, 335, 'img');
+	@include padding-bottom(440, 335, '.height');
+}
+
+.slider-el {
+	.slide-txt {
+		transform: translateX(100px);
+		opacity: 0;
+		transition: transform .5s, opacity .7s ease;
+	}
+	&.is-selected {
+		.slide-txt {
+			transform: translateX(0px);
+			opacity: 1;
+		}
+	}
 }
 
 .slide-txt {
@@ -72,7 +87,7 @@
 	h4,
 	p {
 		margin: 0;
-		line-height: 1.2;
+
 	}
 
 }

@@ -36,6 +36,14 @@ foreach($parentLoop as $theLoop) { ?>
           
           <div class="content-area">
             <?php echo $theLoop['section_content']; ?>
+            <div class="arrow-box">
+             <button class="is-btn slider_btn pre">
+              <?php get_template_part('includes/icons/left-arrow'); ?>
+            </button>
+            <button class="is-btn slider_btn next">
+              <?php get_template_part('includes/icons/left-arrow'); ?>
+            </button>
+            </div>
           </div>
         </div>
 
@@ -43,20 +51,22 @@ foreach($parentLoop as $theLoop) { ?>
           
           <?php foreach($theLoop['section_card_image'] as $theImage) { ?>
           
-          <div class="slider-el has-max">
-					<!-- <a href=""> -->
-						<figure class="slider--image" style="background-image: url(<?php echo $theImage['url']; ?>);">
-							<!-- <img src="<?php echo $theSlide['link']; ?>" alt=""> -->
-							<figcaption class="slide-txt">
-								<div class="contents-inner-slider">
-									<h4><?php echo $theImage['title']; ?></h4>
-									<?php echo $theImage['caption']; ?>
-								</div>
-								<div class="gradient-hr"></div>
-							</figcaption>
-						</figure>
-					<!-- </a> -->
-				</div>
+
+        <div class="slider-el">
+          <a href="<?php echo $theImage['link']; ?>">
+            <div class="height"></div>
+            <figure class="slider--image" style="background-image: url(<?php echo $theImage['url']; ?>);">
+              <div></div>
+              <figcaption class="slide-txt">
+                <div class="contents-inner-slider">
+                  <h4><?php echo $theImage['title']; ?></h4>
+                  <p><?php echo $theImage['caption']; ?></p>
+                </div>
+                <div class="gradient-hr"></div>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
 
           <?php } ?>
         
