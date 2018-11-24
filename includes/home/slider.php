@@ -1,5 +1,5 @@
 <?php $root = get_template_directory_uri(); ?>
-<section id="slider" class="is-orange">
+<section id="slider" class="is-orange s_sec">
 <div class="spacing spacing--md"></div>
 	<div class="stroke-section stroke-section-orange" style="background-image: url(<?php echo "$root/_assets/images/stroke-orange.png"; ?>);"></div>
 
@@ -11,7 +11,7 @@
 			foreach($imageGrid as $theImage ) {
 		?>
 		<div class="old-to-new_item">
-			<div class="old-to-new_image-el" style="background-image: url(<?php echo $theImage['url'];?>)"></div>
+			<div class="old-to-new_image-el is-bg" data-bg-src="<?php echo $theImage['url'];?>"></div>
 		</div>
 		<?php } ?>
 

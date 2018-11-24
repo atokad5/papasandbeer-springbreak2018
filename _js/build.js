@@ -36,6 +36,10 @@ export default function() {
 
 			setTimeout(function() {
 				$s.body.addClass('is-complete')
+
+				setTimeout(function() {
+					$s.body.addClass('is-set');
+				})
 			}, 3500)
 		}
 	}
@@ -46,6 +50,7 @@ export default function() {
 		$s.body.addClass('is-built')
 		$s.body.addClass('is-destroy')
 		$s.body.addClass('is-complete')
+		$s.body.addClass('is-set')
 	}
 
 	$s.win.onLoad = generateWrapper();

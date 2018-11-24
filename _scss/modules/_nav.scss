@@ -3,7 +3,7 @@ nav {
 	position: fixed;
 	top: 0;
 	z-index: 999;
-	transition: background 400ms ease;
+	transition: background 400ms, transform 500ms ease;
 
 	.inner {
 		// padding: 0.5em 0em;
@@ -12,14 +12,12 @@ nav {
 	&.is-scrolled {
 		background: darken( $themeBlue, 5%);
 	}
-	&:hover {
-		background: darken( $themeBlue, 5%);
-	}
+
 }
 
 .page-template-moded-template {
 	nav {
-		background: $themeBlue;
+		background: darken( $themeBlue, 5%);
 	}
 }
 .is-nav-el {
@@ -79,25 +77,29 @@ nav {
 }
 
 
-@media(min-width: $bp-xl) {
+@media(min-width: 970px) {
 	nav {
 		padding: 0.4em 0em;
-	}
 
-	.page-template-moded-template {
-		nav {
-			&:after {
-				content: '';
-				position: absolute;
-				bottom: 0;
-				height: 1px;
-				width: 100%;
-				background-image:linear-gradient(to right, #eee, $themePink);
-				left: 0;
-				z-index: 99;
-			}
+		&:hover {
+			background: darken( $themeBlue, 5%);
 		}
 	}
+
+	// .page-template-moded-template {
+	// 	nav {
+	// 		&:after {
+	// 			content: '';
+	// 			position: absolute;
+	// 			bottom: 0;
+	// 			height: 1px;
+	// 			width: 100%;
+	// 			background-image:linear-gradient(to right, #eee, $themePink);
+	// 			left: 0;
+	// 			z-index: 99;
+	// 		}
+	// 	}
+	// }
 
 	.dk-nav {
 		display: block;
@@ -129,7 +131,7 @@ nav {
 
 	.is-menu-dk {
 		text-align: right;
-		width: 80%;
+		width: 95%;
 
 		ul {
 			margin: 0; 

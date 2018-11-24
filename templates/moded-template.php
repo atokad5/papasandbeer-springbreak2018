@@ -55,7 +55,7 @@ foreach($parentLoop as $theLoop) { ?>
         <div class="slider-el">
           <a href="<?php echo $theImage['link']; ?>">
             <div class="height"></div>
-            <figure class="slider--image" style="background-image: url(<?php echo $theImage['url']; ?>);">
+            <figure class="slider--image is-bg"  data-bg-src="<?php echo $theImage['url']; ?>" style="background-image: url();">
               <div></div>
               <figcaption class="slide-txt">
                 <div class="contents-inner-slider">

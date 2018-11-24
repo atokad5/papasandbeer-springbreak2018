@@ -3,6 +3,17 @@
 	// margin-top: -10em;
 }
 
+.is-set {
+	.s_sec {
+		transform: translateY(0px);
+	}
+}
+.s_sec {
+	transition: transform 1s ease;
+	transform: translateY(160px);
+	position: relative;
+}
+
 .is-blue {
 	background: $themeBlue;
 }

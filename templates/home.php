@@ -84,7 +84,46 @@
 
 
 <?php get_template_part('includes/home/whos-next'); ?>
+
 <?php get_template_part('includes/home/tickets-selling'); ?>
+
+<section class="is-orange">
+	<div class="stroke-section stroke-section-orange" style="background-image: url(<?php echo "$root/_assets/images/stroke-orange.png"; ?>);"></div>
+	<div class="spacing spacing--md"></div>
+	<div class="inner">
+		<div class="is-image-grid-content">
+			<div class="content-area">
+				<h2 class="dates is-center sm-hdr">
+					<?php the_field('user_content_subheadline'); ?>
+				</h2>
+			</div>
+			<div class="section-header is-center image-layout-hdr">
+				<div class="content-area">
+					<?php the_field('user_content_headline'); ?>
+				</div>
+			</div>
+		</div>
+
+		<div class="image-layout-ug">
+			<?php 
+				$ugContent = get_field('user_content');
+				 foreach($ugContent as $imgContent) { ?>
+				<div class="ug-parent">
+					<div class="ug-item is-bg" data-bg-src="<?php echo $imgContent['url'] ?>" style="background-image: url();">
+						
+						<div class="author">
+							<?php echo $imgContent['title']; ?>
+						</div>
+						<div class="gradient-img"></div>
+					</div>
+				</div>
+			<?php } ?>
+		</div>
+	</div>
+	<div class="spacing spacing--md"></div>
+	<div class="spacing spacing--md"></div>
+
+</section>
 <?php get_template_part('includes/home/faq'); ?>
 
 

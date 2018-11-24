@@ -18,8 +18,6 @@ export default function() {
 			let $t = $(this);
 			let $newBox = $t.find('.arrow-box');
 			let $btns = $t.find('.flickity-button');
-			
-			console.log($newBox)
 			$btns.detach();
 			setTimeout(function() {
 				$newBox.append($btns)

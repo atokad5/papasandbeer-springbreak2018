@@ -197,6 +197,10 @@ exports.default = function () {
 
 			setTimeout(function () {
 				_selectors.$s.body.addClass('is-complete');
+
+				setTimeout(function () {
+					_selectors.$s.body.addClass('is-set');
+				});
 			}, 3500);
 		}
 	};
@@ -207,6 +211,7 @@ exports.default = function () {
 		_selectors.$s.body.addClass('is-built');
 		_selectors.$s.body.addClass('is-destroy');
 		_selectors.$s.body.addClass('is-complete');
+		_selectors.$s.body.addClass('is-set');
 	}
 
 	_selectors.$s.win.onLoad = generateWrapper();
@@ -420,6 +425,8 @@ exports.default = function () {
     var $miniSplitter = $('.mini-spliter');
     var $topContent = $("#top-content");
 
+    var $newScroll = 0;
+
     // content area 
 
 
@@ -463,6 +470,21 @@ exports.default = function () {
 
     var scrollTicker = function scrollTicker() {
       if (didScroll) {
+
+        if ($windowOffset > $newScroll) {
+
+          $("nav").css({
+            "transform": "translateY(-100%)"
+          });
+
+          $newScroll = $windowOffset;
+        } else {
+          $("nav").css({
+            "transform": "translateY(0%)"
+          });
+          $newScroll = $windowOffset;
+        }
+
         if ($('body').hasClass('page-template-home')) {
           if ($windowOffset >= $topContent.offset().top - ($('nav').outerHeight() + 80)) {
             $('nav').addClass('is-scrolled');
@@ -557,8 +579,6 @@ exports.default = function () {
 			var $t = $(this);
 			var $newBox = $t.find('.arrow-box');
 			var $btns = $t.find('.flickity-button');
-
-			console.log($newBox);
 			$btns.detach();
 			setTimeout(function () {
 				$newBox.append($btns);

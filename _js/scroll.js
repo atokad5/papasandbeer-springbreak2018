@@ -15,6 +15,11 @@ export default function() {
     let $miniSplitter = $('.mini-spliter');
     let $topContent = $("#top-content");
 
+    let $newScroll = 0;
+
+
+
+
 
     // content area 
 
@@ -68,6 +73,22 @@ export default function() {
     
     let scrollTicker = () => {
       if(didScroll) {
+        
+
+        if($windowOffset > $newScroll) {
+
+          $("nav").css({
+            "transform": "translateY(-100%)"
+          })
+
+          $newScroll = $windowOffset;
+        } else {
+          $("nav").css({
+            "transform": "translateY(0%)"
+          })
+          $newScroll = $windowOffset;
+        }
+
         if($('body').hasClass('page-template-home')) {
           if($windowOffset >= $topContent.offset().top - ($('nav').outerHeight() + 80)) {
             $('nav').addClass('is-scrolled')
@@ -75,6 +96,10 @@ export default function() {
             $('nav').removeClass('is-scrolled');
           }
         }
+
+
+        
+
         
         // home page
         recapElements();
