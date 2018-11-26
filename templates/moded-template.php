@@ -3,7 +3,8 @@
   $root = get_template_directory_uri();
 ?>
 <?php get_template_part('includes/nav') ?>
-<section class="is-blue">
+<section class="bg-area" style="background-image: url(<?php the_field('page_header_image'); ?>);">
+  <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
@@ -18,6 +19,7 @@
     </div>  
   </div>
   <div class="spacing spacing--md"></div>
+  <div class="spacing spacing--md"></div>
 </section>
 
 <div class="group-section">
@@ -25,7 +27,10 @@
   $parentLoop = get_field('page_section');
 
 foreach($parentLoop as $theLoop) { ?>
-  <section class="added_section is-blue">
+  <section class="added_section is-blue" style="position: relative;">
+    <div class="stroke-section stroke-section-orange" style="background-image: url(<?php echo "$root/_assets/images/stroke-blue.png"; ?>);"></div>
+    <div class="spacing spacing--md"></div>
+
     <div class="inner">
       <div class="add_section__header is-white flex">
 

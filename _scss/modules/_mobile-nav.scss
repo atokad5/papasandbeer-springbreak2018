@@ -15,11 +15,12 @@
 		position: relative;
 		height: 100vh;
 		overflow: auto;
+		margin-bottom: 5em;
 	}	
 	.menu-li {
 		margin: 0;
 		list-style-type: none;
-		padding: 9em 0em 3em 0;
+		padding: 15em 0em 3em 0;
 		z-index: 9;
 		position: relative;
 
@@ -56,6 +57,7 @@
 	}
 }
 
+
 .sleeve-one_ml {
 	position: absolute;
 	top: 0; left: 0;
@@ -88,6 +90,10 @@
 }
 
 @media(min-width: 979px) {
+
+	.mb-o {
+		display: none;
+	}
 	
 	.mobile-nav {
 		display: none;

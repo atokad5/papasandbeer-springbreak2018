@@ -78,6 +78,9 @@ nav {
 
 
 @media(min-width: 970px) {
+	.mb-o {
+		display: none !important;
+	}
 	nav {
 		padding: 0.4em 0em;
 
