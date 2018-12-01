@@ -11,6 +11,6 @@
 	
 		<?php } ?>
 		<li><a  class="cta h_over" href="<?php the_field('view_packages_link', 'options'); ?>"><?php the_field('view_packages_text', 'options'); ?></a></li>
-		<li class="mb-o" style="color: white; font-size: 18px;">&copy; Papas & Beer</li>
+		<li class="mb-o" style="color: white; font-size: 18px;">&copy; Papas&Beer</li>
 	</ul>
 </div>

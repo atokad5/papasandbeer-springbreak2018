@@ -15,11 +15,12 @@ nav {
 
 }
 
-.page-template-moded-template {
+.page-template-moded-template, .page-template-contact {
 	nav {
 		background: darken( $themeBlue, 5%);
 	}
 }
+
 .is-nav-el {
 	position: relative;
 }

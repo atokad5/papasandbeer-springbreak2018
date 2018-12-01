@@ -75,7 +75,7 @@ export default function() {
       if(didScroll) {
         
 
-        if($windowOffset > $newScroll) {
+        if($windowOffset > $newScroll && $windowOffset > 20) {
 
           $("nav").css({
             "transform": "translateY(-100%)"

@@ -1,0 +1,138 @@
+.cParent {
+  // display: flex;
+  // align-items: center;
+
+  &__col {
+    margin-bottom: 2em;
+  }
+
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    margin-right: 1em;
+  }
+
+  a {
+    color: $themeOrange;
+    font-weight: 600;
+    letter-spacing: 2px;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+}
+
+.form-parent {
+  // max-width: 500px;
+  // float: right;
+  box-shadow: 0px 0px 40px (rgba(black, 0.15));
+  border-radius: 20px;
+
+  form {
+    // padding: 2em;
+    padding: 2em 1em;
+  }
+
+  input[type="text"], input[type="email"] {
+    width: calc(100% - 0.5em);
+    margin: 0;
+    height: 45px;
+    border-radius: 20px;
+    margin-bottom: 1em;
+    outline: none;
+    -webkit-appearance: none;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    padding-left: 0.5em;
+    transition: all .5s ease;
+
+    &:focus,&:active {
+      border-color: transparent;
+      box-shadow: 0px 0px 30px rgba(black, 0.2);
+    }   
+  }
+
+  input[type="submit"] {
+    background-color: $themePink;
+    display: inline-block;
+    font-size: 24px;
+    -webkit-appearance: none;
+    outline: none;
+    border: none;
+    font-family: 'california';
+    padding: 0.7em 3em 0.6em 3em;
+    border-radius: 100px;
+    margin: auto;
+    box-shadow: 0px 5px 40px rgba( $themePink, 0.6);
+    color: white;
+    cursor: pointer;
+    letter-spacing: 2px;
+  }
+
+
+  textarea {
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    outline-color: #ddd;
+    width: calc(100% - 0.5em);
+    max-height: 150px;
+    min-height: 150px;
+    max-width: 100%;
+    min-width: calc(100% - 0.5em);
+    padding-left: 0.5em;
+    padding-top: 0.5em;
+    font-size: 15px;
+
+
+  }
+
+}
+
+.form-btn {
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+
+.content-area-links {
+  padding-top: 0.5em;
+  padding-bottom: 2em;
+}
+
+.content-area-social-links {
+  ul {
+    padding-top: 1em;
+  }
+}
+
+
+@media(min-width: $bp-md) {
+  .cParent {
+    display: flex;
+    align-items: center;
+  
+    &__col {
+      margin-bottom: 0em;
+      width: 45%;
+      &:first-of-type {
+        margin-right: 10%;
+      }
+    }
+  
+
+  
+  }
+  
+  .form-parent {
+    form {
+      padding: 2em;
+    }
+  }
+}
