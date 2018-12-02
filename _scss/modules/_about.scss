@@ -57,3 +57,42 @@
 .watch-video {
   padding-top: 2em;
 }
+
+.video-el {
+  background: $themeBlue;
+  padding-bottom: (9/16) * 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 0px 40px rgba(black, 0.3);
+}
+.video-par {
+  padding-top: 1em;
+}
+
+.video-cap {
+  text-align: center;
+  padding-top: 0.5em;
+  font-weight: 500;
+  
+}
+
+.image-grid-about {
+  position: relative;
+  z-index: 9;
+}
+.py-bt {
+  max-width: 70px;
+  width: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media(min-width: $bp-md) {
+  .video-par {
+    width: 50%;
+    padding-top: 0em;
+  }
+}

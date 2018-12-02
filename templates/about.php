@@ -73,12 +73,75 @@
 
 </div>
 
-<section class="is-blue" style="position: relative;">
-  <div class="stroke-section stroke-section-orange is-low" style="background-image: url(<?php echo "$root/_assets/images/stroke-white.png"; ?>);"></div>
-  
 
+<?php $root = get_template_directory_uri(); ?>
+<section id="slider" class="is-blue s_sec">
+<div class="spacing spacing--md"></div>
+	<div class="stroke-section stroke-section-orange" style="background-image: url(<?php echo "$root/_assets/images/stroke-blue.png"; ?>);"></div>
+
+
+
+	<div class="max clearfix old-to-new image-grid-about">
+		
+		<?php $imageGrid = get_field('4_image_grid');
+			foreach($imageGrid as $theImage ) {
+		?>
+		<div class="old-to-new_item">
+			<div class="old-to-new_image-el is-bg" data-bg-src="<?php echo $theImage['url'];?>"></div>
+		</div>
+		<?php } ?>
+
+	</div>
+
+	<div class="inner clearfix flex-slide">
+
+
+		<div class="is-half-el-slider video-par">
+			<div class="is-image-grid-content">
+					<div class="content-area mobile-center">
+						<h2 class="dates sm-hdr">
+              Sub Headline Goes Here
+            </h2>
+					</div>
+					<div class="section-header image-layout-hdr">
+						<div class="content-area mobile-center">
+							Headline Goes Here
+						</div>
+					</div>
+
+					<div class="hr-splitter animated-spliter"></div>
+
+					<div class="image-grid-copy">
+						<div class="content-area mobile-center">
+							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam quis repellendus labore cupiditate nulla, est harum impedit sequi quasi atque ipsum ratione, possimus nostrum fuga aspernatur eligendi soluta commodi ducimus!</p>
+            </div>					
+            <div class="section-cta">
+              <a href="<?php the_field('view_packages_link', 'options'); ?>" class="cta"><?php the_field('view_packages_text', 'options'); ?></a>
+            </div>
+					</div>
+
+	
+				</div>
+    </div>
+    
+		<div class="is-half-el-slider video-par">
+			<div class="video-el">
+          <div class="py-bt">
+
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 89.334 89.334"><defs><style></style><linearGradient id="a" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#f29e67"/><stop offset="1" stop-color="#dd675d"/></linearGradient></defs><g transform="translate(-1774.33 -1025.238)"><circle class="a" style="fill:#fff;" cx="44.667" cy="44.667" r="44.667" transform="translate(1774.33 1025.238)"/><path class="b" style=
+            "fill:url(#a);" d="M0,0,22.079,3.473,12.462,13.09l-9.04,9.04Z" transform="translate(1830.154 1069.337) rotate(135)"/></g></svg>
+          </div>
+
+      </div>
+      <div class="video-cap">
+        What you missed last year
+      </div>
+		</div>
+	</div>
+  <div class="spacing spacing--md"></div>
+  <div class="spacing spacing--sm"></div>
+  <div class="spacing spacing--sm"></div>
 </section>
-
 
 
 
