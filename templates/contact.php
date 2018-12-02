@@ -60,8 +60,8 @@
 
 
 	<section class="is-blue dkSpacing">
-			<div class="spacing spacing--md"></div>
-			<div class="spacing spacing--md"></div>
-			<div class="spacing spacing--md"></div>
-		</section>
+		<div class="spacing spacing--md"></div>
+		<div class="spacing spacing--md"></div>
+		<div class="spacing spacing--md"></div>
+	</section>
 <?php get_footer(); ?>
