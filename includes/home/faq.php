@@ -11,8 +11,8 @@
 			
 				<div class="content-area is-white is-center">
 
-					<div class="section-header">
-						faq's
+					<div>
+						<h1 class="section-header" style="font-weight: 100;">faq's</h1>
 					</div>
 
 					<div class="mini-spliter animated-spliter"></div>

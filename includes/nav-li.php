@@ -14,3 +14,18 @@
 		<li class="mb-o" style="color: white; font-size: 18px;">&copy; Papas&Beer</li>
 	</ul>
 </div>
+
+<!-- 
+
+Travel/Hotel
+	- Driving Down (directions)
+
+	- Hotels 
+
+	- Boarders
+
+	- Airports 
+
+-->
+ 
+<!-- venue page, package , line up  -->

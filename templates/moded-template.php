@@ -11,8 +11,8 @@
   <div class="inner">
     <div class="inner-contents__mt">
       <div class="content-area">
-        <div class="section-header">
-          <?php the_field('page_title'); ?>
+        <div>
+          <h1 class="section-header"><?php the_field('page_title'); ?></h1>
         </div>
         <?php the_field('page_message'); ?>
       </div>
@@ -35,8 +35,8 @@ foreach($parentLoop as $theLoop) { ?>
       <div class="add_section__header is-white flex">
 
         <div class="mt_content_group flex_el">
-          <div class="section-header">
-            <?php echo $theLoop['section_title']; ?>
+          <div>
+            <h1 class="section-header"><?php echo $theLoop['section_title']; ?></h1>
           </div>
           
           <div class="content-area">

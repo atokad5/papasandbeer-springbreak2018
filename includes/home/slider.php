@@ -25,9 +25,9 @@
 					<div class="content-area mobile-center">
 						<h2 class="dates sm-hdr"><?php the_field('slider_subtitle'); ?></h2>
 					</div>
-					<div class="section-header image-layout-hdr">
+					<div class="image-layout-hdr">
 						<div class="content-area mobile-center">
-							<?php the_field('slider_headline'); ?>
+							<h1 class="section-header"> <?php the_field('slider_headline'); ?></h1>
 						</div>
 					</div>
 

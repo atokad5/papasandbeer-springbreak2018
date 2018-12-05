@@ -11,8 +11,8 @@
   <div class="inner">
     <div class="inner-contents__mt">
       <div class="content-area">
-        <div class="section-header">
-          About Papas&Beer Spring Break
+        <div>
+          <h1 class="section-header">About Papas&Beer Spring Break</h1>
         </div>
 
         <div class="ply-btn-hero">
@@ -103,9 +103,9 @@
               Sub Headline Goes Here
             </h2>
 					</div>
-					<div class="section-header image-layout-hdr">
+					<div class="image-layout-hdr">
 						<div class="content-area mobile-center">
-							Headline Goes Here
+							<h1 class="section-header">Headline Goes Here</h1>
 						</div>
 					</div>
 

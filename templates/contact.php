@@ -10,7 +10,7 @@
 
 		<div class="cParent__col">
 			<div class="section-header">
-				Leave your worries behind
+				<h1 class="section-header">Leave your worries behind</h1>
 			</div>
 
 			<div class="content-area">

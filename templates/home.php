@@ -11,8 +11,8 @@
 	<div class="inner hdr-inner over-bg">
 		<div class="hdr-container pre-built">
 			<h2 class="dates hdr-el" id="top-content"><?php the_field('dates'); ?></h2>
-			<div class="section-header hdr-el">
-				<?php the_field('hero_headline') ?>
+			<div class="hdr-el">
+				<h1 class="section-header" style="font-weight: 100;"><?php the_field('hero_headline') ?></h1>
 			</div>
 			<div class="hdr-el">
 				<p class="hdr-el"><?php the_field('hero_copy'); ?></p>
@@ -42,9 +42,9 @@
 					<div class="content-area">
 						<h2 class="dates is-center sm-hdr"><?php the_field('image_grid_sub_header'); ?></h2>
 					</div>
-					<div class="section-header is-center image-layout-hdr">
+					<div class="is-center image-layout-hdr">
 						<div class="content-area">
-							<?php the_field('image_grid_header'); ?>
+							<h1 class="section-header"><?php the_field('image_grid_header'); ?></h1>
 						</div>
 					</div>
 
@@ -97,9 +97,9 @@
 					<?php the_field('user_content_subheadline'); ?>
 				</h2>
 			</div>
-			<div class="section-header is-center image-layout-hdr">
+			<div class="is-center image-layout-hdr">
 				<div class="content-area">
-					<?php the_field('user_content_headline'); ?>
+					<h1 class="section-header"><?php the_field('user_content_headline'); ?></h1>
 				</div>
 			</div>
 		</div>

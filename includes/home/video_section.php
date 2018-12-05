@@ -10,8 +10,8 @@
 				<div class="content-area">
 					<h2 class="dates sm-hdr" style="padding-top: 3em;">Suh Headline</h2>
 				</div>
-				<div class="section-header hdr-el content-area">
-					Main Headline
+				<div class="hdr-el content-area">
+					<h1 class="section-header">Main Headline</h1>
 				</div>
 				<div class="mini-spliter animated-spliter"></div>
 				<div class="content-area has-max">
