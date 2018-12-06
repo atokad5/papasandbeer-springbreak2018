@@ -12,43 +12,59 @@
 				<div class="content-area is-white is-center">
 
 					<div>
-						<h1 class="section-header" style="font-weight: 100;">faq's</h1>
+						<h1 class="section-header" style="font-weight: 100;">
+							<?php if ( get_field('faq_header', 'option') ) : ?>
+								<?php echo get_field('faq_header', 'option'); ?>
+							<?php endif; ?>
+							
+						</h1>
 					</div>
 
 					<div class="mini-spliter animated-spliter"></div>
 					
 					<div class="content-area has-max">
-						<p>Got questions? We Got Answers</p>
+						<?php if ( get_field('faq_message', 'option') ) : ?>
+							<?php echo get_field('faq_message', 'option'); ?>
+						<?php endif; ?>
+						
 					</div>
 
 				</div>
 
 				<div class="faq-card has-max">
+				<?php $category = get_field('faq_qa', 'option') ;?>
 
-				<?php for($i = 0; $i < 3; $i++) : ?>
-
+				<?php foreach($category as $theCat) { ?>
+				
 					<div class="faq-card__element">
 						<div class="faq-card__subject">
-							<p class="cat-type">Category for a FAQ</p>
-							<h3>Sub Title</h3>
+							<p class="cat-type"><?php echo $theCat['category_title'] ;?></p>
+							<h3><?php echo $theCat['category_subtitle'] ;?></h3>
 							
 							<div class="indicator">
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19"><g transform="translate(-8.5 -8)"><rect style="fill:#ea5859;" width="4" height="19" transform="translate(16 8)"/><rect style="fill:#ea5859;" width="4" height="19" transform="translate(27.5 15.5) rotate(90)"/></g></svg>
 							</div>
 						</div>
 
-						<?php for($fc = 0; $fc < 5; $fc++): ?>
+						
+						<?php $theFaq = $theCat['qa'] ;?>
+
+
+						<?php foreach($theFaq as $theF) { ?>
+							
+							
 							<div class="faq-card__faq-panel">
 								<div class="faq-card__faq-panel--inner">
-									<div class="question">Question</div>
-									<div class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, maxime illo iusto quo odio corporis perferendis aspernatur debitis, error voluptas laborum obcaecati nulla fugit et incidunt soluta velit non fuga!</div>
+									<div class="question"><?php echo $theF['question'] ;?></div>
+									<div class="answer"><?php echo $theF['answer'] ;?></div>
 								</div>
 							</div>
-						<?php endfor; ?>
+
+						<?php } ?> 
 
 					</div>
 
-				<?php endfor ;?>
+				<?php } ;?>
 
 				</div>
 

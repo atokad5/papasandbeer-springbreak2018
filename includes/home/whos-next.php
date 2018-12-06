@@ -25,8 +25,8 @@
 
 		<div class="toggle-element">
 			<ul>
-				<li class="lineup-year active"><span>2019 LINEUP</span></li>
-				<li class="lineup-year"><span>2018 LINEUP</span></li>
+				<li class="lineup-year active"><span><?php the_field('line_up_option_one'); ?></span></li>
+				<li class="lineup-year"><span><?php the_field('line_up_option_two'); ?></span></li>
 			</ul>
 		</div>
 		
@@ -43,5 +43,4 @@
 			</figure>
 		</div>
 	</div>
-	<!-- <div class="spacing spacing--md"></div> -->
 </section>

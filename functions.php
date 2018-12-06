@@ -10,7 +10,7 @@
 	if (function_exists('acf_add_options_page')) {
 		acf_add_options_page();
 		acf_set_options_page_title('Site Global Settings');
-		// acf_add_options_sub_page('additional settings');
+		acf_add_options_sub_page('Faq Section');
 	}
 
 
