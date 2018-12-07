@@ -777,11 +777,10 @@ exports.default = function () {
   var $windowTop = $(window).scrollTop();
   var $hasScroll = false;
 
-  if ($checker) {
-    $sections.each(function (index, element) {
-      return $(element).attr('id', 'section-' + index);
-    });
-  }
+  if (!$checker) return;
+  $sections.each(function (index, element) {
+    return $(element).attr('id', 'section-' + index);
+  });
 
   var slidePage = function slidePage(event) {
     event.preventDefault();
@@ -798,33 +797,21 @@ exports.default = function () {
   };
 
   var scrollTicker = function scrollTicker() {
-
     if ($hasScroll) {
-
       $sections.each(function (index, element) {
         var $el = $(element);
-        // console.log($el.offset().top)
-
-        // console.log($t.offset().top)
-        // console.log($windowTop, Math.round($el.offset().top), index);
-        if (Math.round($el.offset().top) >= $windowTop) {
-          $catNav.eq($el.index()).addClass('active');
+        if ($windowTop + 100 >= Math.round($el.offset().top)) {
+          $catNav.find('a').removeClass('active');
+          $catNav.eq($el.index()).find('a').addClass('active');
         }
-        // if(Math.round($el.offset().top) + $el.outerHeight() > $windowTop) {
-        //   $catNav.eq($el.index()).removeClass('active')
-        // } 
-
       });
-
       $hasScroll = false;
     }
-
     requestAnimationFrame(scrollTicker);
   };
 
   requestAnimationFrame(scrollTicker);
   $(window).on('scroll', updateScroller);
-
   $catNav.on('click', function (event) {
     return slidePage(event);
   });

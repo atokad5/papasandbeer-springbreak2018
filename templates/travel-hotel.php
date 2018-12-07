@@ -18,7 +18,7 @@
     </div>  
   </div>
 
-  <div class="cats-nav-section">
+  <div class="cats-nav-section" style="position: fixed; z-index:66">
     <div class="inner">
       <div>
         <ul  class="cats-navEl">
