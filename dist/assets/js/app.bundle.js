@@ -132,6 +132,10 @@ var _faq = __webpack_require__(11);
 
 var _faq2 = _interopRequireDefault(_faq);
 
+var _customNav = __webpack_require__(12);
+
+var _customNav2 = _interopRequireDefault(_customNav);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _build2.default)();
@@ -153,6 +157,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _video2.default)();
 
 (0, _faq2.default)();
+
+(0, _customNav2.default)();
 
 /***/ }),
 /* 2 */
@@ -751,6 +757,77 @@ exports.default = function () {
 
   $question.on('click', slideAnswer);
   $faqCard.on('click', grabFaq);
+};
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  var $checker = $('body').hasClass('page-template-travel-hotel');
+  var $sections = $('.added_section');
+  var $catNav = $('.cats-navEl li');
+  var $windowTop = $(window).scrollTop();
+  var $hasScroll = false;
+
+  if ($checker) {
+    $sections.each(function (index, element) {
+      return $(element).attr('id', 'section-' + index);
+    });
+  }
+
+  var slidePage = function slidePage(event) {
+    event.preventDefault();
+    var $t = $(event.currentTarget);
+    var $index = $t.index();
+    $('html, body').animate({
+      'scrollTop': $('#section-' + $index).offset().top
+    }, 1000);
+  };
+
+  var updateScroller = function updateScroller() {
+    $hasScroll = true;
+    $windowTop = $(window).scrollTop();
+  };
+
+  var scrollTicker = function scrollTicker() {
+
+    if ($hasScroll) {
+
+      $sections.each(function (index, element) {
+        var $el = $(element);
+        // console.log($el.offset().top)
+
+        // console.log($t.offset().top)
+        // console.log($windowTop, Math.round($el.offset().top), index);
+        if (Math.round($el.offset().top) >= $windowTop) {
+          $catNav.eq($el.index()).addClass('active');
+        }
+        // if(Math.round($el.offset().top) + $el.outerHeight() > $windowTop) {
+        //   $catNav.eq($el.index()).removeClass('active')
+        // } 
+
+      });
+
+      $hasScroll = false;
+    }
+
+    requestAnimationFrame(scrollTicker);
+  };
+
+  requestAnimationFrame(scrollTicker);
+  $(window).on('scroll', updateScroller);
+
+  $catNav.on('click', function (event) {
+    return slidePage(event);
+  });
 };
 
 /***/ })

@@ -30,3 +30,6 @@ video();
 
 import faq from './faq.js';
 faq();
+
+import customNav from './_custom-nav.js';
+customNav();
