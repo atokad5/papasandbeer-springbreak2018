@@ -6,7 +6,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Papas&Beer Spring Break 2019</title>
-	<link rel="stylesheet" href="<?php echo "$root/dist/assets/css/style.css?w=rsjy" ?>">
+	<link rel="stylesheet" href="<?php echo "$root/dist/assets/css/style.css?fgw=grrsjy" ?>">
 	<meta name="viewport" content="Width=device-width, initial-scale=1, user-scalable=no">
 	<script src="https://use.fontawesome.com/1eda73ce4d.js"></script>
 	<?php wp_head(); ?>
