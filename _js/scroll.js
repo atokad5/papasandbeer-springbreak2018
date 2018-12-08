@@ -14,10 +14,19 @@ export default function() {
     let $hr = $('.hr-splitter');
     let $miniSplitter = $('.mini-spliter');
     let $topContent = $("#top-content");
-
+    let $navParentEl = $('.cats-nav-section');
     let $newScroll = 0;
+    let $setHeightRequirements = 0;
 
+    if($navParentEl.length >= 1) {
+      let $navOffSetOg = Math.round($navParentEl.offset().top)
 
+    $(window).on('load', () => $navOffSetOg = Math.round($navParentEl.offset().top))
+
+      $setHeightRequirements = $navOffSetOg;
+    } else {
+      $setHeightRequirements = 100;
+    }
 
 
 
@@ -75,17 +84,15 @@ export default function() {
       if(didScroll) {
         
 
-        if($windowOffset > $newScroll && $windowOffset > $('header').outerHeight()) {
+        if($windowOffset > $newScroll && $windowOffset >= $setHeightRequirements) {
 
           $("nav").css({
             "transform": "translateY(-100%)"
           })
 
-        
-            $('.cats-nav-section').css({
-              'transform': 'translateY(-'+ $('nav').outerHeight() +'px)'
-            })
-          
+          $('.cats-nav-section').css({
+            'transform': 'translateY(-'+ $('nav').outerHeight() +'px)'
+          })
 
           $newScroll = $windowOffset;
         } else {

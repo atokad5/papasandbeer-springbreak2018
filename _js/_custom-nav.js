@@ -7,9 +7,16 @@ export default function() {
   let $hasScroll = false
 
   if(!$checker) return;
-    let $navOffset = $navParentEl.offset().top;
-    let $navOffSetOg = $navParentEl.offset().top
-    let $navOuterHeight = $navParentEl.outerHeight();
+
+  let $navOffset = $navParentEl.offset().top;
+  let $navOffSetOg = Math.round($navParentEl.offset().top)
+  let $navOuterHeight = $navParentEl.outerHeight();
+
+    $(window).on('load', () => {
+      $navOffset = $navParentEl.offset().top;
+      $navOffSetOg = Math.round($navParentEl.offset().top)
+      $navOuterHeight = $navParentEl.outerHeight();
+    })
 
   
     $sections.each((index, element) => $(element).attr('id', `section-${index}`) )
@@ -38,15 +45,18 @@ export default function() {
           $catNav.eq($el.index()).find('a').addClass('active')
         } 
       })
-      
-      if($windowTop >= $navOffset) {
+
+      let $he = $windowTop + Math.round($('nav').outerHeight());
+      console.log('Scrolltop:'+$he, 'og height:' + Math.round($navOffSetOg));
+
+      if($windowTop + $('nav').outerHeight() >= $navOffset) {
         $navParentEl.css({
           'position': 'fixed',
           'top': $('nav').outerHeight(),
         }).addClass('is-fixed')
       }
-
-      else if($windowTop <= $navOffSetOg + $navOuterHeight) {
+      
+      if($he <= $navOffSetOg) {
         $navParentEl.css({
           'position': 'absolute',
           'top': $navOffSetOg ,

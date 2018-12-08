@@ -430,8 +430,21 @@ exports.default = function () {
     var $hr = $('.hr-splitter');
     var $miniSplitter = $('.mini-spliter');
     var $topContent = $("#top-content");
-
+    var $navParentEl = $('.cats-nav-section');
     var $newScroll = 0;
+    var $setHeightRequirements = 0;
+
+    if ($navParentEl.length >= 1) {
+      var $navOffSetOg = Math.round($navParentEl.offset().top);
+
+      $(window).on('load', function () {
+        return $navOffSetOg = Math.round($navParentEl.offset().top);
+      });
+
+      $setHeightRequirements = $navOffSetOg;
+    } else {
+      $setHeightRequirements = 100;
+    }
 
     // content area 
 
@@ -477,7 +490,7 @@ exports.default = function () {
     var scrollTicker = function scrollTicker() {
       if (didScroll) {
 
-        if ($windowOffset > $newScroll && $windowOffset > $('header').outerHeight()) {
+        if ($windowOffset > $newScroll && $windowOffset >= $setHeightRequirements) {
 
           $("nav").css({
             "transform": "translateY(-100%)"
@@ -786,9 +799,16 @@ exports.default = function () {
   var $hasScroll = false;
 
   if (!$checker) return;
+
   var $navOffset = $navParentEl.offset().top;
-  var $navOffSetOg = $navParentEl.offset().top;
+  var $navOffSetOg = Math.round($navParentEl.offset().top);
   var $navOuterHeight = $navParentEl.outerHeight();
+
+  $(window).on('load', function () {
+    $navOffset = $navParentEl.offset().top;
+    $navOffSetOg = Math.round($navParentEl.offset().top);
+    $navOuterHeight = $navParentEl.outerHeight();
+  });
 
   $sections.each(function (index, element) {
     return $(element).attr('id', 'section-' + index);
@@ -819,12 +839,17 @@ exports.default = function () {
         }
       });
 
-      if ($windowTop >= $navOffset) {
+      var $he = $windowTop + Math.round($('nav').outerHeight());
+      console.log('Scrolltop:' + $he, 'og height:' + Math.round($navOffSetOg));
+
+      if ($windowTop + $('nav').outerHeight() >= $navOffset) {
         $navParentEl.css({
           'position': 'fixed',
           'top': $('nav').outerHeight()
         }).addClass('is-fixed');
-      } else if ($windowTop <= $navOffSetOg + $navOuterHeight) {
+      }
+
+      if ($he <= $navOffSetOg) {
         $navParentEl.css({
           'position': 'absolute',
           'top': $navOffSetOg
