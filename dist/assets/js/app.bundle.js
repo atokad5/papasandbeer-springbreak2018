@@ -833,14 +833,13 @@ exports.default = function () {
     if ($hasScroll) {
       $sections.each(function (index, element) {
         var $el = $(element);
-        if ($windowTop + 10 >= Math.round($el.offset().top)) {
+        if ($windowTop + 30 >= Math.round($el.offset().top)) {
           $catNav.find('a').removeClass('active');
           $catNav.eq($el.index()).find('a').addClass('active');
         }
       });
 
       var $he = $windowTop + Math.round($('nav').outerHeight());
-      console.log('Scrolltop:' + $he, 'og height:' + Math.round($navOffSetOg));
 
       if ($windowTop + $('nav').outerHeight() >= $navOffset) {
         $navParentEl.css({

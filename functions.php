@@ -11,6 +11,7 @@
 		acf_add_options_page();
 		acf_set_options_page_title('Site Global Settings');
 		acf_add_options_sub_page('Faq Section');
+		acf_add_options_sub_page('Nav');
 	}
 
 

@@ -12,14 +12,14 @@ export default function() {
   let $navOffSetOg = Math.round($navParentEl.offset().top)
   let $navOuterHeight = $navParentEl.outerHeight();
 
-    $(window).on('load', () => {
-      $navOffset = $navParentEl.offset().top;
-      $navOffSetOg = Math.round($navParentEl.offset().top)
-      $navOuterHeight = $navParentEl.outerHeight();
-    })
+  $(window).on('load', () => {
+    $navOffset = $navParentEl.offset().top;
+    $navOffSetOg = Math.round($navParentEl.offset().top)
+    $navOuterHeight = $navParentEl.outerHeight();
+  })
 
-  
-    $sections.each((index, element) => $(element).attr('id', `section-${index}`) )
+
+  $sections.each((index, element) => $(element).attr('id', `section-${index}`) )
   
   let slidePage = event => {
     event.preventDefault();
@@ -40,14 +40,14 @@ export default function() {
     if($hasScroll) {  
       $sections.each( (index,element) => {
         let $el = $(element);
-        if($windowTop + 10>= Math.round($el.offset().top)) {
+        if($windowTop + 30>= Math.round($el.offset().top)) {
           $catNav.find('a').removeClass('active')
           $catNav.eq($el.index()).find('a').addClass('active')
         } 
       })
 
       let $he = $windowTop + Math.round($('nav').outerHeight());
-      console.log('Scrolltop:'+$he, 'og height:' + Math.round($navOffSetOg));
+
 
       if($windowTop + $('nav').outerHeight() >= $navOffset) {
         $navParentEl.css({
@@ -63,11 +63,12 @@ export default function() {
         }).removeClass('is-fixed')
       }
 
-
       $hasScroll = false;
     }
     requestAnimationFrame(scrollTicker);
   }
+
+
 
   requestAnimationFrame(scrollTicker);
   $(window).on('scroll', updateScroller)

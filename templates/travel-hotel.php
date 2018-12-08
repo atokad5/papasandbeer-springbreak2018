@@ -4,7 +4,7 @@
 ?>
 <?php get_template_part('includes/nav') ;?>
 
-<section class="bg-area" style="background-image: url('//localhost:3000/wp-content/uploads/2018/10/hero-image.jpg');">
+<section class="bg-area" style="background-image: url(<?php the_field('header_background');?>);">
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
@@ -12,7 +12,7 @@
     <div class="inner-contents__mt">
       <div class="content-area">
         <div>
-          <h1 class="section-header">Travel and Hotel</h1>
+          <h1 class="section-header"><?php the_field('page_title'); ?></h1>
         </div>
       </div>
     </div>  
@@ -23,10 +23,10 @@
       <div class="inner">
         <div>
           <ul  class="cats-navEl">
-            <li><a href="#0">Category</a></li>
-            <li><a href="#0">Category Two</a></li>
-            <li><a href="#0">Category Three</a></li>
-            <li><a href="#0">Category Four</a></li>
+           <?php $li = get_field('page_section'); ?>
+           <?php foreach($li as $theLi ) { ?>
+              <li><a href="#0"><?php echo $theLi['section_name']; ?></a></li>
+            <?php } ?>
           </ul>
         </div>
       </div>
