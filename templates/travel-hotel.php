@@ -18,17 +18,20 @@
     </div>  
   </div>
 
-  <div class="cats-nav-section" style="position: fixed; z-index:66">
-    <div class="inner">
-      <div>
-        <ul  class="cats-navEl">
-          <li><a href="#0">Category</a></li>
-          <li><a href="#0">Category Two</a></li>
-          <li><a href="#0">Category Three</a></li>
-          <li><a href="#0">Category Four</a></li>
-        </ul>
+  <div class="cats-parent">
+    <div class="cats-nav-section">
+      <div class="inner">
+        <div>
+          <ul  class="cats-navEl">
+            <li><a href="#0">Category</a></li>
+            <li><a href="#0">Category Two</a></li>
+            <li><a href="#0">Category Three</a></li>
+            <li><a href="#0">Category Four</a></li>
+          </ul>
+        </div>
       </div>
     </div>
+    
   </div>
 
   <div class="spacing spacing--md"></div>

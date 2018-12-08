@@ -477,16 +477,23 @@ exports.default = function () {
     var scrollTicker = function scrollTicker() {
       if (didScroll) {
 
-        if ($windowOffset > $newScroll && $windowOffset > 20) {
+        if ($windowOffset > $newScroll && $windowOffset > $('header').outerHeight()) {
 
           $("nav").css({
             "transform": "translateY(-100%)"
+          });
+
+          $('.cats-nav-section').css({
+            'transform': 'translateY(-' + $('nav').outerHeight() + 'px)'
           });
 
           $newScroll = $windowOffset;
         } else {
           $("nav").css({
             "transform": "translateY(0%)"
+          });
+          $('.cats-nav-section').css({
+            'transform': 'translateY(0%)'
           });
           $newScroll = $windowOffset;
         }
@@ -773,11 +780,16 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = function () {
   var $checker = $('body').hasClass('page-template-travel-hotel');
   var $sections = $('.added_section');
+  var $navParentEl = $('.cats-nav-section');
   var $catNav = $('.cats-navEl li');
   var $windowTop = $(window).scrollTop();
   var $hasScroll = false;
 
   if (!$checker) return;
+  var $navOffset = $navParentEl.offset().top;
+  var $navOffSetOg = $navParentEl.offset().top;
+  var $navOuterHeight = $navParentEl.outerHeight();
+
   $sections.each(function (index, element) {
     return $(element).attr('id', 'section-' + index);
   });
@@ -794,17 +806,31 @@ exports.default = function () {
   var updateScroller = function updateScroller() {
     $hasScroll = true;
     $windowTop = $(window).scrollTop();
+    $navOffset = $navParentEl.offset().top;
   };
 
   var scrollTicker = function scrollTicker() {
     if ($hasScroll) {
       $sections.each(function (index, element) {
         var $el = $(element);
-        if ($windowTop + 100 >= Math.round($el.offset().top)) {
+        if ($windowTop + 10 >= Math.round($el.offset().top)) {
           $catNav.find('a').removeClass('active');
           $catNav.eq($el.index()).find('a').addClass('active');
         }
       });
+
+      if ($windowTop >= $navOffset) {
+        $navParentEl.css({
+          'position': 'fixed',
+          'top': $('nav').outerHeight()
+        }).addClass('is-fixed');
+      } else if ($windowTop <= $navOffSetOg + $navOuterHeight) {
+        $navParentEl.css({
+          'position': 'absolute',
+          'top': $navOffSetOg
+        }).removeClass('is-fixed');
+      }
+
       $hasScroll = false;
     }
     requestAnimationFrame(scrollTicker);

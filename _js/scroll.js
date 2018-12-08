@@ -75,16 +75,25 @@ export default function() {
       if(didScroll) {
         
 
-        if($windowOffset > $newScroll && $windowOffset > 20) {
+        if($windowOffset > $newScroll && $windowOffset > $('header').outerHeight()) {
 
           $("nav").css({
             "transform": "translateY(-100%)"
           })
 
+        
+            $('.cats-nav-section').css({
+              'transform': 'translateY(-'+ $('nav').outerHeight() +'px)'
+            })
+          
+
           $newScroll = $windowOffset;
         } else {
           $("nav").css({
             "transform": "translateY(0%)"
+          })
+          $('.cats-nav-section').css({
+            'transform': 'translateY(0%)'
           })
           $newScroll = $windowOffset;
         }
@@ -92,6 +101,7 @@ export default function() {
         if($('body').hasClass('page-template-home')) {
           if($windowOffset >= $topContent.offset().top - ($('nav').outerHeight() + 80)) {
             $('nav').addClass('is-scrolled')
+            
           } else {
             $('nav').removeClass('is-scrolled');
           }
