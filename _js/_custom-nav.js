@@ -4,23 +4,27 @@ export default function() {
   let $navParentEl = $('.cats-nav-section');
   let $catNav = $('.cats-navEl li');
   let $windowTop = $(window).scrollTop();
-  let $hasScroll = false
+  let $hasScroll = false;
 
+  // don't execute if not needed
   if(!$checker) return;
 
+  // create dynamic offsets per page
   let $navOffset = $navParentEl.offset().top;
   let $navOffSetOg = Math.round($navParentEl.offset().top)
   let $navOuterHeight = $navParentEl.outerHeight();
 
+  // update offets when page has loaded
   $(window).on('load', () => {
     $navOffset = $navParentEl.offset().top;
     $navOffSetOg = Math.round($navParentEl.offset().top)
     $navOuterHeight = $navParentEl.outerHeight();
   })
 
-
+  // Created dynamic ids for each section 
   $sections.each((index, element) => $(element).attr('id', `section-${index}`) )
   
+  // slide page to specific trigger section 
   let slidePage = event => {
     event.preventDefault();
     let $t = $(event.currentTarget);
@@ -30,12 +34,14 @@ export default function() {
     }, 1000)
   }
 
+  // update user behavior 
   let updateScroller = () => {
     $hasScroll = true;
     $windowTop = $(window).scrollTop();
     $navOffset = $navParentEl.offset().top
   }
 
+  // trigger scroll events 
   let scrollTicker = () => {
     if($hasScroll) {  
       $sections.each( (index,element) => {
@@ -51,14 +57,12 @@ export default function() {
 
       if($windowTop + $('nav').outerHeight() >= $navOffset) {
         $navParentEl.css({
-          'position': 'fixed',
           'top': $('nav').outerHeight(),
         }).addClass('is-fixed')
       }
       
       if($he <= $navOffSetOg) {
         $navParentEl.css({
-          'position': 'absolute',
           'top': $navOffSetOg ,
         }).removeClass('is-fixed')
       }

@@ -1,5 +1,5 @@
 <?php $root = get_template_directory_uri(); ?>
-<section id="slider" class="is-orange s_sec">
+<section id="slider" class="is-orange s_sec" style="z-index: 6;">
 <div class="spacing spacing--md"></div>
 	<div class="stroke-section stroke-section-orange" style="background-image: url(<?php echo "$root/_assets/images/stroke-orange.png"; ?>);"></div>
 

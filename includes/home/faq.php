@@ -24,7 +24,7 @@
 					
 					<div class="content-area has-max">
 						<?php if ( get_field('faq_message', 'option') ) : ?>
-							<?php echo get_field('faq_message', 'option'); ?>
+							<p><?php echo get_field('faq_message', 'option'); ?></p>
 						<?php endif; ?>
 						
 					</div>
