@@ -33,3 +33,6 @@ faq();
 
 import customNav from './_custom-nav.js';
 customNav();
+
+import util from './util.js';
+util();

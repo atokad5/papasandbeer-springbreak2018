@@ -31,6 +31,6 @@
 	}
 	add_filter('admin_footer_text', 'add_admin_footer');
 
-
+	add_filter( 'wpcf7_validate_configuration', '__return_false' );
 
 ?>

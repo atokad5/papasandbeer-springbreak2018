@@ -4,7 +4,7 @@
 <?php get_template_part('includes/nav') ;?>
 
 
-<section class="bg-area" style="background-image: url('//localhost:3000/wp-content/uploads/2018/10/hero-image.jpg');">
+<section class="bg-area" style="background-image: url(<?php the_field('header_background') ;?>);">
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
@@ -12,7 +12,7 @@
     <div class="inner-contents__mt">
       <div class="content-area">
         <div>
-          <h1 class="section-header">About Papas&Beer Spring Break</h1>
+          <h1 class="section-header"><?php the_field('header_title'); ?></h1>
         </div>
 
         <div class="ply-btn-hero">
@@ -23,7 +23,7 @@
         </div>
         
         <div class="watch-video">
-          Watch what's to come ✌️
+         <?php the_field('video_title'); ?>
         </div>
         
       </div>
@@ -39,13 +39,12 @@
 	<div class="stroke-section stroke-section-orange is-low" style="background-image: url(<?php echo "$root/_assets/images/stroke-white.png"; ?>);"></div>
   <div class="inner">
     <div class="about-card">
-      <div class="about-content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ipsum itaque dolorum distinctio? Ut voluptatum asperiores nihil, optio omnis, tempore eos consectetur similique autem nobis harum non, repellendus consequuntur dolorum?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ipsum itaque dolorum distinctio? Ut voluptatum asperiores nihil, optio omnis, tempore eos consectetur similique autem nobis harum non, repellendus consequuntur dolorum?</p>
+      <div class="about-content blog-area">
+        <?php the_field('about_content'); ?>
       </div>
       <div class="floating-image">
         <div class="card-image">
-          <div class="card-image-el"></div>
+          <div class="card-image-el" style="background-image: url(<?php the_field('about_offset_image') ;?>);"></div>
         </div>
       </div>
     </div>
@@ -55,15 +54,30 @@
 
 <div class="inner">
 
+
+<div class="center_text push-bottom">
+  <div class="content-area">
+    <h2 class="dates sm-hdr">
+      <?php the_field('image_grid_subheader'); ?>
+    </h2>
+  </div>
+  <div class="image-layout-hdr">
+    <div class="content-area">
+      <h1 class="section-header"><?php the_field('image_grid_main_header'); ?></h1>
+    </div>
+  </div>
+</div>
+
 <div class="image-grid-about rise-up">
-  <?php for($i = 0; $i < 8; $i++) {;?>
+  <?php $imageGridAbout = get_field('about_image_grid'); ?>
+  <?php foreach($imageGridAbout as $theGridder) {?>
     <div class="ug-parent">
-      <div class="ug-item is-bg" data-bg-src="<?php echo $imgContent['url'] ?>" style="background-image: url();">
+      <div class="ug-item is-bg" data-bg-src="<?php echo $theGridder['url'] ?>" style="background-image: url();">
         
         <div class="author">
-          <?php echo $imgContent['title']; ?>
+          <?php echo $theGridder['title']; ?>
         </div>
-        <div class="gradient-img"></div>
+        
       </div>
     </div>
   <?php } ;?>
@@ -75,7 +89,9 @@
 
 
 <?php $root = get_template_directory_uri(); ?>
-<section id="slider" class="is-blue s_sec">
+<section id="slider" class="is-blue s_sec square_up">
+<div class="spacing spacing--md"></div>
+<div class="spacing spacing--md"></div>
 <div class="spacing spacing--md"></div>
 	<div class="stroke-section stroke-section-orange" style="background-image: url(<?php echo "$root/_assets/images/stroke-blue.png"; ?>);"></div>
 
@@ -100,12 +116,12 @@
 			<div class="is-image-grid-content">
 					<div class="content-area mobile-center">
 						<h2 class="dates sm-hdr">
-              Sub Headline Goes Here
+              <?php the_field('sub_headline'); ?>
             </h2>
 					</div>
 					<div class="image-layout-hdr">
 						<div class="content-area mobile-center">
-							<h1 class="section-header">Headline Goes Here</h1>
+							<h1 class="section-header"><?php the_field('main_headline'); ?></h1>
 						</div>
 					</div>
 
@@ -113,7 +129,7 @@
 
 					<div class="image-grid-copy">
 						<div class="content-area mobile-center">
-							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam quis repellendus labore cupiditate nulla, est harum impedit sequi quasi atque ipsum ratione, possimus nostrum fuga aspernatur eligendi soluta commodi ducimus!</p>
+							<?php the_field('video_element_copy'); ?>
             </div>					
             <div class="section-cta">
               <a href="<?php the_field('view_packages_link', 'options'); ?>" class="cta"><?php the_field('view_packages_text', 'options'); ?></a>
@@ -125,7 +141,7 @@
     </div>
     
 		<div class="is-half-el-slider video-par">
-			<div class="video-el">
+			<div class="video-el video-trigger" style="background-image: url(<?php the_field('video_place_holder'); ?>); background-position: center; background-size: cover;" data-video-src="<?php the_field('video_src');?>">
           <div class="py-bt">
 
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 89.334 89.334"><defs><style></style><linearGradient id="a" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#f29e67"/><stop offset="1" stop-color="#dd675d"/></linearGradient></defs><g transform="translate(-1774.33 -1025.238)"><circle class="a" style="fill:#fff;" cx="44.667" cy="44.667" r="44.667" transform="translate(1774.33 1025.238)"/><path class="b" style=
@@ -134,7 +150,7 @@
 
       </div>
       <div class="video-cap">
-        What you missed last year
+        <?php the_field('video_message'); ?>
       </div>
 		</div>
 	</div>

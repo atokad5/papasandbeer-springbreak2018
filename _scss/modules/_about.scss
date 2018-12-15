@@ -90,9 +90,27 @@
   transform: translate(-50%, -50%);
 }
 
+.center_text {
+  text-align: center;
+}
+
+.push-bottom {
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 2em;
+}
 @media(min-width: $bp-md) {
   .video-par {
     width: 50%;
     padding-top: 0em;
   }
+
+  .square_up {
+    margin-top: -110px;
+  }
+}
+
+.card-image-el {
+  background-size: cover;
+  background-position: center;
 }

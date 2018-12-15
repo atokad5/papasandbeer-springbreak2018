@@ -136,6 +136,10 @@ var _customNav = __webpack_require__(12);
 
 var _customNav2 = _interopRequireDefault(_customNav);
 
+var _util = __webpack_require__(13);
+
+var _util2 = _interopRequireDefault(_util);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _build2.default)();
@@ -159,6 +163,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _faq2.default)();
 
 (0, _customNav2.default)();
+
+(0, _util2.default)();
 
 /***/ }),
 /* 2 */
@@ -868,6 +874,31 @@ exports.default = function () {
   requestAnimationFrame(scrollTicker);
   $(window).on('scroll', updateScroller);
   $catNav.on('click', function (event) {
+    return slidePage(event);
+  });
+};
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  var $slideTrigger = $('#faq-slideDown');
+  var $faqSection = $('#faq-section');
+
+  var slidePage = function slidePage(event) {
+    event.preventDefault();
+    $('html, body').animate({ 'scrollTop': $faqSection.offset().top + 'px' }, 500);
+  };
+
+  $slideTrigger.on('click', function (event) {
     return slidePage(event);
   });
 };
