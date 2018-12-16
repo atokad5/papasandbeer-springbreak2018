@@ -1,0 +1,32 @@
+.image-calendar-parent {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: -20em;
+  position: relative;
+  z-index: 5;
+}
+
+.image-calendar {
+  width: auto;
+  height: 0px;
+  padding-bottom:(9/16) * 100%;
+  background: $themeBlue;
+  border-radius: 15px;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  border: 1em solid white;
+
+ img {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0; left: 0;
+ }
+
+}
+
+.hero_title_push_bottom {
+  padding-bottom: 1em;
+}

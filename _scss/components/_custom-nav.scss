@@ -1,6 +1,7 @@
 .cats-navEl a {
   &.active {
-    color: red !important;
+    text-decoration: underline;
+    font-weight: 700;
   }
 }
 

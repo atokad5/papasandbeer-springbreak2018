@@ -9,16 +9,16 @@
 - Final borders (1em width) 15px radius ✅
 
 # Info/Contact Page
-- ✅Need conditional logic for contact form
+- Need conditional logic for contact form
 - Remove more info link  ✅
 - Header for follow us (indentify for headers) ✅
-- replace mail with snapchat (instagram, snapchat, twitter, facebook, youtube)
+- replace mail with snapchat (instagram, snapchat, twitter, facebook, youtube) ✅
 
 # Travel and Hotel Page
 - Waiting on Christian/Chris for more details on content
 - Add map with location 
 - Hotels Carousel for booking 
-- Travel Faq in the bottom
+- Travel Faq in the bottom ✅
 
 # About Page
 - About Page to be determined for nav ✅

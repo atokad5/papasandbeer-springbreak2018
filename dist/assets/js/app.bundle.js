@@ -893,14 +893,32 @@ exports.default = function () {
   var $slideTrigger = $('#faq-slideDown');
   var $faqSection = $('#faq-section');
 
+  var $accordEl = $('.accordion-trigger');
+
   var slidePage = function slidePage(event) {
     event.preventDefault();
     $('html, body').animate({ 'scrollTop': $faqSection.offset().top + 'px' }, 500);
   };
 
+  var displayEl = function displayEl(event) {
+    var $t = $(event.currentTarget);
+
+    if ($t.parent('.topic').hasClass('is-active')) {
+      $t.parent('.topic').removeClass('is-active');
+      $t.next('.accordion-content').slideUp(300);
+      return;
+    }
+
+    $accordEl.parent('.topic').removeClass('is-active');
+    $accordEl.next('.accordion-content').slideUp(300);
+    $t.parent('.topic').addClass('is-active');
+    $t.next('.accordion-content').slideDown(300);
+  };
+
   $slideTrigger.on('click', function (event) {
     return slidePage(event);
   });
+  $accordEl.on('click', displayEl);
 };
 
 /***/ })
