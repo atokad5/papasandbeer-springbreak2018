@@ -39,8 +39,26 @@
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
-  <div class="inner is-center">
-    <h1 class="section-header">Select a date</h1>
+  <div class="inner" style="color: white;">
+    <div class="is-center">
+			<h1 class="section-header">Select a date</h1>
+		</div>
+		<div class="content-area has-max">
+      <div class="is-center">
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque autem vero asperiores veritatis, fugit vel esse, commodi ex accusantium laborum totam ducimus enim delectus explicabo sint neque provident fuga distinctio?</p>
+			</div>
+    </div>
+
+		<?php for($i = 0 ; $i < 3; $i++) { ?>
+			<div class="package-option">
+				<div class="package-option__element">
+					<div class="package-content">
+						<h2 class="dates">03.28.19 - 03.31.19</h2>
+						<h1 class="section-header">Weekend One</h1>
+					</div>
+				</div>
+			</div>
+		<?php } ?>
   </div>
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>

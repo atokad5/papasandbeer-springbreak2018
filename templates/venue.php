@@ -46,16 +46,14 @@
     <div class="flexing-map">
       <div class="flexing-map-section">
         <figure class="map-image">
-          <img src="http://dev.zitrocreative.com/revamp-2018/wp-content/uploads/2018/06/venuelayout.png" alt="">
+          <img src="<?php the_field('venue_map');?>" alt="">
         </figure>
       </div>
       <div class="flexing-map-section">
         <div class="content-area is-white blog-area">
-          <h1>Venue Map</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, totam soluta vel tenetur quos exercitationem doloremque commodi sit expedita autem nobis, quia vero nemo nostrum corrupti dignissimos possimus numquam enim?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, totam soluta vel tenetur quos exercitationem doloremque commodi sit expedita autem nobis, quia vero nemo nostrum corrupti dignissimos possimus numquam enim?</p>
+          <?php the_field('venue_copy'); ?>
           <div class="cta-el">
-            <a href="<?php the_field('view_packages_link', 'options'); ?>" class="cta">Download Map</a>
+            <a href="<?php the_field('venue_map');?>" class="cta" Download>Download Map</a>
           </div>
         </div>
       </div>
@@ -74,17 +72,18 @@
   <div class="spacing spacing--md"></div>
 
   <div class="inner is-center">
-    <h1 class="section-header">EXCLUSIVE PAPAS Experience</h1>
+    <h1 class="section-header"><?php the_field('exclusive_headline'); ?></h1>
   </div>
 
   <div class="inner accordion has-max push-top">
     <?php 
-      for($i = 0; $i < 4; $i++) {
+      $exclusiveEl = get_field('exclusive_elements');
+      foreach($exclusiveEl as $eEl) {
     ?>
 
     <div class="topic">
       <div class="accordion-trigger">
-        <h2>Beach Front</h2>
+        <h2><?php echo $eEl['title']; ?></h2>
 
         <div class="accordion-indicator">
           <span></span><span></span>
@@ -92,10 +91,7 @@
       </div>
 
       <div class="accordion-content blog-area">
-        <h1>This is a Title</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem temporibus laboriosam quod ad reprehenderit. Quas delectus nobis illo officiis, tenetur animi soluta ut impedit optio sint vel laboriosam, numquam dolore?</p>
-        <h1>This is a Title</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem temporibus laboriosam quod ad reprehenderit. Quas delectus nobis illo officiis, tenetur animi soluta ut impedit optio sint vel laboriosam, numquam dolore?</p>
+        <?php echo $eEl['copy']; ?>
       </div>
 
     </div>
@@ -115,19 +111,19 @@
 <div class="stroke-section stroke-section-orange" style="background-image: url(<?php echo "$root/_assets/images/stroke-orange.png"; ?>);"></div>
   <div class="spacing spacing--md"></div>
   <div class="inner is-center is-white">
-    <h1 class="section-header">Rosa Map Section</h1>
+    <h1 class="section-header"><?php the_field('rosa_map_title'); ?></h1>
     <div class="content-area has-max">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis laboriosam deserunt nisi optio voluptate nemo consequatur pariatur quasi impedit aperiam commodi sunt, minima doloribus doloremque autem aspernatur nostrum libero cupiditate. </p>
+      <?php the_field('rosa_map_entry_copy'); ?>
     </div>
 
     <div class="image--container">
-      <div class="image-element-nested">
+      <div class="image-element-nested" style="background-image: url(<?php the_field('rosa_map');?>); background-size: cover; background-position: center;">
 
       </div>
     </div>
 
     <div class="is-center cta-el">
-      <a href="<?php the_field('view_packages_link', 'options'); ?>" class="cta">Download Map</a>
+      <a href="<?php the_field('rosa_map');?>" class="cta" Download>Download Map</a>
     </div>
 
   </div>
@@ -154,12 +150,12 @@
 			<div class="is-image-grid-content" style="color: black;">
 					<div class="content-area mobile-center">
 						<h2 class="dates sm-hdr">
-              SUB HEADLINE
+              <?php the_field('video_call_out_subheadline') ?>
             </h2>
 					</div>
 					<div class="image-layout-hdr">
 						<div class="content-area mobile-center">
-							<h1 class="section-header">Main Headline</h1>
+							<h1 class="section-header"><?php the_field('video_call_out_headline'); ?></h1>
 						</div>
 					</div>
 
@@ -167,7 +163,7 @@
 
 					<div class="image-grid-copy">
 						<div class="content-area mobile-center">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio fugiat voluptatem neque! Dolor, alias quidem ea quam tempora quasi voluptatibus atque beatae quisquam quo totam mollitia magni illo blanditiis quibusdam.</p>
+							<?php the_field('video_call_out_copy'); ?>
             </div>					
             <div class="section-cta">
               <a href="<?php the_field('view_packages_link', 'options'); ?>" class="cta"><?php the_field('view_packages_text', 'options'); ?></a>
@@ -179,7 +175,7 @@
     </div>
     
 		<div class="is-half-el-slider video-par">
-			<div class="video-el video-trigger" style="background-image: url(<?php the_field('video_place_holder'); ?>); background-position: center; background-size: cover;" data-video-src="<?php the_field('video_src');?>">
+			<div class="video-el video-trigger" style="background-image: url(<?php the_field('video_call_out_placeholder'); ?>); background-position: center; background-size: cover;" data-video-src="<?php the_field('video_src');?>">
           <div class="py-bt">
 
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 89.334 89.334"><defs><style></style><linearGradient id="a" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#f29e67"/><stop offset="1" stop-color="#dd675d"/></linearGradient></defs><g transform="translate(-1774.33 -1025.238)"><circle class="a" style="fill:#fff;" cx="44.667" cy="44.667" r="44.667" transform="translate(1774.33 1025.238)"/><path class="b" style=
@@ -188,7 +184,7 @@
 
       </div>
       <div class="video-cap">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius totam fuga quos nobis!</p>
+        <p><?php the_field('video_message'); ?></p>
       </div>
 		</div>
 	</div>
