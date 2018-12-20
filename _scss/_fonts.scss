@@ -34,6 +34,16 @@ body {
   font-weight: 100;
 }
 
+.blog-area {
+  a {
+    color: $themePink;
+    font-weight: bolder;
+  }
+  .cta {
+    color: white;
+  }
+}
+
 .section-header {
   font-family: california;
   font-size: 3.7em;

@@ -596,8 +596,130 @@ exports.default = function () {
 	var $sliderParent = $('.slider_parent');
 	var $sliderBtn = $('.slideTr');
 	var $slideMt = $('.slider_area_mt');
-	var $sidery = $('.slidey');
 	var $newB = $('.is-btn');
+
+	// slider for venue page
+	var $venueSliderDay = $('.images-day');
+	var $venueSliderNight = $('.images-night');
+	var $menuTrigger = $('.mt-trigger');
+	var $countGo = 0;
+	var $snaggyType = $('.snaggy-type');
+
+	//day button
+	var $dayBtn = $('.content-day .is-btn');
+	var $nightBtn = $('.content-night .is-btn');
+
+	function checkGroup() {
+		if ($menuTrigger.is(':visible')) {
+			$countGo = 1;
+		} else {
+			$countGo = 2;
+		}
+	}
+
+	if ($('body').hasClass('page-template-venue')) {
+		$('body').addClass('day');
+	}
+
+	function showDaySlide() {
+		$venueSliderDay.flickity({
+			groupCells: $countGo,
+			pageDots: false,
+			prevNextButtons: false,
+			wrapAround: true
+		});
+	}
+
+	function showNightSlide() {
+		$venueSliderNight.flickity({
+			groupCells: $countGo,
+			pageDots: false,
+			prevNextButtons: false,
+			wrapAround: true
+		});
+	}
+
+	function swapSlides() {
+		var $t = $(this);
+
+		$snaggyType.removeClass('active');
+		$t.addClass('active');
+
+		if ($t.hasClass('night')) {
+			$venueSliderDay.flickity('destroy');
+			$('.images-day').hide();
+			$('.content-day').hide();
+			$('.images-night').show();
+			$('.content-night').show();
+			$('body').removeClass('day');
+			$('body').addClass('night');
+			setTimeout(function () {
+				showNightSlide();
+			}, 100);
+		} else {
+			$venueSliderNight.flickity('destroy');
+			$('.images-day').show();
+			$('.content-day').show();
+			$('.images-night').hide();
+			$('.content-night').hide();
+			$('body').removeClass('night');
+			$('body').addClass('day');
+			setTimeout(function () {
+				showDaySlide();
+			}, 100);
+		}
+	}
+
+	$snaggyType.on('click', swapSlides);
+
+	$dayBtn.on('click', function () {
+		var $dayEl = $('.images-day');
+		if ($(this).hasClass('next')) {
+			$dayEl.flickity('next');
+		} else {
+			$dayEl.flickity('previous');
+		}
+	});
+
+	$nightBtn.on('click', function () {
+		var $nightEl = $('.images-night');
+		if ($(this).hasClass('next')) {
+			$nightEl.flickity('next');
+		} else {
+			$nightEl.flickity('previous');
+		}
+	});
+
+	function debounce(func, wait, immediate) {
+		var timeout;
+		return function () {
+			var context = this,
+			    args = arguments;
+			var later = function later() {
+				timeout = null;
+				if (!immediate) func.apply(context, args);
+			};
+			var callNow = immediate && !timeout;
+			clearTimeout(timeout);
+			timeout = setTimeout(later, wait);
+			if (callNow) func.apply(context, args);
+		};
+	};
+
+	// example
+	checkGroup();
+	showDaySlide();
+	var updateDay = debounce(function () {
+		if ($('body').hasClass('day')) {
+			showDaySlide();
+		} else {
+			showNightSlide();
+		}
+		checkGroup();
+		// }
+	}, 250);
+
+	// slider for venue page end
 
 	$sliderParent.flickity({
 		cellAlign: 'left',
@@ -652,6 +774,7 @@ exports.default = function () {
 		});
 	}
 
+	$(window).on('resize', updateDay);
 	$newB.on('click', changeSlide);
 	$sliderBtn.on('click', slideSlider);
 };

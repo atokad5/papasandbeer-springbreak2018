@@ -20,7 +20,7 @@
 
     <div class="image-calendar-parent">
       <figure class="image-calendar" >
-        <img src="<?php the_field('header_background');?>" alt="">
+        <img src="<?php the_field('calendar_image');?>" alt="">
       </figure>
     </div>
 
@@ -41,20 +41,26 @@
   <div class="spacing spacing--md"></div>
   <div class="inner" style="color: white;">
     <div class="is-center">
-			<h1 class="section-header">Select a date</h1>
+			<h1 class="section-header"><?php the_field('weekend_package_title'); ?></h1>
 		</div>
 		<div class="content-area has-max">
-      <div class="is-center">
-				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque autem vero asperiores veritatis, fugit vel esse, commodi ex accusantium laborum totam ducimus enim delectus explicabo sint neque provident fuga distinctio?</p>
+      <div class="is-center blog-area">
+				<?php the_field('weekend_package_copy'); ?>
 			</div>
-    </div>
+		</div>
+		
+		<?php $packages = get_field('weekend_package_options'); ?>
 
-		<?php for($i = 0 ; $i < 3; $i++) { ?>
+		<?php foreach($packages as $theWeekend) { ?>
 			<div class="package-option">
 				<div class="package-option__element">
 					<div class="package-content">
-						<h2 class="dates">03.28.19 - 03.31.19</h2>
-						<h1 class="section-header">Weekend One</h1>
+						<h2 class="dates"><?php echo $theWeekend['dates']; ?></h2>
+						<h1 class="section-header"><?php echo $theWeekend['title']; ?></h1>
+					</div>
+
+					<div class="package-button">
+					<a href="<?php echo $theWeekend['link']['url']; ?>" class="cta"><?php echo $theWeekend['link']['title']; ?></a>
 					</div>
 				</div>
 			</div>
@@ -68,14 +74,52 @@
 
 
 
-<section style="position: relative;">
+<section style="position: relative;" id="weekday-packages">
 <div class="stroke-section stroke-section-orange is-rotated" style="background-image: url(<?php echo "$root/_assets/images/stroke-blue.png"; ?>);"></div>
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
 
-  <div class="inner is-center">
-    <h1 class="section-header">Select Week Day</h1>
+  <div class="inner">
+    <div class="is-center">
+			<h1 class="section-header"><?php the_field('weekday_package_title'); ?></h1>
+		</div>
+
+		<div class="sponsor-wrapper-outter">
+			<div class="sponsor-wrapper">
+				<div class="sponsor-logos">
+					<div class="sponsor-logos__element">
+						<img src="<?php the_field('sponsor_image_one');?>" alt="">
+					</div>
+					<div class="sponsor-logos__element">
+						<img src="<?php the_field('sponsor_image_two');?>" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content-area has-max">
+      <div class="is-center blog-area">
+				<?php the_field('weekday_package_copy'); ?>
+			</div>
+    </div>
+
+		<?php $packagesTwo = get_field('weekday_package_options'); ?>
+
+		<?php foreach($packagesTwo as $theWeekDay) { ?>
+			<div class="package-option">
+				<div class="package-option__element">
+					<div class="package-content">
+						<h2 class="dates"><?php echo $theWeekDay['dates']; ?></h2>
+						<h1 class="section-header"><?php echo $theWeekDay['title']; ?></h1>
+					</div>
+
+					<div class="package-button">
+					<a href="<?php echo $theWeekDay['link']['url']; ?>" class="cta"><?php echo $theWeekDay['link']['title']; ?></a>
+					</div>
+				</div>
+			</div>
+		<?php } ?>
   </div>
+	
 
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
@@ -94,7 +138,7 @@
 					<div style="color: white;">
 						<h1 class="section-header" style="font-weight: 100;">
 							<?php if ( get_field('faq_header', 'option') ) : ?>
-							Packages&nbsp;	<?php echo get_field('faq_header', 'option'); ?>
+							Packages&nbsp;Faqs
 							<?php endif; ?>
 							
 						</h1>
@@ -156,17 +200,13 @@
 	<div class="spacing spacing--md"></div>
 	<div class="spacing spacing--md"></div>
 	<div class="spacing spacing--md"></div>
+	<div class="spacing spacing--md"></div>
+	<div class="spacing spacing--md"></div>
 </section>
 
 
 
 
 
-<section class="spaceoff-footer is-blue">
-  <div class="spacing spacing--md"></div>
-  <div class="spacing spacing--md"></div>
-  <div class="spacing spacing--md"></div>
-  <div class="spacing spacing--md"></div>
-</section>
 
 <?php get_footer(); ?>

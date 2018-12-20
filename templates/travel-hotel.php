@@ -59,9 +59,9 @@ foreach($parentLoop as $theLoop) { ?>
             <h1 class="section-header"><?php echo $theLoop['section_title']; ?></h1>
           </div>
           
-          <div class="content-area">
+          <div class="content-area blog-area">
             <?php echo $theLoop['section_content']; ?>
-            <div class="arrow-box">
+            <div class="arrow-box" style="padding-top: 1em;">
              <button class="is-btn slider_btn pre">
               <?php get_template_part('includes/icons/left-arrow'); ?>
             </button>

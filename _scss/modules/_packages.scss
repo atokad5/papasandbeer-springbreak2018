@@ -1,5 +1,5 @@
 .image-calendar-parent {
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
   margin: auto;
   margin-bottom: -20em;
@@ -30,3 +30,82 @@
 .hero_title_push_bottom {
   padding-bottom: 1em;
 }
+
+.package-option {
+  border-bottom: 1px solid white;
+  margin-bottom: 1em;
+  
+
+  &__element {
+    padding: 1em 0em;
+    text-align: center;
+  }
+
+  .package-content {
+    user-select: none;
+  }
+
+}
+
+#weekday-packages {
+  .package-option {
+    border-bottom: 1px solid black;
+  }
+}
+
+.sponsor-logos {
+  text-align: center;
+
+  &__element {
+    margin: auto;
+    max-width: 150px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media(min-width: $bp-md) {
+  .package-option {
+
+    &__element {
+      position: relative;
+      text-align: left;
+      transition: color 1s ease;
+      &:hover {
+        color: $themePink;
+      }
+    }
+  }
+  .package-button {
+    position: absolute;
+    top: 50%;
+    right: 0em;
+    transform: translateY(-50%);
+  }
+
+  .sponsor-wrapper-outter {
+    text-align: center;
+  }
+
+  .sponsor-wrapper {
+    display: inline-block;
+    justify-content: center;
+  }
+  .sponsor-logos {
+    text-align: auto;
+    display: flex;
+    align-items: center;
+  
+    &__element {
+      width: 50%;
+      margin: auto 1em;
+      max-width: 150px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+

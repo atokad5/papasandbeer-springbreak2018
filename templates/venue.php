@@ -29,9 +29,88 @@
   <div class="stroke-section stroke-section-orange" style="background-image: url(<?php echo "$root/_assets/images/stroke-blue.png"; ?>);"></div>
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
-  <div class="inner is-center">
-    <h1 class="section-header">Slider Section</h1>
+  <div class="inner">
+      <div class="flex-parent-element_venue">
+
+      <div class="content-section_venue flexy_venue">
+
+<div class="venue-section-headers">
+  <h1 class="section-header snaggy-type day active">DAY</h1>
+  <h1 class="section-header snaggy-type night">NIGHT</h1>
+</div>
+
+<div class="venue-section-content" style="color: white;">
+
+  <div class="content-day content-ve">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet minima non iste quos iure doloribus nihil, dolores vel animi illo ad cupiditate eligendi facilis porro nostrum ullam nemo cum! Laborum.</p>
+    <div class="arrow-box">
+      <button class="is-btn slider_btn pre">
+        <?php get_template_part('includes/icons/left-arrow'); ?>
+      </button>
+      <button class="is-btn slider_btn next">
+        <?php get_template_part('includes/icons/left-arrow'); ?>
+      </button>
+    </div>
   </div>
+
+  <div class="content-night content-ve">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque explicabo possimus eligendi voluptatibus quia voluptatem nam voluptatum dolor at deserunt vitae, placeat, quos alias iure eaque culpa ut dolorem temporibus?</p>
+    <div class="arrow-box">
+      <button class="is-btn slider_btn pre">
+        <?php get_template_part('includes/icons/left-arrow'); ?>
+      </button>
+      <button class="is-btn slider_btn next">
+        <?php get_template_part('includes/icons/left-arrow'); ?>
+      </button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+        <div class="content-section_venue flexy_venue">
+          
+
+          <div class="venue_images images-day">
+            <?php for($i = 0; $i < 8; $i++) {?>
+              <div class="venue-image-element">
+                <div class="venue-img_item">
+
+                </div>
+                <div class="venue-img_content" style="color: white;">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quae ipsum recusandae.</p>
+                </div>
+              </div>
+            <?php }; ?>
+          </div>
+
+          <div class="venue_images images-night">
+            <?php for($i = 0; $i < 8; $i++) {?>
+              <div class="venue-image-element">
+                <div class="venue-img_item">
+
+                </div>
+                <div class="venue-img_content" style="color: white;">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quae ipsum recusandae.</p>
+                </div>
+              </div>
+            <?php }; ?>
+          </div>
+        
+          
+        </div>
+
+
+       
+      </div>
+
+      
+   
+  </div>
+
+
+
+
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
