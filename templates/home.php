@@ -12,26 +12,26 @@
 		<div class="hdr-container hero_flex">
 
 		<div class="hero_flex--el">
-			<h1 class="section-header">
-					Ready for the ultimate spring break?
+				<h1 class="section-header">
+					<?php the_field('hero_headline'); ?>
 				</h1>
-				<div class="content-area hero-copy">
-					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eum aliquid rerum, dolorem quo magni provident laudantium. Sunt animi explicabo vitae ipsam.</p>
+				<div class="content-area hero-copy" style="margin-bottom: 1.5em;">
+					<?php the_field('hero_copy'); ?>
 				</div>
-				<a href="" class="cta">Buy Packages</a>
+				<a href="<?php the_field('view_packages_link', 'options'); ?>" class="cta"><?php the_field('view_packages_text', 'options'); ?></a>
 		</div>
 
 		<div class="hero_flex--el">
-			<div class="hero_video--card">
+			<div class="hero_video--card video-trigger" data-video-src="<?php the_field('video_src');?>">
 				<div class="py-bt">
 					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 89.334 89.334"><defs><style></style><linearGradient id="a" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#f29e67"/><stop offset="1" stop-color="#dd675d"/></linearGradient></defs><g transform="translate(-1774.33 -1025.238)"><circle class="a" style="fill:#fff;" cx="44.667" cy="44.667" r="44.667" transform="translate(1774.33 1025.238)"/><path class="b" style=
 				"fill:url(#a);" d="M0,0,22.079,3.473,12.462,13.09l-9.04,9.04Z" transform="translate(1830.154 1069.337) rotate(135)"/></g></svg>
 				</div>
-				<div class="card-bg" style="background-image: url(https://media.giphy.com/media/26tP3M3i03hoIYL6M/giphy.gif);"></div>
+				<div class="card-bg" style="background-image: url(<?php the_field('hero_video_placeholder'); ?>);"></div>
 			</div>
 			<div class="hero-watch-video">
 				<div class="hero-watch-video--inner">
-					See What's To Come
+				<?php the_field('video_card_content'); ?>
 				</div>
 				<span class="gradient"></span>
 			</div>
@@ -41,7 +41,7 @@
 		</div>
 	</div>
 	<div class="is-transition-bg"></div>
-	<div class="is-bg is-el-bg header-bg" data-bg-src="<?php the_field('hero_background') ;?>"></div>
+	<div class="is-bg is-el-bg header-bg" data-bg-src="<?php the_field('hero_background') ;?>" id="headerBg"></div>
 </header>
 
 

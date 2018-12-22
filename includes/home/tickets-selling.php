@@ -11,7 +11,7 @@
 		<div class="is-center">
 			<div class="content-area">
 				<div class="countdown-home">
-					<div class="countdown-el">
+					<div class="countdown-el" data-countdown="<?php the_field('countdown'); ?>">
 
 					</div>
 				</div>

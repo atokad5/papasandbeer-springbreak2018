@@ -6,7 +6,7 @@
 .toggle-element {
 	font-family: 'california';
 	font-size: 1.4em;
-	padding: 2em 0em 3em 0em;
+	padding: 1em 0em 1em 0em;
 	text-align: center;
 }
 
@@ -114,4 +114,17 @@
 		transition: transform 1200ms, opacity 800ms ease;
 	}
 
+}
+
+
+.copy-lineup {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
+.copy-lineup-group {
+	padding-bottom: 2em;
 }

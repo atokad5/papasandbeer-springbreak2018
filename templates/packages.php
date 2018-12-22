@@ -57,7 +57,9 @@
 					<div class="package-content">
 						<h2 class="dates"><?php echo $theWeekend['dates']; ?></h2>
 						<h1 class="section-header"><?php echo $theWeekend['title']; ?></h1>
-						<h2 class="dates artist_names-packages" style="color: #eee">Artist Name, Artist Name, Artist Name, Artist Name, Artist Name,</h2>
+						<h2 class="dates artist_names-packages" style="color: #eee">
+							<?php echo $theWeekend['artist_names'] ;?>
+						</h2>
 					</div>
 
 					<div class="package-button">
@@ -112,6 +114,9 @@
 					<div class="package-content">
 						<h2 class="dates"><?php echo $theWeekDay['dates']; ?></h2>
 						<h1 class="section-header"><?php echo $theWeekDay['title']; ?></h1>
+						<h2 class="dates artist_names-packages" style="color: #343434">
+							<?php echo $theWeekDay['artist_names'] ;?>
+						</h2>
 					</div>
 
 					<div class="package-button">

@@ -4,6 +4,9 @@
 }
 
 .is-set {
+	#who_next {
+		transform: translateY(0px);
+	}
 	.s_sec {
 		transform: translateY(0px);
 	}
@@ -11,6 +14,7 @@
 .s_sec {
 	transition: transform 1s ease;
 	position: relative;
+
 }
 
 .is-blue {
@@ -198,10 +202,16 @@
 	}
 }
 
-
+.link-out {
+	text-align: center;
+	padding: 1.5em 0em;
+}
 @media(min-width: $bp-md) {
 	.countdown-ticker {
 		font-size: 3.2em;
+	}
+	.link-out {
+		text-align: left;
 	}
 }
 

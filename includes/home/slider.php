@@ -37,6 +37,10 @@
 						<div class="content-area mobile-center">
 							<p><?php the_field('slider_copy'); ?></p>
 						</div>					
+						<?php $linkOut = get_field('link_out'); ?>
+						<div class="link-out">
+							<a href="<?php echo $linkOut['url']; ?> " class="cta"><?php echo $linkOut['title']; ?></a>
+						</div>
 					</div>
 
 					<div class="slider-buttons">

@@ -28,7 +28,7 @@ export default function() {
     $t.next('.accordion-content').slideDown(300);
   }
 
-  $('.countdown-el').countdown('2019/1/01', function(event){
+  $('.countdown-el').countdown($('.countdown-el').attr('data-countdown'), function(event){
     if(event.strftime('%D') <= 10 ) {
       console.log('yes')
     } else {

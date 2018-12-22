@@ -183,7 +183,9 @@ exports.default = function () {
 	var $spliter = $currentWelcome.split('');
 	var $urlCheckDev = window.origin === "http://localhost:3000" ? true : false;
 
-	if (!$urlCheckDev) {
+	$('body').css({ 'overflow': 'hidden' });
+
+	if ($urlCheckDev) {
 		setTimeout(function () {
 			_selectors.$s.body.addClass('is-ready');
 		});
@@ -198,7 +200,7 @@ exports.default = function () {
 			$currentWelcomeParent.append('\n\t\t\t\t<span class="letter">' + $spliter[i] + '</span>\n\t\t\t');
 		}
 
-		if (!$urlCheckDev) {
+		if ($urlCheckDev) {
 			setTimeout(function () {
 				_selectors.$s.body.addClass('is-built');
 			}, 2100);
@@ -212,12 +214,13 @@ exports.default = function () {
 
 				setTimeout(function () {
 					_selectors.$s.body.addClass('is-set');
+					$('body').css({ 'overflow': 'auto' });
 				});
 			}, 3500);
 		}
 	};
 
-	if ($urlCheckDev) {
+	if (!$urlCheckDev) {
 		_selectors.$s.body.addClass('is-ready');
 		_selectors.$s.body.addClass('is-building');
 		_selectors.$s.body.addClass('is-built');
@@ -438,6 +441,7 @@ exports.default = function () {
     var $navParentEl = $('.cats-nav-section');
     var $newScroll = 0;
     var $setHeightRequirements = 0;
+    var $headerBg = $('#headerBg');
 
     if ($navParentEl.length >= 1) {
       var $navOffSetOg = Math.round($navParentEl.offset().top);
@@ -500,6 +504,10 @@ exports.default = function () {
           $("nav").removeClass('is-scrolled');
         }
 
+        $headerBg.css({
+          'transform': 'translateY(' + $windowOffset / 20 + '%)'
+        });
+
         if ($windowOffset > $newScroll && $windowOffset >= $setHeightRequirements) {
 
           $("nav").css({
@@ -559,9 +567,12 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = function () {
 	var $lineupTrigger = $('.lineup-year');
 	var $elementImage = $('.element-lineup');
-
+	var $next = false;
 	var toggleImage = function toggleImage(e) {
 		var $t = $(e.currentTarget);
+
+		$('.copy-lineup').hide();
+		$('.copy-lineup').eq($t.index()).show();
 
 		if ($t.hasClass('active')) return;
 
@@ -838,7 +849,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 exports.default = function () {
-  var $videoSrc = $('.video-container').attr('data-video-src');
+  var $videoSrc = $('.video-trigger').attr('data-video-src');
   var $videoParent = $('.video-trigger');
   var $videoContainer = $('#video-container');
   var $body = $('body');
@@ -1038,7 +1049,7 @@ exports.default = function () {
     $t.next('.accordion-content').slideDown(300);
   };
 
-  $('.countdown-el').countdown('2019/1/01', function (event) {
+  $('.countdown-el').countdown($('.countdown-el').attr('data-countdown'), function (event) {
     if (event.strftime('%D') <= 10) {
       console.log('yes');
     } else {

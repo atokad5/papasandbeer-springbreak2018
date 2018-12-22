@@ -165,6 +165,25 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_5c1ec4e074752",
+                    "label": "artist names",
+                    "name": "artist_names",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_5c1913c489c7a",
                     "label": "Link",
                     "name": "link",
@@ -338,6 +357,25 @@
                         "id": ""
                     },
                     "return_format": "array"
+                },
+                {
+                    "key": "field_5c1ec4f674753",
+                    "label": "Artist names",
+                    "name": "artist_names",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -477,5 +515,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1545149645
+    "modified": 1545520383
 }

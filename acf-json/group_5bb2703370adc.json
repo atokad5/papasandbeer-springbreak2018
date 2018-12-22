@@ -60,6 +60,68 @@
             "new_lines": "wpautop"
         },
         {
+            "key": "field_5c1ead616b570",
+            "label": "Video Src",
+            "name": "video_src",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c1ead446b56f",
+            "label": "Hero Video placeholder",
+            "name": "hero_video_placeholder",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5c1eb0eff115a",
+            "label": "Video Card Content",
+            "name": "video_card_content",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5bb270b9d30c7",
             "label": "Hero Background",
             "name": "hero_background",
@@ -465,6 +527,25 @@
             "new_lines": "wpautop"
         },
         {
+            "key": "field_5c1eb13ccd4ae",
+            "label": "Line Up Two",
+            "name": "line_up_two",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "wpautop"
+        },
+        {
             "key": "field_5c094a3944a65",
             "label": "Line Up Option One",
             "name": "line_up_option_one",
@@ -623,6 +704,21 @@
             "maxlength": "",
             "rows": "",
             "new_lines": "wpautop"
+        },
+        {
+            "key": "field_5c1ec10e57479",
+            "label": "Link out",
+            "name": "link_out",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         },
         {
             "key": "field_5bb2f53ec5baa",
@@ -859,6 +955,23 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5c1ec5b52da6f",
+            "label": "Countdown",
+            "name": "countdown",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "Y\/m\/d",
+            "first_day": 1
         }
     ],
     "location": [
@@ -880,5 +993,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1544977134
+    "modified": 1545520995
 }

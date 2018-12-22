@@ -6,8 +6,9 @@ export default function() {
 	let $spliter = $currentWelcome.split('');
 	let $urlCheckDev = window.origin === "http://localhost:3000" ? true : false;
 
+	$('body').css({'overflow': 'hidden'})
 
-	if(!$urlCheckDev) {
+	if($urlCheckDev) {
 		setTimeout(function() {
 			$s.body.addClass('is-ready')
 		})
@@ -25,7 +26,7 @@ export default function() {
 			`);
 		}
 
-		if(!$urlCheckDev) {
+		if($urlCheckDev) {
 			setTimeout(function() {
 				$s.body.addClass('is-built')
 			}, 2100)
@@ -39,12 +40,13 @@ export default function() {
 
 				setTimeout(function() {
 					$s.body.addClass('is-set');
+					$('body').css({'overflow': 'auto'})
 				})
 			}, 3500)
 		}
 	}
 
-	if($urlCheckDev) {
+	if(!$urlCheckDev) {
 		$s.body.addClass('is-ready')
 		$s.body.addClass('is-building')
 		$s.body.addClass('is-built')

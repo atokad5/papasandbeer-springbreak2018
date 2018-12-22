@@ -16,6 +16,7 @@ export default function() {
     let $navParentEl = $('.cats-nav-section');
     let $newScroll = 0;
     let $setHeightRequirements = 0;
+    let $headerBg = $('#headerBg');
 
     if($navParentEl.length >= 1) {
       let $navOffSetOg = Math.round($navParentEl.offset().top)
@@ -86,6 +87,10 @@ export default function() {
         } else {
           $("nav").removeClass('is-scrolled');
         }
+
+        $headerBg.css({
+          'transform': 'translateY('+ $windowOffset/20 +'%)'
+        })
         
 
         if($windowOffset > $newScroll && $windowOffset >= $setHeightRequirements) {
