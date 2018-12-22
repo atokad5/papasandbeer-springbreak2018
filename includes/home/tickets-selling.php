@@ -10,7 +10,12 @@
 
 		<div class="is-center">
 			<div class="content-area">
-				<h2 class="dates sm-hdr"><?php the_field('tickets_subtitle'); ?></h2>
+				<div class="countdown-home">
+					<div class="countdown-el">
+
+					</div>
+				</div>
+				<!-- <h2 class="dates sm-hdr"><?php the_field('tickets_subtitle'); ?></h2> -->
 			</div>
 			<div class="hdr-el content-area">
 				<h1 class="section-header"><?php the_field('tickets_headline'); ?></h1>

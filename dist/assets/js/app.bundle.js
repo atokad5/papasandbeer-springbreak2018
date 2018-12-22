@@ -435,7 +435,6 @@ exports.default = function () {
     var $sectionCta = $('.section-cta');
     var $hr = $('.hr-splitter');
     var $miniSplitter = $('.mini-spliter');
-    var $topContent = $("#top-content");
     var $navParentEl = $('.cats-nav-section');
     var $newScroll = 0;
     var $setHeightRequirements = 0;
@@ -495,6 +494,11 @@ exports.default = function () {
 
     var scrollTicker = function scrollTicker() {
       if (didScroll) {
+        if ($windowOffset >= $("nav").outerHeight()) {
+          $("nav").addClass('is-scrolled');
+        } else {
+          $("nav").removeClass('is-scrolled');
+        }
 
         if ($windowOffset > $newScroll && $windowOffset >= $setHeightRequirements) {
 
@@ -517,13 +521,7 @@ exports.default = function () {
           $newScroll = $windowOffset;
         }
 
-        if ($('body').hasClass('page-template-home')) {
-          if ($windowOffset >= $topContent.offset().top - ($('nav').outerHeight() + 80)) {
-            $('nav').addClass('is-scrolled');
-          } else {
-            $('nav').removeClass('is-scrolled');
-          }
-        }
+        if ($('body').hasClass('page-template-home')) {}
 
         // home page
         recapElements();
@@ -796,35 +794,36 @@ exports.default = function () {
 	var $header = $('header,  .hdr-inner');
 	var theHeight = 0;
 
-	var calcHeight = function calcHeight() {
-		theHeight = $nav.outerHeight() + $headerContent.outerHeight();
-	};
+	// let calcHeight = () => {
+	// 	theHeight = $nav.outerHeight() + $headerContent.outerHeight();
+	// }
 
-	var $headerMinHeight = function $headerMinHeight() {
-		$header.css({
-			'min-height': theHeight
-		});
-	};
 
-	var resizeTimeout = null;
-	var doResizeTimeout = function doResizeTimeout() {
-		resizeTimeout = setTimeout(function () {
-			calcHeight();
-		}, 400);
-	},
-	    doResizeHandler = function doResizeHandler() {
-		if (resizeTimeout !== null) {
-			clearTimeout(resizeTimeout);
-		}
-		doResizeTimeout();
-	};
+	// let $headerMinHeight = () => {
+	// 	$header.css({
+	// 		'min-height': theHeight
+	// 	})
+	// }
 
-	window.onresize = function () {
-		return doResizeHandler();
-	};
-	window.onLoad = calcHeight();
-	calcHeight();
-	window.onLoad = $headerMinHeight();
+
+	// let resizeTimeout = null;
+	// const doResizeTimeout = () => {
+	//   resizeTimeout = setTimeout(() => {
+	//     calcHeight();
+	//   }, 400);
+	// },
+	// doResizeHandler = () => {
+	//   if (resizeTimeout !== null) {
+	//   clearTimeout(resizeTimeout);
+	//   }
+	//   doResizeTimeout();
+	// };
+
+	// window.onresize = () => doResizeHandler();
+	// window.onLoad = calcHeight();
+	// calcHeight();
+	// window.onLoad = $headerMinHeight();
+
 };
 
 /***/ }),
@@ -1013,6 +1012,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 exports.default = function () {
+
   var $slideTrigger = $('#faq-slideDown');
   var $faqSection = $('#faq-section');
 
@@ -1037,6 +1037,15 @@ exports.default = function () {
     $t.parent('.topic').addClass('is-active');
     $t.next('.accordion-content').slideDown(300);
   };
+
+  $('.countdown-el').countdown('2019/1/01', function (event) {
+    if (event.strftime('%D') <= 10) {
+      console.log('yes');
+    } else {
+      console.log('no');
+    }
+    $(this).html(event.strftime('<div class="countdown-ticker">%D days <span>|</span> %H Hrs <span>|</span> %M Mins</div>'));
+  });
 
   $slideTrigger.on('click', function (event) {
     return slidePage(event);

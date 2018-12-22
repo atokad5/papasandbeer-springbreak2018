@@ -1,4 +1,6 @@
+
 export default function() {
+  
   let $slideTrigger = $('#faq-slideDown');
   let $faqSection = $('#faq-section');
 
@@ -25,6 +27,21 @@ export default function() {
     $t.parent('.topic').addClass('is-active')
     $t.next('.accordion-content').slideDown(300);
   }
+
+  $('.countdown-el').countdown('2019/1/01', function(event){
+    if(event.strftime('%D') <= 10 ) {
+      console.log('yes')
+    } else {
+      console.log('no')
+    }
+    $(this).html(event.strftime(`<div class="countdown-ticker">%D days <span>|</span> %H Hrs <span>|</span> %M Mins</div>`))
+  })
+
+
+
+
+
+
 
   $slideTrigger.on('click', event => slidePage(event))
   $accordEl.on('click', displayEl)

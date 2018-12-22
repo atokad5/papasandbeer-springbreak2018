@@ -1,12 +1,10 @@
 header {
 	position: relative;
-	height: 100vh;
 	overflow: hidden;
 }
 
 .hdr-inner {
 	position: relative;
-	height: 100vh;
 }
 
 .page-template-home {
@@ -19,15 +17,13 @@ header {
 
 .hdr-container {
 	color: white;
-	text-align: center;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	// position: absolute;
+	// top: 50%;
+	left: 0%;
+	// transform: translateY(-50%);
 	width: 100%;
-	max-width: 700px;
 	backface-visibility: hidden;
-	padding: 4em 0em;
+	padding: 10em 0em;
 }
 
 .sb-logo {
@@ -206,14 +202,121 @@ header {
 }
 
 
-@keyframes zoomEffect{
-	0% {
-		transform: scale(1);
+// New header 
+
+.hero_flex {
+	// display: flex;
+	// align-items: center;
+	text-align: center;
+
+	&--el {
+		position: relative;
+		&:first-of-type {
+			// width: 40%;
+			margin-bottom: 3em;
+		}
+		&:last-of-type {
+			// width: 55%;
+			// margin-left: 5%;
+		}
 	}
-	50% {
-		transform: scale(1.6);
+}
+
+.hero_video--card {
+	padding-bottom: (1/2) * 100%;
+	background: $themeBlue;
+	width: auto;
+	height: 0px;
+	border-radius: 15px;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+
+	&:hover {
+		.card-bg {
+			transform: scale(1.2) translateY(5%) ;
+		}
 	}
-	100% {
-		transform: scale(1);
+
+	.py-bt {
+		z-index: 54;
 	}
+}
+
+.card-bg {
+	transition: all 400ms ease;
+	position: absolute;
+	top: 0; left: 0; 
+	border-radius: 15px;
+	width: 110%; height: 110%;
+	background: red;
+	background-size: cover;
+	background-position: center;
+}
+
+.hero-watch-video {
+	position: absolute;
+	z-index: 4;
+	left: 50%;
+	display: none;
+	transform: translate(10%, -50%);
+	background: white;
+	color: black;	
+	font-weight: 700;
+
+	&--inner {
+		padding: 1em 3em;
+	}
+	
+	.gradient {
+		height: 4px; 
+		width: 100%;
+		background: linear-gradient(to right, #E02C5D, #fcac47);
+		position: relative;
+		display: block;
+		position: absolute;
+		top: 0;
+	}
+}
+
+
+@media(min-width: $bp-md) {
+	header {
+		position: relative;
+		
+		overflow: hidden;
+	}
+	
+	.hdr-inner {
+		position: relative;
+		
+	}
+	.hdr-container { 
+		padding: 12em 0em;
+	}
+
+	.hero-watch-video { 
+		display: block;
+	}
+
+	.hero_flex {
+		display: flex;
+		align-items: center;
+		text-align: left;
+	
+		&--el {
+			position: relative;
+			&:first-of-type {
+				width: 40%;
+				margin-bottom: 0em;
+			}
+			&:last-of-type {
+				width: 55%;
+				margin-left: 5%;
+			}
+		}
+	}
+	
 }

@@ -5,7 +5,7 @@
 
 
 
-	<div class="max clearfix old-to-new">
+	<!-- <div class="max clearfix old-to-new">
 		
 		<?php $imageGrid = get_field('4_image_grid');
 			foreach($imageGrid as $theImage ) {
@@ -15,7 +15,7 @@
 		</div>
 		<?php } ?>
 
-	</div>
+	</div> -->
 
 	<div class="max clearfix flex-slide">
 

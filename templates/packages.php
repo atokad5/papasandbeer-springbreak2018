@@ -57,6 +57,7 @@
 					<div class="package-content">
 						<h2 class="dates"><?php echo $theWeekend['dates']; ?></h2>
 						<h1 class="section-header"><?php echo $theWeekend['title']; ?></h1>
+						<h2 class="dates artist_names-packages" style="color: #eee">Artist Name, Artist Name, Artist Name, Artist Name, Artist Name,</h2>
 					</div>
 
 					<div class="package-button">
@@ -77,7 +78,8 @@
 <section style="position: relative;" id="weekday-packages">
 <div class="stroke-section stroke-section-orange is-rotated" style="background-image: url(<?php echo "$root/_assets/images/stroke-blue.png"; ?>);"></div>
   <div class="spacing spacing--md"></div>
-  <div class="spacing spacing--md"></div>
+	<div class="spacing spacing--md"></div>
+	<div class="spacing spacing--md"></div>
 
   <div class="inner">
     <div class="is-center">
@@ -121,7 +123,8 @@
   </div>
 	
 
-  <div class="spacing spacing--md"></div>
+	<div class="spacing spacing--md"></div>
+	<div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
 </section>
 

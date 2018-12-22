@@ -15,10 +15,15 @@ nav {
 
 }
 
-.page-template-moded-template, .page-template-contact, .page-template-about, .page-template-travel-hotel, .page-template-venue, .page-template-packages {
-	nav {
-		background: darken( $themeBlue, 5%);
-	}
+// .page-template-moded-template, .page-template-contact, .page-template-about, .page-template-travel-hotel, .page-template-venue, .page-template-packages {
+// 	nav {
+// 		background: darken( $themeBlue, 5%);
+// 	}
+// }
+
+
+nav.is-scrolled {
+	background:darken( $themeBlue, 5%);
 }
 
 .is-nav-el {

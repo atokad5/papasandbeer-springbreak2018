@@ -1,5 +1,5 @@
 <?php $root = get_template_directory_uri(); ?>
-<?php $contacter = is_page_template("templates/contact.php");?>
+<?php $contacter = is_page_template("templates/contact.php") || is_page_template("templates/home.php") ;?>
 <?php $flag = $contacter ? 'white' : 'orange'; ?>
 
 

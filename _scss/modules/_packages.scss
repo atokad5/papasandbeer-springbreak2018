@@ -16,7 +16,6 @@
   margin: 0;
   overflow: hidden;
   position: relative;
-  border: 1em solid white;
 
  img {
    width: 100%;
@@ -31,13 +30,17 @@
   padding-bottom: 1em;
 }
 
+.artist_names-packages {
+  max-width: 500px;
+  margin-bottom: 1em;
+}
 .package-option {
   border-bottom: 1px solid white;
   margin-bottom: 1em;
   
 
   &__element {
-    padding: 1em 0em;
+    padding: 2.5em 0em;
     text-align: center;
   }
 
@@ -72,10 +75,12 @@
       position: relative;
       text-align: left;
       transition: color 1s ease;
-      &:hover {
-        color: $themePink;
-      }
+   
     }
+  }
+  .artist_names-packages {
+    max-width: 500px;
+    margin-bottom: 0em;
   }
   .package-button {
     position: absolute;

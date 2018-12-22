@@ -13,7 +13,6 @@ export default function() {
     let $sectionCta = $('.section-cta');
     let $hr = $('.hr-splitter');
     let $miniSplitter = $('.mini-spliter');
-    let $topContent = $("#top-content");
     let $navParentEl = $('.cats-nav-section');
     let $newScroll = 0;
     let $setHeightRequirements = 0;
@@ -82,6 +81,11 @@ export default function() {
     
     let scrollTicker = () => {
       if(didScroll) {
+        if($windowOffset >= $("nav").outerHeight()) {
+          $("nav").addClass('is-scrolled');
+        } else {
+          $("nav").removeClass('is-scrolled');
+        }
         
 
         if($windowOffset > $newScroll && $windowOffset >= $setHeightRequirements) {
@@ -106,12 +110,7 @@ export default function() {
         }
 
         if($('body').hasClass('page-template-home')) {
-          if($windowOffset >= $topContent.offset().top - ($('nav').outerHeight() + 80)) {
-            $('nav').addClass('is-scrolled')
-            
-          } else {
-            $('nav').removeClass('is-scrolled');
-          }
+          
         }
 
 

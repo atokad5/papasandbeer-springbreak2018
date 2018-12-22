@@ -4,35 +4,35 @@ export default function() {
 	let $header = $('header,  .hdr-inner');
 	let theHeight = 0;
 
-	let calcHeight = () => {
-		theHeight = $nav.outerHeight() + $headerContent.outerHeight();
-	}
+	// let calcHeight = () => {
+	// 	theHeight = $nav.outerHeight() + $headerContent.outerHeight();
+	// }
 
 
-	let $headerMinHeight = () => {
-		$header.css({
-			'min-height': theHeight
-		})
-	}
+	// let $headerMinHeight = () => {
+	// 	$header.css({
+	// 		'min-height': theHeight
+	// 	})
+	// }
 
 
-	let resizeTimeout = null;
-  const doResizeTimeout = () => {
-    resizeTimeout = setTimeout(() => {
-      calcHeight();
-    }, 400);
-  },
-  doResizeHandler = () => {
-    if (resizeTimeout !== null) {
-    clearTimeout(resizeTimeout);
-    }
-    doResizeTimeout();
-  };
+	// let resizeTimeout = null;
+  // const doResizeTimeout = () => {
+  //   resizeTimeout = setTimeout(() => {
+  //     calcHeight();
+  //   }, 400);
+  // },
+  // doResizeHandler = () => {
+  //   if (resizeTimeout !== null) {
+  //   clearTimeout(resizeTimeout);
+  //   }
+  //   doResizeTimeout();
+  // };
 
-  window.onresize = () => doResizeHandler();
-	window.onLoad = calcHeight();
-	calcHeight();
-	window.onLoad = $headerMinHeight();
+  // window.onresize = () => doResizeHandler();
+	// window.onLoad = calcHeight();
+	// calcHeight();
+	// window.onLoad = $headerMinHeight();
 
 
 
