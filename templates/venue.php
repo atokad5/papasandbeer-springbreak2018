@@ -42,7 +42,7 @@
 <div class="venue-section-content" style="color: white;">
 
   <div class="content-day content-ve">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet minima non iste quos iure doloribus nihil, dolores vel animi illo ad cupiditate eligendi facilis porro nostrum ullam nemo cum! Laborum.</p>
+    <?php the_field('day_time_content'); ?>
     <div class="arrow-box">
       <button class="is-btn slider_btn pre">
         <?php get_template_part('includes/icons/left-arrow'); ?>
@@ -54,7 +54,7 @@
   </div>
 
   <div class="content-night content-ve">
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque explicabo possimus eligendi voluptatibus quia voluptatem nam voluptatum dolor at deserunt vitae, placeat, quos alias iure eaque culpa ut dolorem temporibus?</p>
+  <?php the_field('night_time_content'); ?>
     <div class="arrow-box">
       <button class="is-btn slider_btn pre">
         <?php get_template_part('includes/icons/left-arrow'); ?>
@@ -72,29 +72,31 @@
           
 
           <div class="venue_images images-day">
-            <?php for($i = 0; $i < 8; $i++) {?>
+            <?php $dayImages = get_field('day_time_assets'); ?>
+            <?php foreach($dayImages as $theImages) {?>
               <div class="venue-image-element">
-                <div class="venue-img_item">
+                <div class="venue-img_item" style="background-image: url(<?php echo $theImages['image']?>); background-size: cover; background-position: center;">
 
                 </div>
                 <div class="venue-img_content" style="color: white;">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quae ipsum recusandae.</p>
+                  <p><?php echo $theImages['content'] ?></p>
                 </div>
               </div>
             <?php }; ?>
           </div>
 
           <div class="venue_images images-night">
-            <?php for($i = 0; $i < 8; $i++) {?>
-              <div class="venue-image-element">
-                <div class="venue-img_item">
+            <?php $nightImages = get_field('night_time_assets'); ?>
+              <?php foreach($nightImages as $theImages) {?>
+                <div class="venue-image-element">
+                  <div class="venue-img_item" style="background-image: url(<?php echo $theImages['image']?>); background-size: cover; background-position: center;">
 
+                  </div>
+                  <div class="venue-img_content" style="color: white;">
+                    <p><?php echo $theImages['content'] ?></p>
+                  </div>
                 </div>
-                <div class="venue-img_content" style="color: white;">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quae ipsum recusandae.</p>
-                </div>
-              </div>
-            <?php }; ?>
+              <?php }; ?>
           </div>
         
           
@@ -270,7 +272,6 @@
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--sm"></div>
-</section>
 </section>
 
 <section class="spaceoff-footer is-blue">
