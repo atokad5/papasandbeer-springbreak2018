@@ -2,6 +2,13 @@
 	$root = get_template_directory_uri();
 ?>
 
+<div class="cookie-mobile">
+	<div class="cookie-inner inner">
+
+	</div>
+
+</div>
+
 <footer>
 
 	<div id="venue-parent">

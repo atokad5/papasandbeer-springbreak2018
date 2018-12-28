@@ -16,11 +16,6 @@
   padding: 0.2em 0em;
   color: $themeBlue;
   margin-bottom: 0.3em;
-
-  &:last-of-type {
-    margin-bottom: 0em;
-  }
-  
 }
 
 .ck-content {
@@ -71,4 +66,14 @@
       }
     }
   }
+}
+
+
+.cookie-mobile {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  
 }

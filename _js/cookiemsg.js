@@ -8,7 +8,7 @@ export default function() {
   let $nav = $('.ck-msg');
   let $closeMsg = $('.ck-btn');
   let cookieMessenger = $('.ck-el');
-
+  let $mobileToggle = $('.mt-trigger');
   // option to clear all cookies
   let $checkUrl = window.location.search;
   let $splitUrl = $checkUrl.split('=');
@@ -22,8 +22,6 @@ export default function() {
     })
   } 
 
-  
-  
   // check to see if cookie exists. If so, hide specific element
   let cookieMonster = () => {
     cookieMessenger.each((index,  element) => {
@@ -69,13 +67,29 @@ export default function() {
     };
   };
 
+  let checkMobile = () =>  { 
+    if($mobileToggle.is(':visible')) {
+      console.log('yes')
+      $('.ck-msg').detach();
+      $('.cookie-inner').append($nav)
+    } else { 
+      $('.ck-msg').detach();
+      $('.cookie-msg').append($nav)
+    }
+  }
+
 
 
   let reSetHeight = debounce(function() {
     setHeight();
+    checkMobile();
   }, 250);
 
 
+
+  
+
+  checkMobile();
   $closeMsg.on('click', closeTheMessage)
   $(window).on('resize',  reSetHeight)
 }
