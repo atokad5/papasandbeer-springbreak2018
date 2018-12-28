@@ -29,11 +29,6 @@ export default function() {
   }
 
   $('.countdown-el').countdown($('.countdown-el').attr('data-countdown'), function(event){
-    if(event.strftime('%D') <= 10 ) {
-      console.log('yes')
-    } else {
-      console.log('no')
-    }
     $(this).html(event.strftime(`<div class="countdown-ticker">%D days <span>|</span> %H Hrs <span>|</span> %M Mins</div>`))
   })
 

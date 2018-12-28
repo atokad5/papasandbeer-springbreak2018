@@ -41,3 +41,8 @@ import util from './util.js';
 util();
 
 
+
+import cookiemsg from './cookiemsg.js';
+cookiemsg();
+
+

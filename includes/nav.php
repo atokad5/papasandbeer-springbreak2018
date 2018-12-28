@@ -31,4 +31,7 @@
 
 
 	</div>
+	<div class="inner cookie-msg">
+		<?php get_template_part('includes/cookie'); ?>
+	</div>
 </nav>

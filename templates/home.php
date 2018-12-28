@@ -9,6 +9,7 @@
 
 <header>
 	<div class="inner hdr-inner over-bg">
+		<div class="spacingElement"></div>
 		<div class="hdr-container hero_flex">
 
 		<div class="hero_flex--el">
