@@ -148,7 +148,7 @@
 					<div style="color: white;">
 						<h1 class="section-header" style="font-weight: 100;">
 							<?php if ( get_field('faq_header', 'option') ) : ?>
-							Packages&nbsp;Faqs
+							Faqs
 							<?php endif; ?>
 							
 						</h1>
@@ -166,7 +166,7 @@
 				</div>
 
 				<div class="faq-card has-max">
-				<?php $category = get_field('faq_qa') ;?>
+				<?php $category = get_field('faq_qa', 'option') ;?>
 
 				<?php foreach($category as $theCat) { ?>
 				

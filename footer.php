@@ -24,7 +24,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<script src="<?php echo "$root/dist/assets/js/app.bundle.js?ewg=wvaeg"; ?>"></script>
+<script src="<?php echo "$root/dist/assets/js/app.bundle.js?wg=waeg"; ?>"></script>
 <?php  wp_footer();  ?>
 </body>
 </html>

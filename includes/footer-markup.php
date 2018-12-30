@@ -9,7 +9,9 @@
 
 </div>
 
-<footer>
+<footer style="position: relative;">
+
+
 
 	<div id="venue-parent">
 		<figure id="venue-image">

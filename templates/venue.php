@@ -7,6 +7,7 @@
 <section class="bg-area" style="background-image: url(<?php the_field('header_background');?>);">
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
+  <div class="spacingElement"></div>
   <div class="spacing spacing--md"></div>
   <div class="inner">
     <div class="inner-contents__mt">
@@ -21,12 +22,19 @@
 
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
+  <div class="spacingElement"></div>
   <div class="spacing spacing--sm"></div>
 </section>
 
+<script>
+  var windowInfo = {
+    root : "<?php echo $root; ?>"
+  }
+</script>
 
- <section class="added_section is-blue" style="position: relative;">
-  <div class="stroke-section stroke-section-orange" style="background-image: url(<?php echo "$root/_assets/images/stroke-blue.png"; ?>);"></div>
+
+ <section class="added_section is-blue bgChange" style="position: relative;">
+  <div class="stroke-section stroke-section-orange swappy-stroke" style="background-image: url(<?php echo "$root/_assets/images/stroke-blue.png"; ?>);"></div>
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
   <div class="inner">
@@ -35,8 +43,8 @@
       <div class="content-section_venue flexy_venue">
 
 <div class="venue-section-headers">
-  <h1 class="section-header snaggy-type day active">DAY</h1>
-  <h1 class="section-header snaggy-type night">NIGHT</h1>
+  <h1 class="section-header snaggy-type day active bgday">DAY</h1>
+  <h1 class="section-header snaggy-type night bgnight">NIGHT</h1>
 </div>
 
 <div class="venue-section-content" style="color: white;">
@@ -274,11 +282,11 @@
   <div class="spacing spacing--sm"></div>
 </section>
 
-<section class="spaceoff-footer is-blue">
+<section class="spaceoff-footer is-blue" style="position: relative;">
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
-  <div class="spacing spacing--md"></div>
+  <div class="stroke-section stroke-section-orange is-low" style="background-image: url(<?php echo "$root/_assets/images/stroke-blue.png"; ?>);"></div>
 </section>
 
 <?php get_footer(); ?>

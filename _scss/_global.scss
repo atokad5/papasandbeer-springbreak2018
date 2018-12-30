@@ -83,3 +83,14 @@ body {
     text-align: left;
   }
 }
+
+.spacingElement {
+  display: none;
+}
+
+
+@media(min-width: 1040px) {
+  .spacingElement {
+    display: block;
+  }
+}

@@ -7,6 +7,7 @@
 <section class="bg-area" style="background-image: url(<?php the_field('header_background');?>);">
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
+  <div class="spacingElement"></div>
   <div class="spacing spacing--md"></div>
   <div class="inner">
     <div class="inner-contents__mt">
@@ -36,6 +37,7 @@
 
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
+  <div class="spacingElement"></div>
   <div class="spacing spacing--sm"></div>
 </section>
 
@@ -45,11 +47,16 @@
 <div class="group-section">
 <?php 
   $parentLoop = get_field('page_section');
-
-foreach($parentLoop as $theLoop) { ?>
+  $count = 0;
+foreach($parentLoop as $theLoop) {  
+    $count++
+  ?>
   <section class="added_section is-blue" style="position: relative;">
+  <?php if($count === 1) {?> 
     <div class="stroke-section stroke-section-orange" style="background-image: url(<?php echo "$root/_assets/images/stroke-blue.png"; ?>);"></div>
     <div class="spacing spacing--md"></div>
+   <?php } ?>
+    
 
     <div class="inner">
       <div class="add_section__header is-white flex">
@@ -124,7 +131,7 @@ foreach($parentLoop as $theLoop) { ?>
 					<div style="color: black;">
 						<h1 class="section-header" style="font-weight: 100;">
 							<?php if ( get_field('faq_header', 'option') ) : ?>
-							Travel&nbsp;	<?php echo get_field('faq_header', 'option'); ?>
+							  <?php echo get_field('faq_header', 'option'); ?>
 							<?php endif; ?>
 							
 						</h1>
@@ -142,7 +149,7 @@ foreach($parentLoop as $theLoop) { ?>
 				</div>
 
 				<div class="faq-card has-max">
-				<?php $category = get_field('faq_qa') ;?>
+				<?php $category = get_field('faq_qa', 'option') ;?>
 
 				<?php foreach($category as $theCat) { ?>
 				
@@ -190,10 +197,11 @@ foreach($parentLoop as $theLoop) { ?>
 
 
 
-<section class="is-blue dkSpacing">
+<section class="is-blue dkSpacing" style="position: relative;">
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
+  <div class="stroke-section stroke-section-orange is-low" style="background-image: url(<?php echo "$root/_assets/images/stroke-blue.png"; ?>);"></div>
 </section>
 
 <?php get_footer(); ?>

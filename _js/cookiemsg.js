@@ -69,7 +69,6 @@ export default function() {
 
   let checkMobile = () =>  { 
     if($mobileToggle.is(':visible')) {
-      console.log('yes')
       $('.ck-msg').detach();
       $('.cookie-inner').append($nav)
     } else { 

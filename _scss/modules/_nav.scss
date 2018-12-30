@@ -21,6 +21,12 @@ nav {
 // 	}
 // }
 
+.page-template-contact {
+	nav {
+		background: darken( $themeBlue, 5%);
+	}
+}
+
 
 nav.is-scrolled {
 	background:darken( $themeBlue, 5%);
@@ -205,3 +211,5 @@ nav.is-scrolled {
 		font-size: 1em !important;
 	}
 }
+
+

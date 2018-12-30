@@ -28,12 +28,33 @@ export default function() {
 	if($('body').hasClass('page-template-venue')) {
 		$('body').addClass('day');
 	}
+
+
+	$('.bgnight').on('click' , function() {
+		$('.bgChange').css({
+			'background-color': '#22889F'
+		})
+		$('.swappy-stroke').css({
+			'background-image': 'url('+ windowInfo.root+'/_assets/images/stroke-dark-blue.png' + ')'
+		})
+	})
+
+
+	$('.bgday').on('click', function() {
+		$('.bgChange').css({
+			'background-color': '#44BED6'
+		})
+		$('.swappy-stroke').css({
+			'background-image': 'url('+ windowInfo.root+'/_assets/images/stroke-blue.png' + ')'
+		})
+	})
 	
 	
 
 	function showDaySlide() {
 		$venueSliderDay.flickity({
 			groupCells: $countGo,
+			cellAlign: 'left',
 			pageDots: false,
 			prevNextButtons: false,
 			wrapAround: true
@@ -43,6 +64,7 @@ export default function() {
 	function showNightSlide() {
 		$venueSliderNight.flickity({
 			groupCells: $countGo,
+			cellAlign: 'left',
 			pageDots: false,
 			prevNextButtons: false,
 			wrapAround: true
@@ -125,7 +147,6 @@ export default function() {
   };
 
 
-	// example
 	checkGroup();
 	showDaySlide();
   let updateDay = debounce(function() {
