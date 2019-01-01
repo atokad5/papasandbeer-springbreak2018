@@ -11,18 +11,18 @@
 		<div class="is-center">
 			<div class="content-area">
 				<div class="countdown-home">
-					<div class="countdown-el" data-countdown="<?php the_field('countdown'); ?>">
+					<div class="countdown-el" data-countdown="<?php the_field('countdown', 'option'); ?>">
 
 					</div>
 				</div>
 				<!-- <h2 class="dates sm-hdr"><?php the_field('tickets_subtitle'); ?></h2> -->
 			</div>
 			<div class="hdr-el content-area">
-				<h1 class="section-header"><?php the_field('tickets_headline'); ?></h1>
+				<h1 class="section-header"><?php the_field('headline', 'option'); ?></h1>
 			</div>
 			<div class="mini-spliter animated-spliter"></div>
 			<div class="content-area has-max">
-				<p><?php the_field('tickets_copy'); ?></p>
+				<p><?php the_field('headline_copy', 'option'); ?></p>
 			</div>
 			<div class="section-cta is-center">
 				<a href="<?php the_field('view_packages_link', 'options'); ?>" class="cta"><?php the_field('view_packages_text', 'options'); ?></a>

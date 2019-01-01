@@ -12,9 +12,9 @@
 }
 .ck-el {
   position: relative;
-  background: rgba(white, 0.9);
+  background: $themeBlue;
   padding: 0.2em 0em;
-  color: $themeBlue;
+  color: white;
   margin-bottom: 0.3em;
 }
 
@@ -31,11 +31,11 @@
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  border: 1px solid $themeBlue;
+  border: 1px solid white;
   cursor: pointer;
   transition: all 200ms ease;
   span {
-    background: $themeBlue;
+    background: white;
     position: absolute;
     height: 2px;
     width: 60%;

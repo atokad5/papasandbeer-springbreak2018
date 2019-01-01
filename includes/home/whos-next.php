@@ -14,10 +14,10 @@
 			<div class="content-area">
 				<h2 class="dates sm-hdr"><?php the_field('line_up_subtitle'); ?></h2>
 			</div>
-			<div class="hdr-el content-area">
+			<div class="hdr-el content-area artist-line-up-header" >
 				<h1 class="section-header"><?php the_field('line_up_headline'); ?></h1>
 			</div>
-			<div class="mini-spliter animated-spliter"></div>
+			<!-- <div class="mini-spliter animated-spliter"></div> -->
 			
 			<div class="content-area has-max">
 				<div class="toggle-element">

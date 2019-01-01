@@ -48,8 +48,9 @@
 }
 
 .slider-el {
-	max-width: 335px;
-	width: 60%;
+	// max-width: 335px;
+	// width: 60%;
+	width: 100%;
 	margin-right: 3em;
 
 	&:nth-child(2n) {
@@ -88,7 +89,7 @@
 	position: absolute;
 	bottom: -10%;
 	background: white;
-	left: 10%;
+	// left: 10%;
 	width: 100%;
 	border-radius: 0px 0px 15px 15px;
 	box-shadow: 5px 5px 15px rgba(black, 0.1);
@@ -109,6 +110,14 @@
 
 .contents-inner-slider {
 	padding: 1em;
+}
+@media(min-width: $bp-md) {
+	.slide-txt { 
+		left: 10%;
+	}
+	.slider-el {
+		max-width: 335px;
+	}
 }
 
 
@@ -219,5 +228,21 @@
 @media(min-width: $bp-lg) {
 	.countdown-ticker {
 		font-size: 4.5em;
+	}
+}
+
+.dot {
+	background: $themePink !important;
+
+	&.is-selected {
+		background: $themeBlue !important;
+	}
+}
+
+
+
+@media(min-width: $bp-md) {
+	.dot {
+		display: none !important;
 	}
 }

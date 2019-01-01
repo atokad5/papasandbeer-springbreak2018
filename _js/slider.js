@@ -57,6 +57,7 @@ export default function() {
 			cellAlign: 'left',
 			pageDots: false,
 			prevNextButtons: false,
+			dragThreshold: 10,
 			wrapAround: true
 		});
 	}
@@ -67,6 +68,7 @@ export default function() {
 			cellAlign: 'left',
 			pageDots: false,
 			prevNextButtons: false,
+			dragThreshold: 10,
 			wrapAround: true
 		});
 	}
@@ -165,7 +167,8 @@ export default function() {
 
 	$sliderParent.flickity({
 		cellAlign: 'left',
-		pageDots: false,
+		dragThreshold: 10,
+		pageDots: true,
 		prevNextButtons: false,
 		wrapAround: true
 	});
@@ -212,8 +215,9 @@ export default function() {
 
 	if($slideMt) {
 		$slideMt.flickity({
-			pageDots: false,
+			pageDots: true,
 			cellAlign: 'left',
+			dragThreshold: 10,
 			wrapAround: true
 		});
 	}

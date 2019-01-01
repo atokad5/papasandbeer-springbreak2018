@@ -60,6 +60,11 @@
 	<div class="inner">
 		<div class="is-image-grid-content">
 			<div class="content-area">
+				<div class="content-area is-center">
+					<h1 class="dates">
+					<svg class="feather feather-instagram sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-reactid="671"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg> <a target="_BLANK" href="https://www.instagram.com/explore/tags/springatpapas/" style="color: white;"><span>#</span>Springatpapas</a>
+					</h1>
+				</div>
 				<h2 class="dates is-center sm-hdr">
 					<?php the_field('user_content_subheadline'); ?>
 				</h2>

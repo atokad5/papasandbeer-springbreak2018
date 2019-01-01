@@ -87,8 +87,14 @@
 	}
 
 }
+.home_link {
+
+}
 
 @media(min-width: 1040px) {
+	.home_link {
+		display: none;
+	}
 
 	.mb-o {
 		display: none;

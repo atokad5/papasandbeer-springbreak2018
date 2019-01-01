@@ -46,3 +46,6 @@ import cookiemsg from './cookiemsg.js';
 cookiemsg();
 
 
+import form from './form.js';
+form();
+

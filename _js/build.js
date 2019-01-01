@@ -9,6 +9,11 @@ export default function() {
 	if($('body').hasClass('page-template-home')) {
 		$('body').css({'overflow': 'hidden'})
 	}
+
+
+	let $lineUpSection = window.location.search;
+	let $getTag = $lineUpSection.split('?');
+	console.log($getTag[1])
 	
 
 	
@@ -45,13 +50,32 @@ export default function() {
 				$s.body.addClass('is-set');
 				if($('body').hasClass('page-template-home')) {
 					$('body').css({'overflow': 'auto'})
+					if($getTag[1] === "lineup") {
+						console.log('scrolling')
+						$('html, body').animate({
+							'scrollTop': $('.artist-line-up-header').offset().top - $('nav').outerHeight()
+						}, 1000)
+
+
+					}
 				}
 			})
 		}, 3500)
 
 	}
 
+let $link = $('li').eq(1).find('a');
 
+function actionA (event) {
+	if($('body').hasClass('page-template-home')) {
+		event.preventDefault();
+		$('html, body').animate({
+			'scrollTop': $('.artist-line-up-header').offset().top - $('nav').outerHeight()
+		}, 1000)
+	}
+}
+
+$link.on('click', actionA)
 
 	$s.win.onLoad = generateWrapper();
 }

@@ -24,8 +24,17 @@ header {
 	width: 100%;
 	backface-visibility: hidden;
 	padding: 10em 0em;
+
+	
 }
 
+@media(max-width: $bp-sm) {
+	.hdr-container {
+		h1 {
+			font-size: 2.8em;
+		}
+	}
+}
 .sb-logo {
 	position: relative;
 	z-index: 9;

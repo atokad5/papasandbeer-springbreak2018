@@ -348,6 +348,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_5c29830a47786",
+            "label": "Day Night Pre Text",
+            "name": "day_night_pre_text",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_5c1ececd9c252",
             "label": "Day Time Content",
             "name": "day_time_content",
@@ -533,5 +552,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1545523970
+    "modified": 1546224448
 }

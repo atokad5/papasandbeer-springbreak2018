@@ -28,6 +28,7 @@
 		acf_add_options_sub_page('Faq Section');
 		acf_add_options_sub_page('Nav');
 		acf_add_options_sub_page('cookies');
+		acf_add_options_sub_page('countdown');
 	}
 
 

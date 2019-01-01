@@ -1,5 +1,6 @@
 <div class="menu">
 	<ul class="menu-li">
+		<li><a class="home_link true_link" href="<?php echo site_url(''); ?>">Home</a></li>
 		<?php $getNav = get_field('nav_links', 'options'); 
 		// var_dump($getNav);
 			foreach ($getNav as $theNav) {

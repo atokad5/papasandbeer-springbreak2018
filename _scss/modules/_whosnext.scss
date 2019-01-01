@@ -128,3 +128,9 @@
 .copy-lineup-group {
 	padding-bottom: 2em;
 }
+
+@media(max-width: $bp-md) {
+	.artist-line-up-header h1 {
+		font-size: 2.8em;
+	}
+}

@@ -38,11 +38,11 @@
 
 		<div class="cParent__col">
 			<div class="form-parent">
-				<form action="">
-					<input type="text" name="" id="" placeholder="First Name" autocomplete="off"/>
-					<input type="text" name="" id="" placeholder="Last Name" autocomplete="off"/>
-					<input type="email" name="" id="" placeholder="Email Address" autocomplete="off"/>
-					<textarea name="" id="" cols="30" rows="10" placeholder="Ask question here"></textarea>
+				<form class="form" action="">
+					<input type="text" name="first-name" id="firstname" placeholder="First Name" autocomplete="off"/>
+					<input type="text" name="last-name" id="lastname" placeholder="Last Name" autocomplete="off"/>
+					<input type="email" name="email" id="email" placeholder="Email Address" autocomplete="off"/>
+					<textarea name="message" id="message" cols="30" rows="10" placeholder="Ask question here"></textarea>
 					<div class="form-btn">
 						<input type="submit" value="Contact">
 					</div>
