@@ -83,7 +83,7 @@
 						<h3 class="footer-section-title">INFO</h3>
 						<div class="mini-spliter animated-spliter"></div>
 						<ul>
-							<li><a href="<?php echo site_url('/about');?>">What’s the hype all about?</a></li>
+							<li><a href="<?php echo site_url('/about');?>">about spring break</a></li>
 							<li><a href="<?php echo site_url('/contact-us');?>">FAQS</a></li>
 							<li><a href="<?php echo site_url('/contact-us');?>">CONTACT</a></li>
 						</ul>
