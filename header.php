@@ -14,8 +14,7 @@
 	<script src="https://use.fontawesome.com/1eda73ce4d.js"></script>
 	<?php wp_head(); ?>
 </head>
-<body>
-weeeeeee
+<body <?php body_class(); ?>>
 
-<!-- im here -->
+
 
