@@ -3,14 +3,14 @@ footer {
 	color: white;
 
 	.mini-spliter {
-		// margin: 1em 0em;
 		margin: 1em auto;
 	}
 
 	a {
 		color: white;
-		text-decoration: none;
+		text-decoration: underline;
 		transition: color 400ms ease;
+		text-transform: uppercase;
 
 		&:hover {
 			color: $themePink;
@@ -28,16 +28,16 @@ footer {
 
 }
 
-.footer-grid {
-	// display: flex;
-}
-
 .footer-column {
 	width: 80%;
 	margin: 0em auto 3em auto;
 	text-align: center;
 	z-index: 9;
 	position: relative;
+
+	p {
+		line-height: 1;
+	}
 }
 
 .footer-row {
