@@ -15,6 +15,7 @@
 	<?php wp_head(); ?>
 </head>
 <body>
+weeeeeee
 
 <!-- im here -->
 
