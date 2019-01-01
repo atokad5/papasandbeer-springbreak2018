@@ -144,7 +144,7 @@
         <div class="content-area is-white blog-area">
           <?php the_field('venue_copy'); ?>
           <div class="cta-el">
-            <a href="<?php the_field('venue_map');?>" class="cta" Download>Download Map</a>
+            <a href="<?php the_field('venue_map_download');?>" class="cta" Download>Download Map</a>
           </div>
         </div>
       </div>
