@@ -34,7 +34,7 @@
 					<h3 class="footer-section-title">Get In Touch</h3>
 					<div class="mini-spliter animated-spliter"></div>
 					<a taget="_BLANK" href="https://www.google.com/maps/place/Papas+%26+Beer/@32.3378241,-117.0571455,15z/data=!4m5!3m4!1s0x0:0xa4536611499b42fa!8m2!3d32.3378241!4d-117.0571455">CORONADO 400, PLAYAS ROSARITO</a>
-					<p>ROSARITO, BC, MEXICO<BR>(619)799-9491</p>
+					<p>ROSARITO, BC, MEXICO</p>
 					<p class="contact-us-footer"><a href="<?php echo site_url('/contact-us'); ?>">CONTACT US</a></p>
 					<?php get_template_part('includes/social-links') ?>
 					<div class="mobile__footer-content">
