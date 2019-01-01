@@ -11,8 +11,7 @@
   <div class="spacingElement"></div>
   <div class="inner">
     <div class="content-area has-max blog-area">
-      <h1>hello</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora animi commodi magni molestiae architecto possimus impedit voluptatem voluptates adipisci, quae cumque blanditiis, reiciendis veritatis doloribus eaque ipsa aperiam. Adipisci, architecto.s</p>
+      <?php echo get_post_field('post_content', $post->ID); ?>
     </div>
   </div>
   <div class="spacing spacing--md"></div>

@@ -1,5 +1,5 @@
 footer {
-	background: $themeBrown;
+	background: #F7EAD6;
 	color: white;
 
 	.mini-spliter {
@@ -36,6 +36,8 @@ footer {
 	width: 80%;
 	margin: 0em auto 3em auto;
 	text-align: center;
+	z-index: 9;
+	position: relative;
 }
 
 .footer-row {
@@ -97,7 +99,7 @@ footer {
 #venue-image {
 	margin: 0;
 	position: absolute;
-	@include padding-bottom(556, 1800, 'img');
+	@include padding-bottom(556, 1080, 'img');
 
 	img {
 		transform: translateY(-50%);
@@ -159,7 +161,7 @@ footer {
 
 	.footer-grid {
 		display: flex;
-		margin-top: -6em;
+		margin-top: -14em;
 	}
 
 	.footer-column {

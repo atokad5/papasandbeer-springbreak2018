@@ -15,6 +15,7 @@
         <div>
           <h2 class="dates">The Venue</h2>
           <h1 class="section-header"><?php the_field('page_title'); ?></h1>
+          <div class="has-max large-text"><?php the_field('day_night_pre_text'); ?></div>
         </div>
       </div>
     </div>  
@@ -38,9 +39,6 @@
   <div class="stroke-section stroke-section-orange swappy-stroke" style="background-image: url(<?php echo "$root/_assets/images/stroke-blue.png"; ?>);"></div>
   <div class="spacing spacing--md"></div>
   <div class="inner">
-    <div class="content-area has-max is-center blog-area is-white">
-      <?php the_field('day_night_pre_text'); ?>
-    </div>
     <div class="spacing spacing--md"></div>
       <div class="flex-parent-element_venue">
 

@@ -48,6 +48,7 @@
 					</div>
 				</form>	
 			</div>
+			<div class="message-indicator" data-success="You have successfully submitted the form, we'll get back to you asap." data-error="Uhoh, something went wrong! Please try filling out the form again"></div>
 		</div>
 
 	</div>
