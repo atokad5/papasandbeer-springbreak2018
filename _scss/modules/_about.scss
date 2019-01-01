@@ -1,0 +1,116 @@
+.ply-btn-hero {
+  max-width: 80px;
+  margin: auto;
+  margin-top: 1em;
+  position: relative;
+
+  &:before {
+    content: '';
+    border-radius: 100%;
+    position: absolute;
+    top: -10%; left: -10%;
+    width: 120%;
+    height: 120%;
+    transition: all 300ms ease;
+    background: rgba($themeOrange, 0.4);
+    animation: pulse 3s infinite;
+  }
+
+}
+
+.ply-btn-el-hero {
+  width: 100%;
+  height: 0px;
+  padding-bottom: (1/1)* 100%;
+  background: white;
+  position: relative;
+  border-radius: 100%;
+
+
+  svg {
+    width: 20%;
+    position: absolute;
+    top: 50%; left: 50%;
+    transition: all 400ms ease;
+    transform: translate(-50%, -50%);
+    
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.3);
+    background: rgba($themeOrange, 0.4);
+  }
+  80% {
+    background: rgba($themeOrange, 0.6);
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.3);
+    background: rgba($themeOrange, 0.4);
+  }
+}
+
+
+.watch-video {
+  padding-top: 2em;
+}
+
+.video-el {
+  background: $themeBlue;
+  padding-bottom: (9/16) * 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 0px 40px rgba(black, 0.3);
+}
+.video-par {
+  padding-top: 1em;
+}
+
+.video-cap {
+  text-align: center;
+  padding-top: 0.5em;
+  font-weight: 500;
+  
+}
+
+.image-grid-about {
+  position: relative;
+  z-index: 9;
+}
+.py-bt {
+  max-width: 70px;
+  width: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center_text {
+  text-align: center;
+}
+
+.push-bottom {
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 2em;
+}
+@media(min-width: $bp-md) {
+  .video-par {
+    width: 50%;
+    padding-top: 0em;
+  }
+
+  .square_up {
+    margin-top: -110px;
+  }
+}
+
+.card-image-el {
+  background-size: cover;
+  background-position: center;
+}

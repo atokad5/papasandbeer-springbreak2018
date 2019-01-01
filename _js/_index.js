@@ -1,6 +1,7 @@
 import build from './build.js';
 build();
 
+
 import lazyLoad from './lazyload.js';
 lazyLoad();
 
@@ -30,3 +31,21 @@ video();
 
 import faq from './faq.js';
 faq();
+
+import customNav from './_custom-nav.js';
+customNav();
+
+
+
+import util from './util.js';
+util();
+
+
+
+import cookiemsg from './cookiemsg.js';
+cookiemsg();
+
+
+import form from './form.js';
+form();
+

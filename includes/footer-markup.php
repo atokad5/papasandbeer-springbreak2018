@@ -2,11 +2,20 @@
 	$root = get_template_directory_uri();
 ?>
 
-<footer>
+<div class="cookie-mobile">
+	<div class="cookie-inner inner">
+
+	</div>
+
+</div>
+
+<footer style="position: relative;">
+
+
 
 	<div id="venue-parent">
 		<figure id="venue-image">
-			<img class="lazy-image" data-lazy="<?php echo "$root/_assets/images/footer-image.png" ; ?>" src="" alt="">
+			<img class="lazy-image" data-lazy="<?php echo "$root/_assets/images/footer-image.png" ; ?>" src="" alt="Venue Image for Papas&Beer">
 		</figure>
 	</div>
 		<div class="inner footer-grid">

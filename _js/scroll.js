@@ -13,12 +13,28 @@ export default function() {
     let $sectionCta = $('.section-cta');
     let $hr = $('.hr-splitter');
     let $miniSplitter = $('.mini-spliter');
+    let $navParentEl = $('.cats-nav-section');
+    let $newScroll = 0;
+    let $setHeightRequirements = 0;
+    let $headerBg = $('#headerBg');
+
+    if($navParentEl.length >= 1) {
+      let $navOffSetOg = Math.round($navParentEl.offset().top)
+
+    $(window).on('load', () => $navOffSetOg = Math.round($navParentEl.offset().top))
+
+      $setHeightRequirements = $navOffSetOg;
+    } else {
+      $setHeightRequirements = 100;
+    }
+
 
 
     // content area 
 
 
 
+    
 
     $.fn.inView = function(){
       var win = $(window);
@@ -66,6 +82,45 @@ export default function() {
     
     let scrollTicker = () => {
       if(didScroll) {
+        if($windowOffset >= $("nav").outerHeight()) {
+          $("nav").addClass('is-scrolled');
+        } else {
+          $("nav").removeClass('is-scrolled');
+        }
+
+        $headerBg.css({
+          'transform': 'translateY('+ $windowOffset/20 +'%)'
+        })
+        
+
+        if($windowOffset > $newScroll && $windowOffset >= $setHeightRequirements) {
+
+          $("nav").css({
+            "transform": "translateY(-100%)"
+          })
+
+          $('.cats-nav-section').css({
+            'transform': 'translateY(-'+ $('nav').outerHeight() +'px)'
+          })
+
+          $newScroll = $windowOffset;
+        } else {
+          $("nav").css({
+            "transform": "translateY(0%)"
+          })
+          $('.cats-nav-section').css({
+            'transform': 'translateY(0%)'
+          })
+          $newScroll = $windowOffset;
+        }
+
+        if($('body').hasClass('page-template-home')) {
+          
+        }
+
+
+        
+
         
         // home page
         recapElements();

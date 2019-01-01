@@ -1,5 +1,5 @@
 export default function() {
-  let $videoSrc = $('.video-container').attr('data-video-src');
+  let $videoSrc = $('.video-trigger').attr('data-video-src');
   let $videoParent = $('.video-trigger');
   let $videoContainer = $('#video-container');
   let $body = $('body');

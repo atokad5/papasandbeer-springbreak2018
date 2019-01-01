@@ -5,6 +5,22 @@
 		
 	</div>
 		<div class="inner has-max-container">
+
+			<div class="is-center is-white">
+				<div class="content-area">
+					<h2 class="dates sm-hdr" style="padding-top: 3em;"><?php the_field('video_subheadline_home_page'); ?></h2>
+				</div>
+				<div class="hdr-el content-area">
+					<h1 class="section-header"><?php the_field('video_headline_home_page'); ?></h1>
+				</div>
+				<div class="mini-spliter animated-spliter"></div>
+				<div class="content-area has-max">
+					<p><?php the_field('line_up_copy'); ?></p>
+				</div>
+			</div>
+			<div class="spacing spacing--md"></div>
+
+
 			<div class="video-container video-trigger" data-video-src="<?php the_field('video_url');?>">
 					
 				<div class="play-circ">
@@ -18,13 +34,6 @@
 					</div>
 				</div>
 
-
-				<!-- <div class="video-card-text-transform">
-					<div class="video-card-text-container">
-						<h2><span><?php the_field('video_card_title'); ?></span></h2>
-						<div class="gradient-hr"></div>
-					</div>
-				</div> -->
 				
 				<div class="video-img-parent is-bg" data-bg-src="<?php the_field('video_placeholder_image'); ?>"></div>
 

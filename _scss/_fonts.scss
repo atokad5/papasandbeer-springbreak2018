@@ -25,6 +25,24 @@ body {
   @include font-smoothing()
 }
 
+.blog-area  h1 {
+  font-family: california;
+  font-size: 3em;
+  margin: 0;
+  line-height: 1.4;
+  padding: 0;
+  font-weight: 100;
+}
+
+.blog-area {
+  a {
+    color: $themePink;
+    font-weight: bolder;
+  }
+  .cta {
+    color: white;
+  }
+}
 
 .section-header {
   font-family: california;
@@ -32,6 +50,7 @@ body {
   margin: 0;
   line-height: 1.4;
   padding: 0;
+  font-weight: 100;
 }
 .section-header {
   h1 {
@@ -86,7 +105,7 @@ h5 {
 
 @media(min-width: $bp-xl) {
   body {
-    font-size: 18px;
+    font-size: 19px;
   }
 }
 

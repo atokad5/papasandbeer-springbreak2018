@@ -1,8 +1,32 @@
 <div class="menu">
 	<ul class="menu-li">
-		<li><a href="" data-image="https://images.pexels.com/photos/196652/pexels-photo-196652.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">Lineup</a></li>
-		<li><a href="" data-image="https://images.pexels.com/photos/1304473/pexels-photo-1304473.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">Experience</a></li>
-		<li><a href="" data-image="https://images.pexels.com/photos/341858/pexels-photo-341858.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">Travel</a></li>
-		<li><a href="" data-image="https://images.pexels.com/photos/2143/lights-party-dancing-music.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">Info</a></li>
+		<li><a class="home_link true_link" href="<?php echo site_url(''); ?>">Home</a></li>
+		<?php $getNav = get_field('nav_links', 'options'); 
+		// var_dump($getNav);
+			foreach ($getNav as $theNav) {
+
+		?>
+		<li><a class="true_link" href="<?php echo $theNav['link']['url']; ?>" data-image="<?php echo $theNav['link_image']; ?>"><?php echo $theNav['link']['title']; ?></a></li>
+
+
+	
+		<?php } ?>
+		<li><a  class="cta h_over" href="<?php the_field('view_packages_link', 'options'); ?>"><?php the_field('view_packages_text', 'options'); ?></a></li>
+		<li class="mb-o" style="color: white; font-size: 18px;">&copy; Papas&Beer</li>
 	</ul>
 </div>
+
+<!-- 
+
+Travel/Hotel
+	- Driving Down (directions)
+
+	- Hotels 
+
+	- Boarders
+
+	- Airports 
+
+-->
+ 
+<!-- venue page, package , line up  -->

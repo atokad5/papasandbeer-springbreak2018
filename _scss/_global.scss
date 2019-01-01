@@ -1,6 +1,11 @@
 body {
-  margin: 0;
+  margin: 0;  
 }
+::selection {
+  background-color: $themePink;
+  color: white;
+}
+
 .inner {
   max-width: 1440px;
   width: 95%;
@@ -76,5 +81,16 @@ body {
 @media(min-width: $bp-lg) {
   .mobile-center {
     text-align: left;
+  }
+}
+
+.spacingElement {
+  display: none;
+}
+
+
+@media(min-width: 1040px) {
+  .spacingElement {
+    display: block;
   }
 }

@@ -108,25 +108,34 @@
   top: 30% !important;
   left: 30% !important;
   path {
-    fill: white;
+    fill: $themePink;
   }
 }
 
 .flickity-prev-next-button {
-  bottom: -20px;
-  background: $themePink;
-  top: auto;
+  bottom: auto;
+  background: transparent;
+  top: -3em; 
   width: 50px; height: 50px;
   transform: translateY(0px);
+  border: 2px solid $themePink;
 
   &:hover {
     background: $themePink;
+
+    .flickity-button-icon path  {
+      fill: white;
+    }
+    
   }
 
   &.previous {
     left: auto;
-    right: 80px;
+    right: 100px;
   }
+
+
+
 }
 
 .content-area_slider_mt {
@@ -153,7 +162,7 @@
 }
 
 .hr-parent-sp {
-  padding-bottom: 3em;
+  padding-bottom: 5em;
 }
 
 .added_section {
@@ -162,4 +171,26 @@
       display: none;
     }
   }
+}
+
+.slider_area_mt .slide-txt {
+  left: 0px;
+}
+
+
+@media(min-width: $bp-md) {
+
+  .slider_area_mt .slide-txt {
+    left: 10%;
+  }  
+
+}
+
+
+
+.arrow-box {
+  height: 60px;
+  width: 100%;
+  position: relative;
+  // border: 2px solid red;
 }
