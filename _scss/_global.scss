@@ -94,3 +94,25 @@ body {
     display: block;
   }
 }
+
+
+.created-modal {
+  position: fixed;
+  z-index: 999999;
+  background: rgba(black, 0.9);
+  top: 0; left:0;
+  height: 100vh; width: 100%;
+  min-height: 1150px;
+  overflow: scroll;
+
+  &__inner {
+    height: 100vh;
+    min-height: 1150px;
+    overflow: scroll;
+    position: relative;
+  }
+
+  img {
+    width: 100%;
+  }
+}

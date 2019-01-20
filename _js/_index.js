@@ -49,3 +49,5 @@ cookiemsg();
 import form from './form.js';
 form();
 
+import createModal from './create-modal';
+createModal();

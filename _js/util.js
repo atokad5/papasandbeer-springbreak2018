@@ -29,7 +29,7 @@ export default function() {
   }
 
   $('.countdown-el').countdown($('.countdown-el').attr('data-countdown'), function(event){
-    $(this).html(event.strftime(`<div class="countdown-ticker">%D days <span>|</span> %H Hrs <span>|</span> %M Mins</div>`))
+    $(this).html(event.strftime(`<div class="countdown-ticker">%D days <span>|</span> %H Hrs <span>|</span> %M Mins <span>|</span> %S Sec</div>`))
   })
 
 

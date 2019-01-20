@@ -2,6 +2,7 @@ export default function() {
 	let $cta = $('.cta');
 	let $hdrCta = $('.hdr-cta');
 	let $hdrEl = $('.header-bg');
+	let $slideLinker = $('.slide_link-packages');
 
 	let createBtnsMarkup = () => {
 
@@ -23,6 +24,15 @@ export default function() {
 
 		})
 	}
+
+	let slideLinkGo = event => {
+		event.preventDefault();
+		$('html, body').animate({
+			scrollTop: $('#package-parent').offset().top
+		}, 1000)
+	}
+
+	$slideLinker.on('click', event => slideLinkGo(event))
 
 	const changeBgPosition = () => $hdrEl.css({'transform': 'scale(1.1)'})
 	const changeBgPositionBack = () => $hdrEl.css({'transform': 'scale(1)'})

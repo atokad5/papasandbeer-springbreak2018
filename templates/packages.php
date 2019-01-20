@@ -20,9 +20,11 @@
     </div>  
 	
     <div class="image-calendar-parent">
-      <figure class="image-calendar" >
-        <img src="<?php the_field('calendar_image');?>" alt="">
-      </figure>
+      <a href="" class="slide_link-packages">
+				<figure class="image-calendar" >
+					<img src="<?php the_field('calendar_image');?>" alt="">
+				</figure>
+			</a>
     </div>
 
   </div>
@@ -41,7 +43,7 @@
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
-  <div class="inner" style="color: white;">
+  <div id="package-parent" class="inner" style="color: white;">
     <div class="is-center">
 			<h1 class="section-header"><?php the_field('weekend_package_title'); ?></h1>
 		</div>
