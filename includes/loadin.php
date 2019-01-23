@@ -3,7 +3,7 @@
 		<div class="sp-position">
 			<span class="sp-welcome-parent">
 				<span class="parent-current">
-					<span class="current-name" style="opacity: 0;"> Vamos Spring Break 2019
+					<span class="current-name" style="opacity: 0;">Spring Break 2019
 					</span>
 				</span>
 			</span>

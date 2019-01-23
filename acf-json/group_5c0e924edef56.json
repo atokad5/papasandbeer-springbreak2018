@@ -46,6 +46,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_5c2b9b4aef090",
+            "label": "Video Src Header",
+            "name": "video_src_header",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5c0e9293d153e",
             "label": "Video Title",
             "name": "video_title",
@@ -324,5 +343,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1544977938
+    "modified": 1546361778
 }

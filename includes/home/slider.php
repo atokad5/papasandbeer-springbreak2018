@@ -60,7 +60,7 @@
 			$slider_slides = get_field('slider_slides');
 			foreach($slider_slides as $theSlide) : ?>
 				<div class="slider-el">
-					<a href="<?php echo $theSlide['link']; ?>">
+					<!-- <a href="<?php echo $theSlide['link']; ?>"> -->
 						<div class="height"></div>
 						<figure class="slider--image" style="background-image: url(<?php echo $theSlide['image']; ?>);">
 							<div></div>
@@ -72,7 +72,7 @@
 								<div class="gradient-hr"></div>
 							</figcaption>
 						</figure>
-					</a>
+					<!-- </a> -->
 				</div>
 			<?php endforeach; ?>
 		</div>

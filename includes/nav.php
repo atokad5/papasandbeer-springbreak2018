@@ -6,7 +6,7 @@
 			
 			<figure class="sb-logo-mini">
 				<a href="<?php echo site_url('/');?>">
-					<img src="<?php echo "$root/_assets/images/sb-logo.png"; ?>" alt="">
+					<img src="<?php echo "$root/_assets/images/sb-logo-2.png"; ?>" alt="">
 				</a>
 			</figure>
 

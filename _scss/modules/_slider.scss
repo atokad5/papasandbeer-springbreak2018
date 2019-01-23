@@ -203,7 +203,7 @@
 	position: relative;
 }
 .countdown-ticker {
-	font-size: 2.6em;
+	font-size: 2.3em;
 	font-family: 'bebas';
 	span {
 		color: darken($themeBlue, 6%) !important;
@@ -217,7 +217,7 @@
 }
 @media(min-width: $bp-md) {
 	.countdown-ticker {
-		font-size: 3.2em;
+		font-size: 2.4em;
 	}
 	.link-out {
 		text-align: left;
@@ -227,7 +227,7 @@
 
 @media(min-width: $bp-lg) {
 	.countdown-ticker {
-		font-size: 4.5em;
+		font-size: 3.5em;
 	}
 }
 

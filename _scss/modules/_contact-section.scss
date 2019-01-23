@@ -182,12 +182,12 @@
   }
   .image-grid-about {
     max-width: 1000px;
-    width: 70%;
+    width: 90%;
     // width: 100%;
   }
   
   .about-content {
-    max-width: 75%;
+    max-width: 100%;
   }
 
   .card-image-el {
@@ -207,4 +207,8 @@
     transform: translateY(-50%);
     right: 0;
   }
+}
+
+.message-indicator {
+  display: none;
 }

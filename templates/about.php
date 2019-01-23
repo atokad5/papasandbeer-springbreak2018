@@ -15,7 +15,7 @@
           <h1 class="section-header"><?php the_field('header_title'); ?></h1>
         </div>
 
-        <div class="ply-btn-hero">
+        <div class="ply-btn-hero video-trigger" data-video-src="<?php the_field('video_src_header'); ?>">
           <div class="ply-btn-el-hero">
             <?php get_template_part('includes/icons/play-btn') ;?>
           </div>
@@ -42,11 +42,7 @@
       <div class="about-content blog-area">
         <?php the_field('about_content'); ?>
       </div>
-      <div class="floating-image">
-        <div class="card-image">
-          <div class="card-image-el" style="background-image: url(<?php the_field('about_offset_image') ;?>);"></div>
-        </div>
-      </div>
+      
     </div>
   </div>
 </section>
@@ -92,22 +88,10 @@
 <section id="slider" class="is-blue s_sec square_up">
 <div class="spacing spacing--md"></div>
 <div class="spacing spacing--md"></div>
-<div class="spacing spacing--md"></div>
 	<div class="stroke-section stroke-section-orange" style="background-image: url(<?php echo "$root/_assets/images/stroke-blue.png"; ?>);"></div>
 
 
 
-	<div class="max clearfix old-to-new image-grid-about">
-		
-		<?php $imageGrid = get_field('4_image_grid');
-			foreach($imageGrid as $theImage ) {
-		?>
-		<div class="old-to-new_item">
-			<div class="old-to-new_image-el is-bg" data-bg-src="<?php echo $theImage['url'];?>"></div>
-		</div>
-		<?php } ?>
-
-	</div>
 
 	<div class="inner clearfix flex-slide">
 

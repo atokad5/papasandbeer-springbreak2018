@@ -30,12 +30,7 @@
 				</div>
 				<div class="card-bg" style="background-image: url(<?php the_field('hero_video_placeholder'); ?>);"></div>
 			</div>
-			<div class="hero-watch-video">
-				<div class="hero-watch-video--inner">
-				<?php the_field('video_card_content'); ?>
-				</div>
-				<span class="gradient"></span>
-			</div>
+			
 		
 		</div>
 			

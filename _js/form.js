@@ -20,11 +20,11 @@ export default function() {
        success: function(data) {
          $form.hide();
          console.log(data.status)
+         $('.message-indicator').show();
         if(data.status === "success") {
-          
-          $msg.text('You have successfully signed up!') 
+          $('.message-indicator').html(`<p> ${$('.message-indicator').attr('data-success')} </p>`)
         } else {
-          $msg.text('uhoh! Something went wrong, try again!')
+          $('.message-indicator').html(`<p> ${$('.message-indicator').attr('data-error')} </p>`)
         }
 
        }

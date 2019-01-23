@@ -148,6 +148,10 @@ var _form = __webpack_require__(16);
 
 var _form2 = _interopRequireDefault(_form);
 
+var _createModal = __webpack_require__(17);
+
+var _createModal2 = _interopRequireDefault(_createModal);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _build2.default)();
@@ -177,6 +181,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _cookiemsg2.default)();
 
 (0, _form2.default)();
+
+(0, _createModal2.default)();
 
 /***/ }),
 /* 2 */
@@ -321,6 +327,7 @@ exports.default = function () {
 	var $cta = $('.cta');
 	var $hdrCta = $('.hdr-cta');
 	var $hdrEl = $('.header-bg');
+	var $slideLinker = $('.slide_link-packages');
 
 	var createBtnsMarkup = function createBtnsMarkup() {
 
@@ -336,6 +343,17 @@ exports.default = function () {
 			}
 		});
 	};
+
+	var slideLinkGo = function slideLinkGo(event) {
+		event.preventDefault();
+		$('html, body').animate({
+			scrollTop: $('#package-parent').offset().top
+		}, 1000);
+	};
+
+	$slideLinker.on('click', function (event) {
+		return slideLinkGo(event);
+	});
 
 	var changeBgPosition = function changeBgPosition() {
 		return $hdrEl.css({ 'transform': 'scale(1.1)' });
@@ -1099,7 +1117,7 @@ exports.default = function () {
   };
 
   $('.countdown-el').countdown($('.countdown-el').attr('data-countdown'), function (event) {
-    $(this).html(event.strftime('<div class="countdown-ticker">%D days <span>|</span> %H Hrs <span>|</span> %M Mins</div>'));
+    $(this).html(event.strftime('<div class="countdown-ticker">%D days <span>|</span> %H Hrs <span>|</span> %M Mins <span>|</span> %S Sec</div>'));
   });
 
   $slideTrigger.on('click', function (event) {
@@ -1416,11 +1434,11 @@ exports.default = function () {
       success: function success(data) {
         $form.hide();
         console.log(data.status);
+        $('.message-indicator').show();
         if (data.status === "success") {
-
-          $msg.text('You have successfully signed up!');
+          $('.message-indicator').html('<p> ' + $('.message-indicator').attr('data-success') + ' </p>');
         } else {
-          $msg.text('uhoh! Something went wrong, try again!');
+          $('.message-indicator').html('<p> ' + $('.message-indicator').attr('data-error') + ' </p>');
         }
       }
     });
@@ -1429,6 +1447,29 @@ exports.default = function () {
   $form.on('submit', function (e) {
     return sendForm(e);
   });
+};
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  var $imgTrigger = $('.image-expand');
+
+  var showBigImage = function showBigImage(event) {
+    var $t = $(event.currentTarget);
+    var imageSource = $t.find('img').attr('src');
+    console.log(imageSource, 'working');
+  };
+
+  $imgTrigger.on('click', showBigImage);
 };
 
 /***/ })

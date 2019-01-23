@@ -85,7 +85,7 @@ foreach($parentLoop as $theLoop) {
           
 
         <div class="slider-el">
-          <a href="<?php echo $theImage['link']; ?>">
+          <!-- <a href="<?php echo $theImage['link']; ?>"> -->
             <div class="height"></div>
             <figure class="slider--image is-bg"  data-bg-src="<?php echo $theImage['url']; ?>" style="background-image: url();">
               <div></div>
@@ -97,7 +97,7 @@ foreach($parentLoop as $theLoop) {
                 <div class="gradient-hr"></div>
               </figcaption>
             </figure>
-          </a>
+          <!-- </a> -->
         </div>
 
           <?php } ?>
