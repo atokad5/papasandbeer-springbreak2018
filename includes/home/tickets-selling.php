@@ -5,7 +5,6 @@
 	<div class="spacing spacing--sm"></div>
 	<div class="spacing spacing--md"></div>
 	<div class="spacing spacing--md"></div>
-	<div class="spacing spacing--md"></div>
 	<div class="inner is-white">
 
 		<div class="is-center">
@@ -24,9 +23,7 @@
 			<div class="content-area has-max">
 				<p><?php the_field('headline_copy', 'option'); ?></p>
 			</div>
-			<div class="section-cta is-center">
-				<a href="<?php the_field('view_packages_link', 'options'); ?>" class="cta"><?php the_field('view_packages_text', 'options'); ?></a>
-			</div>
+			
 		</div>
 
 	</div>

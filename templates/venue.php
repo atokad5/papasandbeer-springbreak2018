@@ -53,7 +53,7 @@
 
   <div class="content-day content-ve">
     <?php the_field('day_time_content'); ?>
-    <div class="arrow-box">
+    <div class="arrow-box desk-only">
       <button class="is-btn slider_btn pre">
         <?php get_template_part('includes/icons/left-arrow'); ?>
       </button>
