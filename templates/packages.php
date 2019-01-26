@@ -55,23 +55,25 @@
 		
 		<?php $packages = get_field('weekend_package_options'); ?>
 
-		<?php foreach($packages as $theWeekend) { ?>
-			<div class="package-option">
-				<div class="package-option__element">
-					<div class="package-content">
-						<h2 class="dates"><?php echo $theWeekend['dates']; ?></h2>
-						<h1 class="section-header"><?php echo $theWeekend['title']; ?></h1>
-						<h2 class="dates artist_names-packages" style="color: #eee">
-							<?php echo $theWeekend['artist_names'] ;?>
-						</h2>
-					</div>
+		<div class="package-option-parent">
+			<?php foreach($packages as $theWeekend) { ?>
+				<div class="package-option">
+					<div class="package-option__element">
+						<div class="package-content">
+							<h2 class="dates"><?php echo $theWeekend['dates']; ?></h2>
+							<h1 class="section-header"><?php echo $theWeekend['title']; ?></h1>
+							<h2 class="dates artist_names-packages" style="color: #eee">
+								<?php echo $theWeekend['artist_names'] ;?>
+							</h2>
+						</div>
 
-					<div class="package-button">
-					<a href="<?php echo $theWeekend['link']['url']; ?>" class="cta"><?php echo $theWeekend['link']['title']; ?></a>
+						<div class="package-button">
+						<a href="<?php echo $theWeekend['link']['url']; ?>" class="cta"><?php echo $theWeekend['link']['title']; ?></a>
+						</div>
 					</div>
 				</div>
-			</div>
-		<?php } ?>
+			<?php } ?>
+		</div>
   </div>
   <div class="spacing spacing--md"></div>
   <div class="spacing spacing--md"></div>
